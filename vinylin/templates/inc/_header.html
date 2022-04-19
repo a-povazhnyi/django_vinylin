@@ -1,0 +1,25 @@
+{% load static %}
+
+<header>
+  <div class="header container">
+    <div class="header-wrapper">
+      <img src="{% static "img/vinylin-logo.svg" %}" alt="header-logo"
+           class="header-logo">
+      <div class="header_elements">
+        <a href="#" class="vinylin-header-link">
+          <h1 class="vinylin-header">VINYLIN</h1>
+        </a>
+        <a href="#" class="header-cart">
+          <img src="{% static "img/cart.svg" %}" alt="header-cart"
+               class="header-cart">
+        </a>
+      </div>
+      <div class="header-bottom-border"></div>
+    </div>
+  </div>
+</header>
+<nav>
+  <div class="sign-section container">
+    <a class="sign-link" href="/users/login/">sign-in</a>
+  </div>
+</nav>
