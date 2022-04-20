@@ -19,7 +19,17 @@
   </div>
 </header>
 <nav>
-  <div class="sign-section container">
-    <a class="sign-link" href="/users/login/">sign-in</a>
+  <div class="nav-wrapper container">
+    <div class="sign-section">
+      <ul class="sign-ul">
+        <li class="sign-li">
+          <a class="button1 sign-link" href="{% url 'sign-in' %}">sign-in</a>
+        </li>
+
+        <li>
+          <a class="button1 register-link" href="{% url 'register' %}">register</a>
+        </li>
+      </ul>
+  </div>
   </div>
 </nav>

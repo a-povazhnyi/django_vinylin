@@ -43,6 +43,10 @@ header {
     margin: 24px 0 14px 0;
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {
     margin: 0 200px;
 }
@@ -87,20 +91,38 @@ img.header-cart {
     width: 62px
 }
 
-/*nav .sign-section {*/
+.nav-wrapper {
+    height: 35px;
+}
 
-/*}*/
+.sign-section {
+    height: 35px;
+}
 
-a.sign-link {
-    font-size: 22px;
+ul.sign-ul {
+    display: flex;
     float: right;
-    margin-right: 30px;
+    height: 35px;
+}
+
+.button1 {
+    font-size: 22px;
     background-color: black;
     color: white;
     border-radius: 10px;
     width: 100px;
     height: 35px;
     text-align: center;
+}
+
+a.button1 {
+    color: white;
+    width: 100px;
+    height: 35px;
+}
+
+a.sign-link {
+    margin-right: 30px;
 }
 
 @font-face {
