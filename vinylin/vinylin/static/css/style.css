@@ -142,7 +142,11 @@ input.input1 {
     text-align: center;
 }
 
-button.sign-in-button {
+form.register-form > input {
+    margin-bottom: 30px;
+}
+
+button.sign-in-button, button.register-button {
     cursor: pointer;
 }
 
