@@ -93,6 +93,7 @@ img.header-cart {
 
 .nav-wrapper {
     height: 35px;
+    margin-bottom: 50px;
 }
 
 .sign-section {
@@ -123,6 +124,26 @@ a.button1 {
 
 a.sign-link {
     margin-right: 30px;
+}
+
+form.sign-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input.input1 {
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 350px;
+    font-size: 22px;
+    margin: 0 auto 50px auto;
+    padding: 7px 5px;
+    text-align: center;
+}
+
+button.sign-in-button {
+    cursor: pointer;
 }
 
 @font-face {

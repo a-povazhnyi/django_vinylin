@@ -1,4 +1,10 @@
 {% extends "base.html" %}
-<form class="sign-form-group">
-this is login
-</form>
+{% block content %}
+  <div class="sign-form-wrapper container">
+    <form class="sign-form">
+      <input type="email" class="input1" placeholder="@mail ..." required>
+      <input type="password" class="input1" placeholder="password ..." required>
+      <button type="submit" class="button1 sign-in-button">sign-in</button>
+    </form>
+  </div>
+{% endblock content %}
