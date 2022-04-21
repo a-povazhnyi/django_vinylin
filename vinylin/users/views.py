@@ -2,11 +2,15 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, CreateView
 from django.contrib.auth import login, logout
 
-from .forms import UserForm
+from .forms import RegisterForm
 
 
-def sign_in(request):
-    return render(request, 'users/signin.html')
+class SignIn(CreateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'vinyl/index.html')
+
+    def post(self, request, *args, **kwargs):
+        ...
 
 
 class SignOut(TemplateView):
@@ -24,12 +28,12 @@ class SignOut(TemplateView):
 
 class Register(CreateView):
     def get(self, request, *args, **kwargs):
-        user_form = UserForm()
+        user_form = RegisterForm()
         context = {'user_form': user_form}
         return render(request, 'users/register.html', context)
 
     def post(self, request, *args, **kwargs):
-        user_form = UserForm(data=request.POST)
+        user_form = RegisterForm(data=request.POST)
 
         if user_form.is_valid():
             new_user = user_form.save()
