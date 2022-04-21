@@ -4,7 +4,7 @@
     <form class="sign-form register-form"
           method="post" action="{% url 'register' %}">
       {% csrf_token %}
-      {{ user_form }}
+      {{ register_form }}
 
 {#      <input type="text" class="input1" placeholder="age ...">#}
 {#      <input type="tel" class="input1" placeholder="+1 888 888 98 98 ...">#}
