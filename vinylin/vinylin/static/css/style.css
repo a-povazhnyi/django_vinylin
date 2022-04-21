@@ -106,6 +106,17 @@ ul.sign-ul {
     height: 35px;
 }
 
+ul.signed-ul {
+    display: flex;
+    float: right;
+    height: 35px;
+}
+
+span.user-greetings {
+    font-size: 22px;
+    margin-right: 30px;
+}
+
 .button1 {
     font-size: 22px;
     background-color: black;

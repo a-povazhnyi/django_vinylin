@@ -21,15 +21,32 @@
 <nav>
   <div class="nav-wrapper container">
     <div class="sign-section">
-      <ul class="sign-ul">
-        <li class="sign-li">
-          <a class="button1 sign-link" href="{% url 'sign-in' %}">sign-in</a>
-        </li>
 
-        <li>
-          <a class="button1 register-link" href="{% url 'register' %}">register</a>
-        </li>
-      </ul>
-  </div>
+      {% if not user.is_authenticated %}
+        <ul class="sign-ul">
+          <li class="sign-li">
+            <a class="button1 sign-link" href="{% url 'sign-in' %}">sign-in</a>
+          </li>
+
+          <li>
+            <a class="button1 register-link" href="{% url 'register' %}">register</a>
+          </li>
+        </ul>
+
+      {% else %}
+        <ul class="signed-ul">
+          <li class="signed-li">
+            {% if not user.first_name %}
+              <span class="user-greetings">Hello, {{ user.username }}!</span>
+            {% else %}
+              <span class="user-greetings">Hello, {{ user.first_name }}!</span>
+              </li>
+            {% endif %}
+          <li class="signed-li">
+            <a href="{% url 'sign-out' %}" class="button1">sign-out</a>
+          </li>
+        </ul>
+      {% endif %}
+    </div>
   </div>
 </nav>
