@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="sign-form-wrapper container">
-    <form class="sign-form register-form">
-      <input type="email" class="input1" placeholder="@mail ..." required>
-      <input type="text" class="input1" placeholder="username ..." required>
-      <input type="password" class="input1" placeholder="password ..." required>
-      <input type="text" class="input1" placeholder="first name ...">
-      <input type="text" class="input1" placeholder="last name ...">
-      <input type="text" class="input1" placeholder="age ...">
-      <input type="tel" class="input1" placeholder="+1 888 888 98 98 ...">
-      <input type="text" class="input1" placeholder="region ...">
+    <form class="sign-form register-form"
+          method="post" action="{% url 'register' %}">
+      {% csrf_token %}
+      {{ user_form }}
+
+{#      <input type="text" class="input1" placeholder="age ...">#}
+{#      <input type="tel" class="input1" placeholder="+1 888 888 98 98 ...">#}
+{#      <input type="text" class="input1" placeholder="region ...">#}
       <button type="submit" class="button1 register-button">register</button>
     </form>
   </div>
