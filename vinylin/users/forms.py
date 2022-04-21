@@ -1,15 +1,35 @@
 from django import forms
 from django.contrib.auth import password_validation
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.utils.translation import gettext_lazy as _
 
 from .models import Profile
 
 
+class SignInForm(AuthenticationForm):
+    username = forms.CharField(
+        label='Email / Username',
+        widget=forms.TextInput(attrs={
+            'autofocus': True,
+            'class': 'input1',
+            'placeholder': 'email/username'
+        })
+    )
+    password = forms.CharField(
+        label=_("Password"),
+        strip=False,
+        widget=forms.PasswordInput(attrs={
+            'autocomplete': 'current-password',
+            'class': 'input1',
+            'placeholder': 'password',
+        })
+    )
+
+
 class RegisterForm(UserCreationForm):
     class Meta:
-        model = User
+        model = User  # TODO: try to use get_user_model()
         fields = ('username', 'email', 'first_name', 'last_name')
         widgets = {
             'username': forms.TextInput(attrs={

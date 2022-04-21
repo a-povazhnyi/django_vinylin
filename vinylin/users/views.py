@@ -1,16 +1,14 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, CreateView
+from django.contrib.auth import views as auth_views
 from django.contrib.auth import login, logout
 
-from .forms import RegisterForm
+from .forms import SignInForm, RegisterForm
 
 
-class SignIn(CreateView):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'vinyl/index.html')
-
-    def post(self, request, *args, **kwargs):
-        ...
+class SignIn(auth_views.LoginView):
+    template_name = 'users/signin.html'
+    form_class = SignInForm
 
 
 class SignOut(TemplateView):

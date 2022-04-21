@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="sign-form-wrapper container">
-    <form class="sign-form">
-      <input type="email" class="input1" placeholder="@mail ..." required>
-      <input type="password" class="input1" placeholder="password ..." required>
+    <form class="sign-form" method="post" action="{% url 'sign-in' %}">
+      {% csrf_token %}
+      {{ form }}
       <button type="submit" class="button1 sign-in-button">sign-in</button>
     </form>
   </div>
