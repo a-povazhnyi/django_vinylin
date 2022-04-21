@@ -11,17 +11,8 @@ class SignIn(auth_views.LoginView):
     form_class = SignInForm
 
 
-class SignOut(TemplateView):
+class SignOut(auth_views.LogoutView):
     template_name = 'vinyl/index.html'
-
-    def get(self, request, *args, **kwargs):
-        logout(request)
-        return redirect('index')
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['alert'] = 'You successfully signed out!'
-        return context
 
 
 class Register(CreateView):
