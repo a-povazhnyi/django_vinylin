@@ -9,11 +9,11 @@ from .models import Profile
 
 class SignInForm(AuthenticationForm):
     username = forms.CharField(
-        label='Email / Username',
-        widget=forms.TextInput(attrs={
+        label='Email',
+        widget=forms.EmailInput(attrs={
             'autofocus': True,
             'class': 'input1',
-            'placeholder': 'email/username'
+            'placeholder': 'email'
         })
     )
     password = forms.CharField(
