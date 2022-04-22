@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import CreateView
 from django.contrib.auth import views as auth_views
-from django.contrib.auth import login, logout
+from django.contrib.auth import login
 
-from .forms import SignInForm, RegisterForm
+from .models import Profile
+from .forms import SignInForm, UserForm, ProfileForm
 
 
 class SignIn(auth_views.LoginView):
@@ -17,14 +18,33 @@ class SignOut(auth_views.LogoutView):
 
 class Register(CreateView):
     def get(self, request, *args, **kwargs):
-        register_form = RegisterForm()
-        context = {'register_form': register_form}
+        user_form = UserForm()
+        profile_form = ProfileForm()
+        context = {
+            'user_form': user_form,
+            'profile_form': profile_form
+        }
         return render(request, 'users/register.html', context)
 
     def post(self, request, *args, **kwargs):
-        register_form = RegisterForm(data=request.POST)
+        user_form = UserForm(data=request.POST)
+        profile_form = ProfileForm(data=request.POST)
 
-        if register_form.is_valid():
-            new_user = register_form.save()
+        if user_form.is_valid() and profile_form.is_valid():
+            new_user = user_form.save()
+
+            # Checks if profile form is not blank
+            if profile_form.changed_data:
+                new_profile = Profile.objects.get(user_id=new_user.pk)
+                new_profile_form = ProfileForm(data=request.POST,
+                                               instance=new_profile)
+                new_profile_form.save()
+
             login(request, new_user)
-            return redirect('https://www.google.com/')
+            return redirect('index')
+
+        context = {
+            'user_form': user_form,
+            'profile_form': profile_form,
+        }
+        return render(request, 'users/register.html', context)
