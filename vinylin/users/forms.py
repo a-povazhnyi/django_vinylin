@@ -27,9 +27,9 @@ class SignInForm(AuthenticationForm):
     )
 
 
-class RegisterForm(UserCreationForm):
+class UserForm(UserCreationForm):
     class Meta:
-        model = User  # TODO: try to use get_user_model()
+        model = User
         fields = ('username', 'email', 'first_name', 'last_name')
         widgets = {
             'username': forms.TextInput(attrs={
@@ -70,3 +70,21 @@ class RegisterForm(UserCreationForm):
         strip=False,
         help_text=_("Enter the same password as before, for verification."),
     )
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('phone', 'age', 'country')
+        widgets = {
+            'phone': forms.TextInput(attrs={
+                'class': 'input1',
+                'placeholder': 'phone',
+            }),
+            'age': forms.NumberInput(attrs={
+                'class': 'input1',
+                'placeholder': 'age',
+                'min': '0',
+                'max': '170',
+            }),
+        }
