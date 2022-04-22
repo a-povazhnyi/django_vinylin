@@ -19,6 +19,7 @@ class Profile(models.Model):
     country = models.ForeignKey(
         Country,
         on_delete=models.SET_NULL,
+        blank=True,
         null=True,
         related_name='country')
     balance = models.DecimalField(default=0, max_digits=6, decimal_places=2)
