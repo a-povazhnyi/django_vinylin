@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import CreateView
+from django.views.generic import CreateView, TemplateView
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
 
@@ -49,3 +49,8 @@ class Register(CreateView):
             'profile_form': profile_form,
         }
         return render(request, 'users/register.html', context)
+
+
+class SignExceptions(TemplateView):
+    template_name = 'users/sign_exceptions.html'
+    extra_context = {'redirect_url': '/'}
