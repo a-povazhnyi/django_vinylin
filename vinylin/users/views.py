@@ -13,7 +13,8 @@ class SignIn(auth_views.LoginView):
 
 
 class SignOut(auth_views.LogoutView):
-    template_name = 'vinyl/index.html'
+    template_name = 'users/signout.html'
+    extra_context = {'redirect_url': '/'}
 
 
 class Register(CreateView):
