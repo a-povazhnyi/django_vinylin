@@ -8,6 +8,9 @@ from .forms import SignInForm, UserForm, ProfileForm
 from .decorators import anonymous_required
 
 
+UserModel = auth_views.get_user_model()
+
+
 class SignIn(auth_views.LoginView):
     template_name = 'users/signin.html'
     form_class = SignInForm
@@ -43,7 +46,7 @@ class Register(CreateView):
 
             # Checks if profile form is not blank
             if profile_form.changed_data:
-                new_profile = Profile.objects.get(user_id=new_user.pk)
+                new_profile = Profile.objects.get(user=new_user.pk)
                 new_profile_form = ProfileForm(data=request.POST,
                                                instance=new_profile)
                 new_profile_form.save()
