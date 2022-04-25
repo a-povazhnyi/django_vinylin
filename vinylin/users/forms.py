@@ -1,10 +1,11 @@
 from django import forms
-from django.contrib.auth import password_validation
-from django.contrib.auth.models import User
+from django.contrib.auth import password_validation, get_user_model
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.utils.translation import gettext_lazy as _
 
 from .models import Profile
+
+UserModel = get_user_model()
 
 
 class SignInForm(AuthenticationForm):
@@ -29,7 +30,7 @@ class SignInForm(AuthenticationForm):
 
 class UserForm(UserCreationForm):
     class Meta:
-        model = User
+        model = UserModel
         fields = ('username', 'email', 'first_name', 'last_name')
         widgets = {
             'username': forms.TextInput(attrs={
