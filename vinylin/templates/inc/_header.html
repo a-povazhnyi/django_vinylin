@@ -13,11 +13,17 @@
           <img src="{% static "img/cart.svg" %}" alt="header-cart"
                class="header-cart">
         </a>
+        {% if user.is_email_verified == False %}
+          <div class="email-status-desc">
+            <a href="{% url 'email_verification' %}">Verify your e-mail to make orders</a>
+          </div>
+        {% endif %}
       </div>
       <div class="header-bottom-border"></div>
     </div>
   </div>
 </header>
+
 <nav>
   <div class="nav-wrapper container">
     <div class="sign-section">
@@ -34,19 +40,32 @@
         </ul>
 
       {% else %}
+
         <ul class="signed-ul">
           <li class="signed-li">
             {% if not user.first_name %}
-              <span class="user-greetings">Hello, {{ user.username }}!</span>
+              <span class="user-greetings">
+                Hello, {{ user.username }}!
+              </span>
+
             {% else %}
-              <span class="user-greetings">Hello, {{ user.first_name }}!</span>
+
+              <span class="user-greetings">
+                Hello, {{ user.first_name }}!
+              </span>
               </li>
             {% endif %}
+
           <li class="signed-li">
             <a href="{% url 'sign-out' %}" class="button1">sign-out</a>
           </li>
         </ul>
       {% endif %}
     </div>
+    {% if user.is_email_verified == False %}
+      <div class="email-status-desc">
+        <a href="{% url 'email_verification' %}">Verify your e-mail to make orders</a>
+      </div>
+    {% endif %}
   </div>
 </nav>
