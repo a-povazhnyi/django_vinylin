@@ -164,3 +164,23 @@ class EmailChange(SignRequiredMixin, UpdateView):
 
         context = {'email_form': email_form, 'current_email': current_email}
         return render(request, 'users/email_change.html', context)
+
+
+class PasswordChangeView(auth_views.PasswordChangeView):
+    form_class = PasswordChangeForm
+    template_name = 'users/password_change.html'
+
+    def get_success_url(self, *args, **kwargs):
+        return reverse('password_alert')
+
+
+class PasswordResetView(UpdateView):
+    pass
+
+
+class PasswordAlertView(TemplateView):
+    template_name = 'alert.html'
+    extra_context = {
+        'redirect_url': '/',
+        'alert_message': 'Your password is changed successfully!',
+    }
