@@ -89,3 +89,24 @@ class ProfileForm(forms.ModelForm):
                 'max': '170',
             }),
         }
+
+
+class TokenForm(forms.Form):
+    code = forms.CharField(
+        label='Your code:',
+        required=False,
+        widget=forms.TextInput(attrs={
+            'class': 'input1',
+            'placeholder': 'past your code here ...'
+        })
+    )
+
+
+class EmailForm(forms.Form):
+    new_email = forms.EmailField(
+        label='New e-mail address:',
+        widget=forms.EmailInput(attrs={
+            'class': 'input1',
+            'placeholder': 'enter your new e-mail ...'
+        })
+    )
