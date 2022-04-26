@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import password_validation, get_user_model
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth import forms as auth_forms
 from django.utils.translation import gettext_lazy as _
 
 from .models import Profile
@@ -8,7 +8,7 @@ from .models import Profile
 UserModel = get_user_model()
 
 
-class SignInForm(AuthenticationForm):
+class SignInForm(auth_forms.AuthenticationForm):
     username = forms.CharField(
         label='Email',
         widget=forms.EmailInput(attrs={
@@ -28,7 +28,7 @@ class SignInForm(AuthenticationForm):
     )
 
 
-class UserForm(UserCreationForm):
+class UserForm(auth_forms.UserCreationForm):
     class Meta:
         model = UserModel
         fields = ('username', 'email', 'first_name', 'last_name')
