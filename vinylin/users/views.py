@@ -2,13 +2,15 @@ from django.shortcuts import render, redirect
 from django.views.generic import UpdateView, CreateView, TemplateView
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
+from django.contrib.auth.forms import PasswordChangeForm
+from django.urls import reverse
 
 from .models import Profile
 from .forms import SignInForm, UserForm, ProfileForm, TokenForm, EmailForm
 from .decorators import anonymous_required
 from .tokens import TokenGenerator
 from .backends import EmailConfirmMessage
-from . mixins import SignRequiredMixin
+from .mixins import SignRequiredMixin
 
 
 UserModel = auth_views.get_user_model()
@@ -30,7 +32,7 @@ class SignOut(SignRequiredMixin, auth_views.LogoutView):
 
 
 class Register(CreateView):
-    @anonymous_required(redirect_url='sign_exceptions')
+    @anonymous_required
     def get(self, request, *args, **kwargs):
         user_form = UserForm()
         profile_form = ProfileForm()
@@ -65,9 +67,12 @@ class Register(CreateView):
         return render(request, 'users/register.html', context)
 
 
-class SignExceptions(TemplateView):
-    template_name = 'users/sign_exceptions.html'
-    extra_context = {'redirect_url': '/'}
+class SignExceptionsView(TemplateView):
+    template_name = 'alert.html'
+    extra_context = {
+        'redirect_url': '/',
+        'alert_message': 'This page is not accessible to authorized users!'
+    }
 
 
 class EmailVerification(SignRequiredMixin, TemplateView):

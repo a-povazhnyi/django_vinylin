@@ -1,7 +1,6 @@
-{% extends "base.html" %}
 {% block content %}
   <script type="text/javascript">
-    alert('This page is not accessible to authorized users!')
+    alert('{{ alert_message }}')
     document.location.replace("{{ redirect_url }}");
   </script>
 {% endblock content %}
