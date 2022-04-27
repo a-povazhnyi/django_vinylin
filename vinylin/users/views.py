@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import UpdateView, CreateView, TemplateView
+from django.views.generic import UpdateView, CreateView, TemplateView, DetailView
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
 from django.contrib.auth.forms import PasswordChangeForm
@@ -32,7 +32,7 @@ class SignOut(SignRequiredMixin, auth_views.LogoutView):
 
 
 class Register(CreateView):
-    @anonymous_required
+    @anonymous_required(redirect_url='sign_exceptions')
     def get(self, request, *args, **kwargs):
         user_form = UserForm()
         profile_form = ProfileForm()
@@ -73,6 +73,11 @@ class SignExceptionsView(TemplateView):
         'redirect_url': '/',
         'alert_message': 'This page is not accessible to authorized users!'
     }
+
+
+class ProfileView(DetailView):
+    template_name = 'users/profile.html'
+    model = UserModel
 
 
 class EmailVerification(SignRequiredMixin, TemplateView):
@@ -179,8 +184,8 @@ class PasswordChangeView(auth_views.PasswordChangeView):
         return reverse('password_alert')
 
 
-class PasswordResetView(UpdateView):
-    pass
+class PasswordResetView(auth_views.PasswordResetView):
+    template_name = 'users/password_reset.html'
 
 
 class PasswordAlertView(TemplateView):
