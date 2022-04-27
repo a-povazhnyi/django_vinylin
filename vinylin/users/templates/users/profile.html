@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="profile-wrapper container">
+    <div class="profile">
+      <div class="profile-name">
+        <h2 class="profile-name-data">
+          {% if user.first_name %}
+            {{ user.first_name }} {{ user.last_name }}
+          {% else %}
+            {{ user.username }}
+          {% endif %}
+        </h2>
+      </div>
+
+      <ul class="profile-ul">
+        <li class="profile-li">
+          <span>username:
+            <span class="profile-data">{{ user.username }}</span>
+          </span>
+        </li>
+
+        <li class="profile-li">
+          <span>e-mail:
+            <span class="profile-data">{{ user.email }}</span>
+          </span>
+        </li>
+
+        <li class="profile-li">
+          <span>phone:
+            <span class="profile-data">{{ user.profile.phone }}</span>
+          </span>
+        </li>
+
+        <li class="profile-li">
+          <span>country:
+            <span class="profile-data">{{ user.profile.country }}</span>
+          </span>
+        </li>
+
+        <li class="profile-li">
+          <span>balance:
+            <span class="profile-data">{{ user.profile.balance }}$</span>
+          </span>
+        </li>
+      </ul>
+
+      <ul class="profile-buttons">
+        <li class="profile-button">
+          <div class="button-wrapper">
+            <a href="{% url 'email_change' %}" class="profile-a">change e-mail</a>
+          </div>
+        </li>
+
+        <li class="profile-button">
+          <div class="button-wrapper">
+            <a href="{% url 'password_change' %}" class="profile-a">change password</a>
+          </div>
+        </li>
+
+        <li class="profile-button red-button">
+          <div class="button-wrapper">
+            <a href="#" class="profile-a">password reset</a>
+          </div>
+        </li>
+
+        <li class="profile-button">
+          <div class="button-wrapper red-button-wrapper">
+            <a href="{% url 'sign-out' %}" class="profile-a">sign-out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock content %}
