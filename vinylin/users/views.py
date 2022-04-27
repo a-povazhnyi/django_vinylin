@@ -186,6 +186,10 @@ class PasswordChangeView(auth_views.PasswordChangeView):
 
 class PasswordResetView(auth_views.PasswordResetView):
     template_name = 'users/password_reset.html'
+    token_generator = TokenGenerator()
+
+    def get_success_url(self):
+        return reverse('password_change')
 
 
 class PasswordAlertView(TemplateView):

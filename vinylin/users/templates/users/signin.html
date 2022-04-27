@@ -4,6 +4,7 @@
     <form class="sign-form" method="post" action="{% url 'sign-in' %}">
       {% csrf_token %}
       {{ form }}
+      <a href="{% url 'password_reset' %}" class="password-reset-a">reset password</a>
       <button type="submit" class="button1 sign-in-button">sign-in</button>
     </form>
   </div>

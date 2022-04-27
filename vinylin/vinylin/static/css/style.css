@@ -187,6 +187,15 @@ li.profile-button {
     text-align: center;
 }
 
+#id_password {
+    margin-bottom: 1px;
+}
+
+a.password-reset-a {
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
 span.user-greetings {
     font-size: 22px;
     text-align: center;
