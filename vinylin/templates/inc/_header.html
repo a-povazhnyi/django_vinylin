@@ -28,39 +28,29 @@
   <div class="nav-wrapper container">
     <div class="sign-section">
 
-      {% if not user.is_authenticated %}
-        <ul class="sign-ul">
+      <ul class="sign-ul">
+        {% if not user.is_authenticated %}
           <li class="sign-li">
-            <a class="button1 sign-link" href="{% url 'sign-in' %}">sign-in</a>
+            <div class="button-wrapper-sign">
+              <a class="button1 sign-link" href="{% url 'sign-in' %}">sign-in</a>
+            </div>
           </li>
 
-          <li>
-            <a class="button1 register-link" href="{% url 'register' %}">register</a>
+          <li class="sign-li">
+            <div class="button-wrapper-sign">
+              <a class="button1 register-link" href="{% url 'register' %}">register</a>
+            </div>
           </li>
-        </ul>
 
-      {% else %}
-
-        <ul class="signed-ul">
-          <li class="signed-li">
-            {% if not user.first_name %}
-              <span class="user-greetings">
-                Hello, {{ user.username }}!
-              </span>
-
-            {% else %}
-
-              <span class="user-greetings">
-                Hello, {{ user.first_name }}!
-              </span>
-              </li>
-            {% endif %}
+        {% else %}
 
           <li class="signed-li">
-            <a href="{% url 'sign-out' %}" class="button1">sign-out</a>
+            <div class="button-wrapper-sign">
+              <a href="{{ user.get_absolute_url }}" class="button1">profile</a>
+            </div>
           </li>
-        </ul>
-      {% endif %}
+          </ul>
+        {% endif %}
     </div>
     {% if user.is_email_verified == False %}
       <div class="email-status-desc">
