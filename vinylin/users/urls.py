@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (
-    SignIn, SignOut, Register, SignExceptionsView,
+    SignIn, SignOut, Register, SignExceptionsView, ProfileView,
     EmailVerification, EmailChange, EmailConfirm,
     PasswordChangeView, PasswordResetView, PasswordAlertView,
 )
@@ -13,6 +13,8 @@ urlpatterns = [
     path('sign-exceptions/',
          SignExceptionsView.as_view(),
          name='sign_exceptions'),
+
+    path('<int:pk>/', ProfileView.as_view(), name='profile'),
 
     path('email-verification/',
          EmailVerification.as_view(),
