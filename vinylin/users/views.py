@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from django.views.generic import UpdateView, CreateView, TemplateView, DetailView
+from django.views.generic import (
+    UpdateView, CreateView, TemplateView, DetailView
+)
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
 from django.contrib.auth.forms import PasswordChangeForm
@@ -176,7 +178,7 @@ class EmailChange(SignRequiredMixin, UpdateView):
         return render(request, 'users/email_change.html', context)
 
 
-class PasswordChangeView(auth_views.PasswordChangeView):
+class PasswordChangeView(SignRequiredMixin, auth_views.PasswordChangeView):
     form_class = PasswordChangeForm
     template_name = 'users/password_change.html'
 
@@ -184,17 +186,45 @@ class PasswordChangeView(auth_views.PasswordChangeView):
         return reverse('password_alert')
 
 
-class PasswordResetView(auth_views.PasswordResetView):
-    template_name = 'users/password_reset.html'
-    token_generator = TokenGenerator()
-
-    def get_success_url(self):
-        return reverse('password_change')
-
-
-class PasswordAlertView(TemplateView):
+class PasswordChangeCompleteView(TemplateView):
     template_name = 'alert.html'
     extra_context = {
         'redirect_url': '/',
         'alert_message': 'Your password is changed successfully!',
+    }
+
+
+class PasswordResetView(auth_views.PasswordResetView):
+    template_name = 'users/password_reset.html'
+    token_generator = TokenGenerator()
+    email_template_name = 'users/password_reset_email.html'
+
+
+class PasswordResetDoneView(auth_views.PasswordResetDoneView):
+    """
+    The page shown after a user has been emailed a link
+    to reset their password.
+    """
+    template_name = 'alert.html'
+    extra_context = {
+        'redirect_url': '/',
+        'alert_message': 'Check your e-mail to reset the password...'
+    }
+
+
+class PasswordResetConfirmView(auth_views.PasswordResetConfirmView):
+    """Presents a form for entering a new password"""
+    template_name = 'users/password_confirm.html'
+    token_generator = TokenGenerator()
+
+
+class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
+    """
+    Presents a view which informs the user that
+    the password has been successfully changed.
+    """
+    template_name = 'alert.html'
+    extra_context = {
+        'redirect_url': '/users/sign-in/',
+        'alert_message': 'Your password has been changed. Sign in!',
     }
