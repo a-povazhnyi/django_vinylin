@@ -102,7 +102,7 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
         self.token = TokenGenerator()
 
     def get(self, request, *args, **kwargs):
-        if self.db_email_confirmed(request):
+        if self._db_email_confirmed(request):
             context = {'email_confirmed': True}
             return render(request, 'users/email_verification.html', context)
 
@@ -114,8 +114,8 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
         code_form = TokenForm(data=request.POST)
 
         if not code_form.changed_data and code_form.is_valid():
-            code = self.make_token(request)
-            self.mail_code(request, code)
+            code = self._make_token(request)
+            self._mail_code(request, code)
 
             context = {'code_form': code_form, 'is_sent': True}
             return render(request, 'users/email_verification.html', context)
@@ -128,17 +128,17 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
         context = {'code_form': code_form, 'is_sent': False}
         return render(request, 'users/email_verification.html', context)
 
-    def make_token(self, request):
+    def _make_token(self, request):
         new_token = self.token.make_token(request.user)
         return new_token
 
     @staticmethod
-    def db_email_confirmed(request):
+    def _db_email_confirmed(request):
         if UserModel.objects.get(pk=request.user.pk).is_email_verified:
             return True
 
     @staticmethod
-    def mail_code(request, code):
+    def _mail_code(request, code):
         email_to = request.user.email
         email_confirm = EmailConfirmMessage(code=code, to=[email_to])
         email_confirm.send(fail_silently=True)
