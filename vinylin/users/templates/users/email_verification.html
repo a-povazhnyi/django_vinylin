@@ -19,7 +19,10 @@
 
         {% if not is_sent %}
           <button type="submit" class="button1 register-button">send code</button>
-          <a href="{% url 'index' %}" class="button1 try-later">try later</a>
+
+          <div class="button-wrapper try-later">
+            <a href="{% url 'index' %}" class="button1 try-later">try later</a>
+          </div>
 
         {% else %}
           <button type="submit" class="button1 register-button">confirm</button>
