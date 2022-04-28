@@ -81,6 +81,18 @@ class ProfileView(DetailView):
     template_name = 'users/profile.html'
     model = UserModel
 
+    def get(self, request, *args, **kwargs):
+        user_pk = request.user.pk
+        if user_pk == kwargs['pk']:
+            return super().get(request, *args, **kwargs)
+
+        alert_message = 'You have not enough permissions see to this page'
+        context = {
+            'alert_message': alert_message,
+            'redirect_url': '/'
+        }
+        return render(request, 'alert.html', context)
+
 
 class EmailVerification(SignRequiredMixin, TemplateView):
     template_name = 'users/email_verification.html'
