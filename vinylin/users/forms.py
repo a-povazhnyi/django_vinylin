@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth import password_validation, get_user_model
 from django.contrib.auth import forms as auth_forms
 from django.utils.translation import gettext_lazy as _
+from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.widgets import PhoneNumberInternationalFallbackWidget
 
 from .models import Profile
 
@@ -74,14 +76,25 @@ class UserForm(auth_forms.UserCreationForm):
 
 
 class ProfileForm(forms.ModelForm):
+    # phone = PhoneNumberField(
+    #     required=False,
+    #     widget=PhoneNumberPrefixWidget(attrs={
+    #         'class': 'input1',
+    #         'placeholder': 'phone',
+    #     })
+    # )
+    phone = PhoneNumberField(
+        required=False,
+        widget=PhoneNumberInternationalFallbackWidget(attrs={
+            'class': 'input1',
+            'placeholder': 'phone',
+        })
+    )
+
     class Meta:
         model = Profile
         fields = ('phone', 'age', 'country')
         widgets = {
-            'phone': forms.TextInput(attrs={
-                'class': 'input1',
-                'placeholder': 'phone',
-            }),
             'age': forms.NumberInput(attrs={
                 'class': 'input1',
                 'placeholder': 'age',
