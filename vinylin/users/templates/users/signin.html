@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="sign-form-wrapper container">
-    <form class="sign-form" method="post" action="{% url 'sign-in' %}">
+    <form class="sign-form" method="post" action="{% url 'sign_in' %}">
       {% csrf_token %}
       {{ form }}
       <a href="{% url 'password_reset' %}" class="password-reset-a">reset password</a>
