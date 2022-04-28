@@ -19,7 +19,7 @@ UserModel = auth_views.get_user_model()
 
 
 class SignInView(auth_views.LoginView):
-    template_name = 'users/signin.html'
+    template_name = 'users/sign_in.html'
     form_class = SignInForm
     redirect_field_name = ''
 
@@ -29,7 +29,7 @@ class SignInView(auth_views.LoginView):
 
 
 class SignOutView(SignRequiredMixin, auth_views.LogoutView):
-    template_name = 'users/signout.html'
+    template_name = 'users/sign_out.html'
     extra_context = {'redirect_url': '/'}
 
 
