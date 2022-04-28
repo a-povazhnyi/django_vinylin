@@ -27,6 +27,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Installed apps:
+    'phonenumber_field',
 
     # Default apps:
     'django.contrib.admin',
