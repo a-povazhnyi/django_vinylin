@@ -3,18 +3,18 @@ from django.urls import path
 from .views import (
     SignIn, SignOut, Register, SignExceptionsView, ProfileView,
     EmailVerification, EmailChange, EmailConfirm,
-    PasswordChangeView, PasswordResetView, PasswordAlertView,
+    PasswordChangeView, PasswordResetView, PasswordResetConfirmView,
+    PasswordResetDoneView, PasswordChangeCompleteView, PasswordResetCompleteView,
 )
 
 urlpatterns = [
     path('sign-in/', SignIn.as_view(), name='sign-in'),
     path('sign-out/', SignOut.as_view(), name='sign-out'),
     path('register/', Register.as_view(), name='register'),
+    path('<int:pk>/', ProfileView.as_view(), name='profile'),
     path('sign-exceptions/',
          SignExceptionsView.as_view(),
          name='sign_exceptions'),
-
-    path('<int:pk>/', ProfileView.as_view(), name='profile'),
 
     path('email-verification/',
          EmailVerification.as_view(),
@@ -32,7 +32,16 @@ urlpatterns = [
     path('password-reset/',
          PasswordResetView.as_view(),
          name='password_reset'),
+    path('password-reset/done/',
+         PasswordResetDoneView.as_view(),
+         name='password_reset_done'),
+    path('password-reset/confirm/<uidb64>/<token>/',
+         PasswordResetConfirmView.as_view(),
+         name='password_reset_confirm'),
+    path('password-reset/complete/',
+         PasswordResetCompleteView.as_view(),
+         name='password_reset_complete'),
     path('password-alert/',
-         PasswordAlertView.as_view(),
+         PasswordChangeCompleteView.as_view(),
          name='password_alert'),
 ]
