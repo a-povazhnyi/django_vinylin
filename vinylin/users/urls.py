@@ -1,29 +1,30 @@
 from django.urls import path
 
 from .views import (
-    SignIn, SignOut, Register, SignExceptionsView, ProfileView,
-    EmailVerification, EmailChange, EmailConfirm,
+    SignInView, SignOutView, RegisterView, SignExceptionsView, ProfileView,
+    EmailVerificationView, EmailChangeView, EmailConfirmView,
     PasswordChangeView, PasswordResetView, PasswordResetConfirmView,
-    PasswordResetDoneView, PasswordChangeCompleteView, PasswordResetCompleteView,
+    PasswordResetDoneView, PasswordChangeCompleteView,
+    PasswordResetCompleteView,
 )
 
 urlpatterns = [
-    path('sign-in/', SignIn.as_view(), name='sign-in'),
-    path('sign-out/', SignOut.as_view(), name='sign-out'),
-    path('register/', Register.as_view(), name='register'),
+    path('sign-in/', SignInView.as_view(), name='sign-in'),
+    path('sign-out/', SignOutView.as_view(), name='sign-out'),
+    path('register/', RegisterView.as_view(), name='register'),
     path('<int:pk>/', ProfileView.as_view(), name='profile'),
     path('sign-exceptions/',
          SignExceptionsView.as_view(),
          name='sign_exceptions'),
 
     path('email-verification/',
-         EmailVerification.as_view(),
+         EmailVerificationView.as_view(),
          name='email_verification'),
     path('email-confirm/<str:verification_code>/',
-         EmailConfirm.as_view(),
+         EmailConfirmView.as_view(),
          name='email_confirm'),
     path('email-change/',
-         EmailChange.as_view(),
+         EmailChangeView.as_view(),
          name='email_change'),
 
     path('password-change/',

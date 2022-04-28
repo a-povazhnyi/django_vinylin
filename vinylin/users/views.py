@@ -18,7 +18,7 @@ from .mixins import SignRequiredMixin
 UserModel = auth_views.get_user_model()
 
 
-class SignIn(auth_views.LoginView):
+class SignInView(auth_views.LoginView):
     template_name = 'users/signin.html'
     form_class = SignInForm
     redirect_field_name = ''
@@ -28,12 +28,12 @@ class SignIn(auth_views.LoginView):
         return super().get(request, *args, *kwargs)
 
 
-class SignOut(SignRequiredMixin, auth_views.LogoutView):
+class SignOutView(SignRequiredMixin, auth_views.LogoutView):
     template_name = 'users/signout.html'
     extra_context = {'redirect_url': '/'}
 
 
-class Register(CreateView):
+class RegisterView(CreateView):
     @anonymous_required(redirect_url='sign_exceptions')
     def get(self, request, *args, **kwargs):
         user_form = UserForm()
@@ -94,7 +94,7 @@ class ProfileView(DetailView):
         return render(request, 'alert.html', context)
 
 
-class EmailVerification(SignRequiredMixin, TemplateView):
+class EmailVerificationView(SignRequiredMixin, TemplateView):
     template_name = 'users/email_verification.html'
 
     def __init__(self, *args, **kwargs):
@@ -144,7 +144,7 @@ class EmailVerification(SignRequiredMixin, TemplateView):
         email_confirm.send(fail_silently=True)
 
 
-class EmailConfirm(SignRequiredMixin, TemplateView):
+class EmailConfirmView(SignRequiredMixin, TemplateView):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.token = TokenGenerator()
@@ -165,7 +165,7 @@ class EmailConfirm(SignRequiredMixin, TemplateView):
         return render(request, 'users/email_confirmed.html', context)
 
 
-class EmailChange(SignRequiredMixin, UpdateView):
+class EmailChangeView(SignRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         email_form = EmailForm()
         user_email = UserModel.objects.get(pk=request.user.pk).email
