@@ -191,6 +191,12 @@ li.profile-button {
     margin-bottom: 1px;
 }
 
+.try-later {
+    width: 100px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
 a.password-reset-a {
     text-decoration: underline;
     margin-bottom: 50px;
@@ -298,6 +304,21 @@ a.email-status:hover .email-status-desc {
     font-size: 50px;
     font-weight: bold;
     margin: 40px 0 40px 0;
+}
+
+#id_email {
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 350px;
+    font-size: 22px;
+    margin: 0 auto 50px auto;
+    padding: 7px 5px;
+    text-align: center;
+}
+
+.mid-button {
+    margin: 30px auto;
+    width: 150px;
 }
 
 @font-face {
