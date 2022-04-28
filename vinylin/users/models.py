@@ -22,7 +22,6 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # phone = models.CharField(max_length=20, blank=True, null=True)
     phone = PhoneNumberField(blank=True, null=True)
     age = models.SmallIntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(170)],
@@ -34,7 +33,7 @@ class Profile(models.Model):
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
-        related_name='country'
+        related_name='countries'
     )
     balance = models.DecimalField(default=0, max_digits=6, decimal_places=2)
 

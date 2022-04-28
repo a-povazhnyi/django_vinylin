@@ -69,17 +69,15 @@ class RegisterView(CreateView):
         return render(request, 'users/register.html', context)
 
 
-class SignExceptionsView(TemplateView):
-    template_name = 'alert.html'
-    extra_context = {
-        'redirect_url': '/',
-        'alert_message': 'This page is not accessible to authorized users!'
-    }
-
-
 class ProfileView(DetailView):
     template_name = 'users/profile.html'
-    model = UserModel
+
+    def get_queryset(self):
+        user_pk = self.request.user.pk
+        return UserModel.objects\
+            .select_related('profile')\
+            .select_related('profile__country')\
+            .filter(pk=user_pk)
 
     def get(self, request, *args, **kwargs):
         user_pk = request.user.pk
@@ -92,6 +90,14 @@ class ProfileView(DetailView):
             'redirect_url': '/'
         }
         return render(request, 'alert.html', context)
+
+
+class SignExceptionsView(TemplateView):
+    template_name = 'alert.html'
+    extra_context = {
+        'redirect_url': '/',
+        'alert_message': 'This page is not accessible to authorized users!'
+    }
 
 
 class EmailVerificationView(SignRequiredMixin, TemplateView):
@@ -168,13 +174,13 @@ class EmailConfirmView(SignRequiredMixin, TemplateView):
 class EmailChangeView(SignRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         email_form = EmailForm()
-        user_email = UserModel.objects.get(pk=request.user.pk).email
+        user_email = request.user.email
 
         context = {'email_form': email_form, 'current_email': user_email}
         return render(request, 'users/email_change.html', context)
 
     def post(self, request, *args, **kwargs):
-        user = UserModel.objects.get(pk=request.user.pk)
+        user = request.user
         current_email = user.email
 
         email_form = EmailForm(data=request.POST)
