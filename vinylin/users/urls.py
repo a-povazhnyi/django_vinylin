@@ -8,6 +8,7 @@ from .views import (
     PasswordResetCompleteView,
 )
 
+
 urlpatterns = [
     path('sign-in/', SignInView.as_view(), name='sign_in'),
     path('sign-out/', SignOutView.as_view(), name='sign_out'),
@@ -20,7 +21,7 @@ urlpatterns = [
     path('email-verification/',
          EmailVerificationView.as_view(),
          name='email_verification'),
-    path('email-confirm/<str:verification_code>/',
+    path('email-confirm/<str:token>/',
          EmailConfirmView.as_view(),
          name='email_confirm'),
     path('email-change/',

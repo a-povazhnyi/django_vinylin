@@ -83,13 +83,12 @@ class ProfileView(DetailView):
             .filter(pk=user_pk)
 
     def get(self, request, *args, **kwargs):
-        user_pk = request.user.pk
-        if user_pk == kwargs['pk']:
+        if request.user.pk == kwargs['pk']:
             return super().get(request, *args, **kwargs)
 
-        alert_message = 'You have not enough permissions see to this page'
         context = {
-            'alert_message': alert_message,
+            'alert_message': ('You have not enough permissions '
+                              'to see this page'),
             'redirect_url': '/'
         }
         return render(request, 'alert.html', context)
@@ -108,37 +107,37 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.token = TokenGenerator()
+        self._token_generator = TokenGenerator()
 
     def get(self, request, *args, **kwargs):
         if self._db_email_confirmed(request):
             context = {'email_confirmed': True}
             return render(request, 'users/email_verification.html', context)
 
-        code_form = TokenForm()
-        context = {'code_form': code_form}
+        token_form = TokenForm()
+        context = {'token_form': token_form}
         return render(request, 'users/email_verification.html', context)
 
     def post(self, request, *args, **kwargs):
-        code_form = TokenForm(data=request.POST)
+        token_form = TokenForm(data=request.POST)
 
-        if not code_form.changed_data and code_form.is_valid():
+        if not token_form.changed_data and token_form.is_valid():
             code = self._make_token(request)
             self._mail_code(request, code)
 
-            context = {'code_form': code_form, 'is_sent': True}
+            context = {'token_form': token_form, 'is_sent': True}
             return render(request, 'users/email_verification.html', context)
 
-        user_code = code_form.data.get('code')
-        if user_code and code_form.is_valid():
-            return redirect(f'/users/email-confirm/{user_code}/',
-                            user_code=user_code)
+        user_token = token_form.data.get('code')
+        if not user_token or not token_form.is_valid():
+            context = {'token_form': token_form, 'is_sent': False}
+            return render(request, 'users/email_verification.html', context)
 
-        context = {'code_form': code_form, 'is_sent': False}
-        return render(request, 'users/email_verification.html', context)
+        return redirect(f'/users/email-confirm/{user_token}/',
+                        user_code=user_token)
 
     def _make_token(self, request):
-        new_token = self.token.make_token(request.user)
+        new_token = self._token_generator.make_token(request.user)
         return new_token
 
     @staticmethod
@@ -156,47 +155,52 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
 class EmailConfirmView(SignRequiredMixin, TemplateView):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.token = TokenGenerator()
+        self._token_generator = TokenGenerator()
 
     def get(self, request, *args, **kwargs):
-        user_id = request.user.pk
-        user_code = kwargs.get('verification_code')
+        user = request.user
+        user_token = kwargs.get('token')
+        user_token_checked = self._token_generator.check_token(
+            user=user,
+            token=user_token
+        )
 
-        if user_code and self.token.check_token(request.user, user_code):
-            user = UserModel.objects.get(pk=user_id)
-            user.is_email_verified = True
-            user.save()
-
-            context = {'email_confirmed': True}
+        if not user_token or not user_token_checked:
+            context = {'email_confirmed': False}
             return render(request, 'users/email_confirmed.html', context)
 
-        context = {'email_confirmed': False}
+        user.is_email_verified = True
+        user.save()
+
+        context = {'email_confirmed': True}
         return render(request, 'users/email_confirmed.html', context)
 
 
 class EmailChangeView(SignRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         email_form = EmailForm()
-        user_email = request.user.email
-
-        context = {'email_form': email_form, 'current_email': user_email}
+        context = {
+            'email_form': email_form,
+            'current_email': request.user.email,
+        }
         return render(request, 'users/email_change.html', context)
 
     def post(self, request, *args, **kwargs):
         user = request.user
-        current_email = user.email
-
         email_form = EmailForm(data=request.POST)
         new_email = email_form.data.get('new_email')
 
-        if email_form.is_valid() and new_email:
-            user.email = new_email
-            user.is_email_verified = False
-            user.save()
-            return redirect('email_verification')
+        if not new_email or not email_form.is_valid():
+            context = {
+                'email_form': email_form,
+                'current_email': user.email,
+            }
+            return render(request, 'users/email_change.html', context)
 
-        context = {'email_form': email_form, 'current_email': current_email}
-        return render(request, 'users/email_change.html', context)
+        user.email = new_email
+        user.is_email_verified = False
+        user.save()
+        return redirect('email_verification')
 
 
 class PasswordChangeView(SignRequiredMixin, auth_views.PasswordChangeView):
