@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.views.generic import (
-    UpdateView, CreateView, TemplateView, DetailView
+    UpdateView,
+    CreateView,
+    TemplateView,
+    DetailView,
 )
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
@@ -9,7 +12,7 @@ from django.urls import reverse
 
 from .models import Profile
 from .forms import SignInForm, UserForm, ProfileForm, TokenForm, EmailForm
-from .decorators import anonymous_required
+from .decorators import anonymous_only
 from .tokens import TokenGenerator
 from .backends import EmailConfirmMessage
 from .mixins import SignRequiredMixin
@@ -23,7 +26,7 @@ class SignInView(auth_views.LoginView):
     form_class = SignInForm
     redirect_field_name = ''
 
-    @anonymous_required(redirect_url='sign_exceptions')
+    @anonymous_only(redirect_url='sign_exceptions')
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, *kwargs)
 
@@ -34,7 +37,7 @@ class SignOutView(SignRequiredMixin, auth_views.LogoutView):
 
 
 class RegisterView(CreateView):
-    @anonymous_required(redirect_url='sign_exceptions')
+    @anonymous_only(redirect_url='sign_exceptions')
     def get(self, request, *args, **kwargs):
         user_form = UserForm()
         profile_form = ProfileForm()
@@ -44,7 +47,7 @@ class RegisterView(CreateView):
         }
         return render(request, 'users/register.html', context)
 
-    @anonymous_required(redirect_url='sign_exceptions')
+    @anonymous_only(redirect_url='sign_exceptions')
     def post(self, request, *args, **kwargs):
         user_form = UserForm(data=request.POST)
         profile_form = ProfileForm(data=request.POST)

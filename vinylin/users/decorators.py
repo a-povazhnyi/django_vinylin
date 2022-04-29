@@ -1,7 +1,11 @@
 from django.shortcuts import redirect
+from django.urls import reverse_lazy
 
 
-def anonymous_required(redirect_url='/'):
+index_url = reverse_lazy('index')
+
+
+def anonymous_only(redirect_url=index_url):
     def outer(func):
         def wrapper(*args, **kwargs):
             request = args[1]
