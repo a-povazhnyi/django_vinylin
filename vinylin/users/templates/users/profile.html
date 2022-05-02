@@ -31,6 +31,14 @@
           </span>
         </li>
 
+        {% if user.profile.age %}
+        <li class="profile-li">
+          <span>age:
+            <span class="profile-data">{{ user.profile.age }}</span>
+          </span>
+        </li>
+        {% endif %}
+
         <li class="profile-li">
           <span>country:
             <span class="profile-data">{{ user.profile.country }}</span>
