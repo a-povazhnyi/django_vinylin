@@ -18,23 +18,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG')))
 
-ALLOWED_HOSTS = []
-INTERNAL_IPS = ['127.0.0.1']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+INTERNAL_IPS = [os.environ.get('INTERNAL_IPS')]
 
 
 # Application definition
-
 INSTALLED_APPS = [
-    # My apps:
-    'users',
-    'vinyl',
-
-    # Installed apps:
-    'phonenumber_field',
-    'debug_toolbar',
-
     # Default apps:
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +33,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Installed apps:
+    'phonenumber_field',
+    'debug_toolbar',
+
+    # My apps:
+    'users',
+    'vinyl',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +83,7 @@ WSGI_APPLICATION = 'vinylin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DB_ENGINE'),
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
@@ -99,16 +98,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': os.environ.get('PASSWORD_VALIDATOR_A'),
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': os.environ.get('PASSWORD_VALIDATOR_B'),
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': os.environ.get('PASSWORD_VALIDATOR_C'),
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': os.environ.get('PASSWORD_VALIDATOR_D'),
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
