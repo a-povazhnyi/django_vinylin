@@ -86,7 +86,7 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ('phone', 'age', 'country')
+        fields = ('phone', 'birthday', 'country')
         widgets = {
             'age': forms.NumberInput(attrs={
                 'class': 'input1',
