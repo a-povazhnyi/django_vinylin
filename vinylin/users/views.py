@@ -14,7 +14,7 @@ from .models import Profile
 from .forms import SignInForm, UserForm, ProfileForm, TokenForm, EmailForm
 from .decorators import anonymous_only
 from .tokens import TokenGenerator
-from .backends import EmailConfirmMessage
+from .emails import EmailConfirmMessage
 from .mixins import SignRequiredMixin
 
 
