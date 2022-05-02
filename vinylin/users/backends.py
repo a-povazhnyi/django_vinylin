@@ -12,11 +12,7 @@ class EmailSignInBackend(ModelBackend):
         try:
             user = UserModel.objects.get(Q(email__iexact=username))
         except UserModel.DoesNotExist:
-            UserModel().set_password(password)
-            return
-        except UserModel.MultipleObjectsReturned:
-            user = UserModel.objects.filter(
-                Q(email__iexact=username)).order_by('id').first()
+            return None
 
         if user.check_password(password) and self.user_can_authenticate(user):
             return user
