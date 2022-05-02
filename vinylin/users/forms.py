@@ -76,13 +76,6 @@ class UserForm(auth_forms.UserCreationForm):
 
 
 class ProfileForm(forms.ModelForm):
-    # phone = PhoneNumberField(
-    #     required=False,
-    #     widget=PhoneNumberPrefixWidget(attrs={
-    #         'class': 'input1',
-    #         'placeholder': 'phone',
-    #     })
-    # )
     phone = PhoneNumberField(
         required=False,
         widget=PhoneNumberInternationalFallbackWidget(attrs={
