@@ -1,11 +1,13 @@
+from datetime import datetime
+
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import AbstractUser
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
 from phonenumber_field.modelfields import PhoneNumberField
 
+from users.validators import validate_birthday
 from vinyl.models import Country
 
 
@@ -23,10 +25,10 @@ class User(AbstractUser):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = PhoneNumberField(blank=True, null=True)
-    age = models.SmallIntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(170)],
+    birthday = models.DateField(
         blank=True,
-        null=True
+        null=True,
+        validators=[validate_birthday]
     )
     country = models.ForeignKey(
         Country,
@@ -39,6 +41,14 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user} ({self.pk})'
+
+    @property
+    def age(self):
+        if not self.birthday:
+            return None
+
+        current_date = datetime.today().date()
+        return int((current_date - self.birthday).days / 365.2425)
 
 
 @receiver(post_save, sender=User)
