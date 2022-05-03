@@ -8,7 +8,7 @@ from django.views.generic import (
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
 from django.contrib.auth.forms import PasswordChangeForm
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 
 from .forms import SignInForm, UserForm, TokenForm, EmailForm
 from .decorators import anonymous_only
@@ -18,6 +18,7 @@ from .mixins import SignRequiredMixin
 
 
 UserModel = auth_views.get_user_model()
+INDEX_URL = reverse_lazy('index')
 
 
 class SignInView(auth_views.LoginView):
@@ -32,7 +33,7 @@ class SignInView(auth_views.LoginView):
 
 class SignOutView(SignRequiredMixin, auth_views.LogoutView):
     template_name = 'users/sign_out.html'
-    extra_context = {'redirect_url': '/'}
+    extra_context = {'redirect_url': INDEX_URL}
 
 
 class RegisterView(CreateView):
@@ -66,21 +67,20 @@ class ProfileView(DetailView):
             .filter(pk=user_pk)
 
     def get(self, request, *args, **kwargs):
-        if request.user.pk == kwargs['pk']:
-            return super().get(request, *args, **kwargs)
-
-        context = {
-            'alert_message': ('You have not enough permissions '
-                              'to see this page'),
-            'redirect_url': '/'
-        }
-        return render(request, 'alert.html', context)
+        if request.user.pk != kwargs['pk']:
+            context = {
+                'alert_message': ('You have not enough permissions '
+                                  'to see this page'),
+                'redirect_url': INDEX_URL,
+            }
+            return render(request, 'alert.html', context)
+        return super().get(request, *args, **kwargs)
 
 
 class SignExceptionsView(TemplateView):
     template_name = 'alert.html'
     extra_context = {
-        'redirect_url': '/',
+        'redirect_url': INDEX_URL,
         'alert_message': 'This page is not accessible to authorized users!'
     }
 
@@ -93,12 +93,12 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
         self._token_generator = TokenGenerator()
 
     def get(self, request, *args, **kwargs):
-        if self._db_email_confirmed(request):
-            context = {'email_confirmed': True}
+        if not self._db_email_confirmed(request):
+            token_form = TokenForm()
+            context = {'token_form': token_form}
             return render(request, 'users/email_verification.html', context)
 
-        token_form = TokenForm()
-        context = {'token_form': token_form}
+        context = {'email_confirmed': True}
         return render(request, 'users/email_verification.html', context)
 
     def post(self, request, *args, **kwargs):
@@ -154,7 +154,6 @@ class EmailConfirmView(SignRequiredMixin, TemplateView):
 
         user.is_email_verified = True
         user.save()
-
         context = {'email_confirmed': True}
         return render(request, 'users/email_confirmed.html', context)
 
@@ -197,7 +196,7 @@ class PasswordChangeView(SignRequiredMixin, auth_views.PasswordChangeView):
 class PasswordChangeCompleteView(TemplateView):
     template_name = 'alert.html'
     extra_context = {
-        'redirect_url': '/',
+        'redirect_url': INDEX_URL,
         'alert_message': 'Your password is changed successfully!',
     }
 
@@ -215,7 +214,7 @@ class PasswordResetDoneView(auth_views.PasswordResetDoneView):
     """
     template_name = 'alert.html'
     extra_context = {
-        'redirect_url': '/',
+        'redirect_url': INDEX_URL,
         'alert_message': 'Check your e-mail to reset the password...'
     }
 
@@ -233,6 +232,6 @@ class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
     """
     template_name = 'alert.html'
     extra_context = {
-        'redirect_url': '/users/sign-in/',
+        'redirect_url': reverse_lazy('sign_in'),
         'alert_message': 'Your password has been changed. Sign in!',
     }
