@@ -7,16 +7,22 @@ from django.dispatch import receiver
 from django.urls import reverse
 from phonenumber_field.modelfields import PhoneNumberField
 
+from users.backends import UserManager
 from users.validators import validate_birthday
 from vinyl.models import Country
 
 
 class User(AbstractUser):
+    REQUIRED_FIELDS = []
+    USERNAME_FIELD = 'email'
+    username = None
     email = models.EmailField(unique=True)
     is_email_verified = models.BooleanField(default=False)
 
+    objects = UserManager()
+
     def __str__(self):
-        return f'{self.username} ({self.pk})'
+        return f'({self.pk}) {self.email}'
 
     def get_absolute_url(self):
         return reverse('profile', kwargs={'pk': self.pk})

@@ -34,7 +34,7 @@ class SignInForm(auth_forms.AuthenticationForm):
 class UserForm(auth_forms.UserCreationForm):
     class Meta:
         model = UserModel
-        fields = ('username', 'email', 'first_name', 'last_name')
+        fields = ('email', 'first_name', 'last_name')
         widgets = {
             'username': forms.TextInput(attrs={
                 'class': 'input1',

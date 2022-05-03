@@ -142,9 +142,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
 
-# Verification via email
-AUTHENTICATION_BACKENDS = ['users.backends.EmailSignInBackend']
-
 LOGIN_REDIRECT_URL = '/'
 
 PASSWORD_RESET_TIMEOUT = 300
