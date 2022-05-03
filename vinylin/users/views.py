@@ -10,8 +10,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import PasswordChangeForm
 from django.urls import reverse
 
-from .models import Profile
-from .forms import SignInForm, UserForm, ProfileForm, TokenForm, EmailForm
+from .forms import SignInForm, UserForm, TokenForm, EmailForm
 from .decorators import anonymous_only
 from .tokens import TokenGenerator
 from .emails import EmailConfirmMessage
