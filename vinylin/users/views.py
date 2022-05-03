@@ -60,13 +60,11 @@ class ProfileView(DetailView):
     template_name = 'users/profile.html'
 
     def get_queryset(self):
-        user_pk = self.request.user.pk
-        return UserModel.objects\
-            .select_related('profile')\
-            .select_related('profile__country')\
-            .filter(pk=user_pk)
+        user_pk = self.kwargs['pk']
+        return UserModel.objects.with_profile().filter(pk=user_pk)
 
     def get(self, request, *args, **kwargs):
+        """Disallows a user from viewing other`s profiles"""
         if request.user.pk != kwargs['pk']:
             context = {
                 'alert_message': ('You have not enough permissions '
