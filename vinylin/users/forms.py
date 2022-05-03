@@ -124,32 +124,10 @@ class UserForm(auth_forms.UserCreationForm):
         profile_data = self._get_profile_data()
         profile.phone = profile_data['phone']
         profile.birthday = profile_data['birthday']
-        profile.country = profile_data['country']
+        profile.country_id = profile_data['country']
 
         profile.save()
         return profile
-
-
-class ProfileForm(forms.ModelForm):
-    phone = PhoneNumberField(
-        required=False,
-        widget=PhoneNumberInternationalFallbackWidget(attrs={
-            'class': 'input1',
-            'placeholder': 'phone',
-        })
-    )
-
-    class Meta:
-        model = Profile
-        fields = ('phone', 'birthday', 'country')
-        widgets = {
-            'age': forms.NumberInput(attrs={
-                'class': 'input1',
-                'placeholder': 'age',
-                'min': '0',
-                'max': '170',
-            }),
-        }
 
 
 class TokenForm(forms.Form):
