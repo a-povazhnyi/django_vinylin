@@ -7,7 +7,7 @@ from django.dispatch import receiver
 from django.urls import reverse
 from phonenumber_field.modelfields import PhoneNumberField
 
-from users.backends import UserManager
+from users.managers import UserManager
 from users.validators import validate_birthday
 from vinyl.models import Country
 
