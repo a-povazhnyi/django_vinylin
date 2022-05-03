@@ -1,7 +1,9 @@
 import os
-from dotenv import load_dotenv
-
 from pathlib import Path
+
+from dotenv import load_dotenv
+from django.urls import reverse_lazy
+
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '../../.env')
 if os.path.exists(dotenv_path):
@@ -142,7 +144,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = reverse_lazy('index')
 
 PASSWORD_RESET_TIMEOUT = 300
 
