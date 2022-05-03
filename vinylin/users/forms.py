@@ -6,6 +6,7 @@ from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberInternationalFallbackWidget
 
 from .models import Profile
+from vinyl.countries.country_choices import COUNTRIES_FORM_CHOICES
 
 UserModel = get_user_model()
 
@@ -73,6 +74,60 @@ class UserForm(auth_forms.UserCreationForm):
         strip=False,
         help_text=_("Enter the same password as before, for verification."),
     )
+
+    phone = PhoneNumberField(
+        required=False,
+        widget=PhoneNumberInternationalFallbackWidget(attrs={
+            'class': 'input1',
+            'placeholder': 'phone',
+        })
+    )
+
+    birthday = forms.DateField(
+        required=False,
+        label=_('Birthday'),
+        widget=forms.TextInput(attrs={'type': 'date', 'class': 'input1'}),
+    )
+
+    country = forms.ChoiceField(required=False, choices=COUNTRIES_FORM_CHOICES)
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.set_password(self.cleaned_data["password1"])
+
+        if commit:
+            user.save()
+
+            if not self._is_profile_blank():
+                profile = Profile.objects.get(user=user.pk)
+                self._save_profile(profile=profile)
+        return user
+
+    def _is_profile_blank(self):
+        for field in ('phone', 'birthday', 'country'):
+            if field in self.changed_data:
+                return False
+        return True
+
+    def _get_profile_data(self):
+        phone = self.cleaned_data['phone']
+        phone = phone if phone else None
+
+        profile_data = {
+            'phone': phone,
+            'birthday': self.cleaned_data['birthday'],
+            'country': self.cleaned_data['country'],
+        }
+        return profile_data
+
+    def _save_profile(self, profile: Profile):
+        profile_data = self._get_profile_data()
+        profile.phone = profile_data['phone']
+        profile.birthday = profile_data['birthday']
+        profile.country = profile_data['country']
+
+        profile.save()
+        return profile
 
 
 class ProfileForm(forms.ModelForm):
