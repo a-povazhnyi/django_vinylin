@@ -32,16 +32,15 @@ class Artist(models.Model):
 
 
 class Vinyl(Product):
+    vinyl_title = models.CharField(max_length=150)
     artist = models.ForeignKey(
         to=Artist,
         on_delete=models.CASCADE,
     )
-    genre = models.ForeignKey(
-        to=Genre,
-        on_delete=models.SET_NULL,
-    )
+    genre = models.ManyToManyField(Genre)
     country = models.ForeignKey(
         to=Country,
+        null=True,
         on_delete=models.SET_NULL,
     )
     format = models.CharField(max_length=50, blank=True, null=True)
