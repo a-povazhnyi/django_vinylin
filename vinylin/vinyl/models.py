@@ -37,7 +37,7 @@ class Vinyl(Product):
         to=Artist,
         on_delete=models.CASCADE,
     )
-    genre = models.ManyToManyField(Genre)
+    genres = models.ManyToManyField(Genre)
     country = models.ForeignKey(
         to=Country,
         null=True,
