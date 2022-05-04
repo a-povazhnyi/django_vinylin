@@ -22,6 +22,7 @@ class Tag(models.Model):
 class Sale(models.Model):
     product = models.OneToOneField(
         to='Product',
+        null=True,
         on_delete=models.SET_NULL,
     )
     amount = models.IntegerField()
