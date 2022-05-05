@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if email_confirmed %}
+    <div class="email-description container">
+      <h2 class="email-ver">Your e-mail is already confirmed!</h2>
+    </div>
+
+  {% else %}
+
+    <div class="email-description container">
+      <h2 class="email-ver">Confirm your e-mail</h2>
+    </div>
+
+    <div class="sign-form-wrapper container">
+      <form class="sign-form register-form"
+            method="post" action="{% url 'email_verification' %}">
+        {% csrf_token %}
+        {{ token_form }}
+
+        {% if not is_sent %}
+          <button type="submit" class="button1 register-button">send code</button>
+
+          <div class="button-wrapper try-later">
+            <a href="{% url 'index' %}" class="button1 try-later">try later</a>
+          </div>
+
+        {% else %}
+          <button type="submit" class="button1 register-button">confirm</button>
+        {% endif %}
+      </form>
+    </div>
+  {% endif %}
+{% endblock content %}

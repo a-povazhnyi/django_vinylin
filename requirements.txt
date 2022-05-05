@@ -1,0 +1,11 @@
+asgiref==3.5.0
+Babel==2.10.1
+Django==3.2.13
+django-debug-toolbar==3.2.4
+django-phonenumber-field==6.1.0
+phonenumbers==8.12.47
+psycopg2-binary==2.9.3
+python-dotenv==0.20.0
+pytz==2022.1
+six==1.16.0
+sqlparse==0.4.2

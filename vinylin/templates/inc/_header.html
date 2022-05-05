@@ -13,40 +13,49 @@
           <img src="{% static "img/cart.svg" %}" alt="header-cart"
                class="header-cart">
         </a>
+        {% if user.is_email_verified == False %}
+          <div class="email-status-desc">
+            <a href="{% url 'email_verification' %}">Verify your e-mail to make orders</a>
+          </div>
+        {% endif %}
       </div>
       <div class="header-bottom-border"></div>
     </div>
   </div>
 </header>
+
 <nav>
   <div class="nav-wrapper container">
     <div class="sign-section">
 
-      {% if not user.is_authenticated %}
-        <ul class="sign-ul">
+      <ul class="sign-ul">
+        {% if not user.is_authenticated %}
           <li class="sign-li">
-            <a class="button1 sign-link" href="{% url 'sign-in' %}">sign-in</a>
+            <div class="button-wrapper-sign">
+              <a class="button1 sign-link" href="{% url 'sign_in' %}">sign-in</a>
+            </div>
           </li>
 
-          <li>
-            <a class="button1 register-link" href="{% url 'register' %}">register</a>
+          <li class="sign-li">
+            <div class="button-wrapper-sign">
+              <a class="button1 register-link" href="{% url 'register' %}">register</a>
+            </div>
           </li>
-        </ul>
 
-      {% else %}
-        <ul class="signed-ul">
+        {% else %}
+
           <li class="signed-li">
-            {% if not user.first_name %}
-              <span class="user-greetings">Hello, {{ user.username }}!</span>
-            {% else %}
-              <span class="user-greetings">Hello, {{ user.first_name }}!</span>
-              </li>
-            {% endif %}
-          <li class="signed-li">
-            <a href="{% url 'sign-out' %}" class="button1">sign-out</a>
+            <div class="button-wrapper-sign">
+              <a href="{{ user.get_absolute_url }}" class="button1">profile</a>
+            </div>
           </li>
-        </ul>
-      {% endif %}
+          </ul>
+        {% endif %}
     </div>
+    {% if user.is_email_verified == False %}
+      <div class="email-status-desc">
+        <a href="{% url 'email_verification' %}">Verify your e-mail to make orders</a>
+      </div>
+    {% endif %}
   </div>
 </nav>

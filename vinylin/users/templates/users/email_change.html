@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="sign-form-wrapper container">
+  <span>Your current e-mail: {{ current_email }}</span>
+    <form class="sign-form register-form"
+          method="post" action="{% url 'email_change' %}">
+      {% csrf_token %}
+      {{ email_form }}
+      <button type="submit" class="button1 register-button">change e-mail</button>
+    </form>
+  </div>
+{% endblock content %}

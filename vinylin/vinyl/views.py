@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import TemplateView
 
 
-def index(request):
-    return render(request, 'vinyl/index.html')
+class IndexView(TemplateView):
+    template_name = 'vinyl/index.html'
