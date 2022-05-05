@@ -1,11 +1,17 @@
 from django.contrib import admin
 
-from .models import Category, Tag, Sale, Image, Product, Storage
+from .forms import ProductAdminForm
+from .models import Category, Tag, Discount, Image, Product, Storage
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    form = ProductAdminForm
+    save_on_top = True
 
 
 admin.site.register(Category)
 admin.site.register(Tag)
-admin.site.register(Sale)
+admin.site.register(Discount)
 admin.site.register(Image)
-admin.site.register(Product)
 admin.site.register(Storage)
