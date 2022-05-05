@@ -1,0 +1,23 @@
+[
+  {
+    "model": "vinyl.tag",
+    "pk": 1,
+    "fields": {
+      "title": "Bestseller"
+    }
+  },
+  {
+    "model": "vinyl.tag",
+    "pk": 2,
+    "fields": {
+      "title": "New Release"
+    }
+  },
+  {
+    "model": "vinyl.tag",
+    "pk": 3,
+    "fields": {
+      "title": "Rare"
+    }
+  }
+]
