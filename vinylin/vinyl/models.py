@@ -22,6 +22,9 @@ class Genre(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        ordering = ['pk']
+
 
 class Artist(models.Model):
     name = models.CharField(max_length=200)
