@@ -1,0 +1,3215 @@
+[
+  {
+    "model": "vinyl.genre",
+    "pk": 1,
+    "fields": {
+      "title": "Acid Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 2,
+    "fields": {
+      "title": "Acid Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 3,
+    "fields": {
+      "title": "Acoustic Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 4,
+    "fields": {
+      "title": "Acoustic Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 5,
+    "fields": {
+      "title": "Acoustic Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 6,
+    "fields": {
+      "title": "Adult Standards"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 7,
+    "fields": {
+      "title": "Afropop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 8,
+    "fields": {
+      "title": "Alberta Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 9,
+    "fields": {
+      "title": "Album Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 10,
+    "fields": {
+      "title": "Alternative Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 11,
+    "fields": {
+      "title": "Alternative Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 12,
+    "fields": {
+      "title": "Alternative Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 13,
+    "fields": {
+      "title": "Alternative R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 14,
+    "fields": {
+      "title": "Alternative Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 15,
+    "fields": {
+      "title": "Ambient"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 16,
+    "fields": {
+      "title": "American Folk Revival"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 17,
+    "fields": {
+      "title": "Anti-Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 18,
+    "fields": {
+      "title": "Appalachian Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 19,
+    "fields": {
+      "title": "Arab Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 20,
+    "fields": {
+      "title": "Arab Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 21,
+    "fields": {
+      "title": "Art Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 22,
+    "fields": {
+      "title": "Art Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 23,
+    "fields": {
+      "title": "Atl Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 24,
+    "fields": {
+      "title": "Atl Trap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 25,
+    "fields": {
+      "title": "Australian Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 26,
+    "fields": {
+      "title": "Avant-Garde"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 27,
+    "fields": {
+      "title": "Avant-Garde Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 28,
+    "fields": {
+      "title": "Bachata"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 29,
+    "fields": {
+      "title": "Bachata Dominicana"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 30,
+    "fields": {
+      "title": "Background Music"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 31,
+    "fields": {
+      "title": "Background Piano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 32,
+    "fields": {
+      "title": "Bakersfield Sound"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 33,
+    "fields": {
+      "title": "Ballroom"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 34,
+    "fields": {
+      "title": "Baroque"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 35,
+    "fields": {
+      "title": "Bass House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 36,
+    "fields": {
+      "title": "Bass Trap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 37,
+    "fields": {
+      "title": "Bebop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 38,
+    "fields": {
+      "title": "Big Band"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 39,
+    "fields": {
+      "title": "Big Room"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 40,
+    "fields": {
+      "title": "Black Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 41,
+    "fields": {
+      "title": "Bluegrass"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 42,
+    "fields": {
+      "title": "Bluegrass Gospel"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 43,
+    "fields": {
+      "title": "Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 44,
+    "fields": {
+      "title": "Blues Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 45,
+    "fields": {
+      "title": "Blues Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 46,
+    "fields": {
+      "title": "Bolero"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 47,
+    "fields": {
+      "title": "Bossa Nova"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 48,
+    "fields": {
+      "title": "Bossa Nova"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 49,
+    "fields": {
+      "title": "Bounce"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 50,
+    "fields": {
+      "title": "Bow Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 51,
+    "fields": {
+      "title": "Breakbeat"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 52,
+    "fields": {
+      "title": "Breakcore"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 53,
+    "fields": {
+      "title": "Brill Building Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 54,
+    "fields": {
+      "title": "British Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 55,
+    "fields": {
+      "title": "British Invasion"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 56,
+    "fields": {
+      "title": "Britpop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 57,
+    "fields": {
+      "title": "Brostep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 58,
+    "fields": {
+      "title": "Brutal Death Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 59,
+    "fields": {
+      "title": "C-Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 60,
+    "fields": {
+      "title": "Cajun"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 61,
+    "fields": {
+      "title": "Calming Instrumental"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 62,
+    "fields": {
+      "title": "Canadian Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 63,
+    "fields": {
+      "title": "Canzone Genovese"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 64,
+    "fields": {
+      "title": "Celtic"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 65,
+    "fields": {
+      "title": "Celtic Harp"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 66,
+    "fields": {
+      "title": "Chamber Ensemble"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 67,
+    "fields": {
+      "title": "Chamber Orchestra"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 68,
+    "fields": {
+      "title": "Chicago Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 69,
+    "fields": {
+      "title": "Chicago Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 70,
+    "fields": {
+      "title": "Chicha"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 71,
+    "fields": {
+      "title": "Chillstep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 72,
+    "fields": {
+      "title": "Choral"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 73,
+    "fields": {
+      "title": "Christian Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 74,
+    "fields": {
+      "title": "Classic Country Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 75,
+    "fields": {
+      "title": "Classic Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 76,
+    "fields": {
+      "title": "Classic Soundtrack"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 77,
+    "fields": {
+      "title": "Classical"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 78,
+    "fields": {
+      "title": "Classical Cello"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 79,
+    "fields": {
+      "title": "Classical Era"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 80,
+    "fields": {
+      "title": "Classical Guitar"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 81,
+    "fields": {
+      "title": "Classical Jazz Fusion"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 82,
+    "fields": {
+      "title": "Classical Piano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 83,
+    "fields": {
+      "title": "Classical Soprano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 84,
+    "fields": {
+      "title": "Classify"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 85,
+    "fields": {
+      "title": "Classify"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 86,
+    "fields": {
+      "title": "Colombian Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 87,
+    "fields": {
+      "title": "Complextro"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 88,
+    "fields": {
+      "title": "Compositional Ambient"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 89,
+    "fields": {
+      "title": "Conscious Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 90,
+    "fields": {
+      "title": "Contemporary Classical"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 91,
+    "fields": {
+      "title": "Contemporary Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 92,
+    "fields": {
+      "title": "Contemporary Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 93,
+    "fields": {
+      "title": "Contemporary Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 94,
+    "fields": {
+      "title": "Contemporary Post-Bop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 95,
+    "fields": {
+      "title": "Cool Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 96,
+    "fields": {
+      "title": "Corsican Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 97,
+    "fields": {
+      "title": "Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 98,
+    "fields": {
+      "title": "Country Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 99,
+    "fields": {
+      "title": "Country Dawn"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 100,
+    "fields": {
+      "title": "Country Gospel"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 101,
+    "fields": {
+      "title": "Country Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 102,
+    "fields": {
+      "title": "Country Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 103,
+    "fields": {
+      "title": "Country Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 104,
+    "fields": {
+      "title": "Country Road"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 105,
+    "fields": {
+      "title": "Country Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 106,
+    "fields": {
+      "title": "Cowboy Western"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 107,
+    "fields": {
+      "title": "Cowpunk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 108,
+    "fields": {
+      "title": "Crossover Thrash"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 109,
+    "fields": {
+      "title": "Crunk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 110,
+    "fields": {
+      "title": "Cumbia"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 111,
+    "fields": {
+      "title": "Dance Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 112,
+    "fields": {
+      "title": "Dance Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 113,
+    "fields": {
+      "title": "Dance-Punk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 114,
+    "fields": {
+      "title": "Dansband"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 115,
+    "fields": {
+      "title": "Dark Black Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 116,
+    "fields": {
+      "title": "Death Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 117,
+    "fields": {
+      "title": "Deep Adult Standards"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 118,
+    "fields": {
+      "title": "Deep Big Room"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 119,
+    "fields": {
+      "title": "Deep Groove House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 120,
+    "fields": {
+      "title": "Deep House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 121,
+    "fields": {
+      "title": "Deep Tropical House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 122,
+    "fields": {
+      "title": "Delta Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 123,
+    "fields": {
+      "title": "Desert Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 124,
+    "fields": {
+      "title": "Dirty South Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 125,
+    "fields": {
+      "title": "Disco"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 126,
+    "fields": {
+      "title": "Disco House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 127,
+    "fields": {
+      "title": "Dixieland"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 128,
+    "fields": {
+      "title": "Dominican Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 129,
+    "fields": {
+      "title": "Doom Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 130,
+    "fields": {
+      "title": "Dubstep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 131,
+    "fields": {
+      "title": "Early Modern Classical"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 132,
+    "fields": {
+      "title": "Early Music"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 133,
+    "fields": {
+      "title": "Early Music Choir"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 134,
+    "fields": {
+      "title": "Early Music Ensemble"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 135,
+    "fields": {
+      "title": "Early Romantic Era"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 136,
+    "fields": {
+      "title": "East Coast Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 137,
+    "fields": {
+      "title": "Easy Listening"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 138,
+    "fields": {
+      "title": "Ecm-Style Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 139,
+    "fields": {
+      "title": "Ectofolk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 140,
+    "fields": {
+      "title": "Edm"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 141,
+    "fields": {
+      "title": "Electric Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 142,
+    "fields": {
+      "title": "Electro"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 143,
+    "fields": {
+      "title": "Electro House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 144,
+    "fields": {
+      "title": "Electro Swing"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 145,
+    "fields": {
+      "title": "Electronic Trap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 146,
+    "fields": {
+      "title": "Electropop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 147,
+    "fields": {
+      "title": "Electropop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 148,
+    "fields": {
+      "title": "Escape Room"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 149,
+    "fields": {
+      "title": "Ethio-Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 150,
+    "fields": {
+      "title": "Europop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 151,
+    "fields": {
+      "title": "Exotica"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 152,
+    "fields": {
+      "title": "Filthstep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 153,
+    "fields": {
+      "title": "Finnish Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 154,
+    "fields": {
+      "title": "Flamenco"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 155,
+    "fields": {
+      "title": "Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 156,
+    "fields": {
+      "title": "Folk Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 157,
+    "fields": {
+      "title": "Folk Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 158,
+    "fields": {
+      "title": "Folkmusik"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 159,
+    "fields": {
+      "title": "Fourth World"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 160,
+    "fields": {
+      "title": "Freak Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 161,
+    "fields": {
+      "title": "Free Improvisation"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 162,
+    "fields": {
+      "title": "Free Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 163,
+    "fields": {
+      "title": "Funk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 164,
+    "fields": {
+      "title": "Future Bass"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 165,
+    "fields": {
+      "title": "Future Garage"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 166,
+    "fields": {
+      "title": "Future House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 167,
+    "fields": {
+      "title": "G Funk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 168,
+    "fields": {
+      "title": "Gaming Dubstep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 169,
+    "fields": {
+      "title": "Gaming Edm"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 170,
+    "fields": {
+      "title": "Gangster Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 171,
+    "fields": {
+      "title": "Garage Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 172,
+    "fields": {
+      "title": "German Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 173,
+    "fields": {
+      "title": "German Power Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 174,
+    "fields": {
+      "title": "Glam Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 175,
+    "fields": {
+      "title": "Glam Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 176,
+    "fields": {
+      "title": "Glitch Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 177,
+    "fields": {
+      "title": "Gospel Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 178,
+    "fields": {
+      "title": "Gospel R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 179,
+    "fields": {
+      "title": "Gothic Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 180,
+    "fields": {
+      "title": "Greek Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 181,
+    "fields": {
+      "title": "Greek Guitar"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 182,
+    "fields": {
+      "title": "Griot"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 183,
+    "fields": {
+      "title": "Groove Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 184,
+    "fields": {
+      "title": "Grunge"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 185,
+    "fields": {
+      "title": "Gypsy Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 186,
+    "fields": {
+      "title": "Hard Bop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 187,
+    "fields": {
+      "title": "Hard Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 188,
+    "fields": {
+      "title": "Hardcore Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 189,
+    "fields": {
+      "title": "Harlem Renaissance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 190,
+    "fields": {
+      "title": "Harmonica Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 191,
+    "fields": {
+      "title": "Healing"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 192,
+    "fields": {
+      "title": "Heartland Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 193,
+    "fields": {
+      "title": "Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 194,
+    "fields": {
+      "title": "Hip Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 195,
+    "fields": {
+      "title": "Historically Informed Performance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 196,
+    "fields": {
+      "title": "Hollywood"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 197,
+    "fields": {
+      "title": "Honky Tonk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 198,
+    "fields": {
+      "title": "House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 199,
+    "fields": {
+      "title": "Huayno"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 200,
+    "fields": {
+      "title": "Hyperpop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 201,
+    "fields": {
+      "title": "Hyphy"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 202,
+    "fields": {
+      "title": "Impressionism"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 203,
+    "fields": {
+      "title": "Indie Cafe Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 204,
+    "fields": {
+      "title": "Indie Electropop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 205,
+    "fields": {
+      "title": "Indie Electropop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 206,
+    "fields": {
+      "title": "Indie Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 207,
+    "fields": {
+      "title": "Indie Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 208,
+    "fields": {
+      "title": "Indie Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 209,
+    "fields": {
+      "title": "Indie Poptimism"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 210,
+    "fields": {
+      "title": "Indie R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 211,
+    "fields": {
+      "title": "Indie Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 212,
+    "fields": {
+      "title": "Indie Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 213,
+    "fields": {
+      "title": "Industrial Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 214,
+    "fields": {
+      "title": "Irish Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 215,
+    "fields": {
+      "title": "Italian Baroque"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 216,
+    "fields": {
+      "title": "J-Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 217,
+    "fields": {
+      "title": "Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 218,
+    "fields": {
+      "title": "Jazz Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 219,
+    "fields": {
+      "title": "Jazz Clarinet"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 220,
+    "fields": {
+      "title": "Jazz Double Bass"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 221,
+    "fields": {
+      "title": "Jazz Drums"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 222,
+    "fields": {
+      "title": "Jazz Funk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 223,
+    "fields": {
+      "title": "Jazz Fusion"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 224,
+    "fields": {
+      "title": "Jazz Guitar"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 225,
+    "fields": {
+      "title": "Jazz Piano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 226,
+    "fields": {
+      "title": "Jazz Quartet"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 227,
+    "fields": {
+      "title": "Jazz Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 228,
+    "fields": {
+      "title": "Jazz Saxophone"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 229,
+    "fields": {
+      "title": "Jazz Trio"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 230,
+    "fields": {
+      "title": "Jazz Trumpet"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 231,
+    "fields": {
+      "title": "Jazz Vibraphone"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 232,
+    "fields": {
+      "title": "Jump Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 233,
+    "fields": {
+      "title": "K-Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 234,
+    "fields": {
+      "title": "Kentucky Roots"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 235,
+    "fields": {
+      "title": "Kundiman"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 236,
+    "fields": {
+      "title": "Late Romantic Era"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 237,
+    "fields": {
+      "title": "Latin"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 238,
+    "fields": {
+      "title": "Latin Alternative"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 239,
+    "fields": {
+      "title": "Latin Arena Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 240,
+    "fields": {
+      "title": "Latin Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 241,
+    "fields": {
+      "title": "Latin Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 242,
+    "fields": {
+      "title": "Latin Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 243,
+    "fields": {
+      "title": "Latin Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 244,
+    "fields": {
+      "title": "Latin Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 245,
+    "fields": {
+      "title": "Latin Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 246,
+    "fields": {
+      "title": "Levenslied"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 247,
+    "fields": {
+      "title": "Light Music"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 248,
+    "fields": {
+      "title": "Lilith"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 249,
+    "fields": {
+      "title": "Louisiana Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 250,
+    "fields": {
+      "title": "Lounge"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 251,
+    "fields": {
+      "title": "Malian Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 252,
+    "fields": {
+      "title": "Mande Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 253,
+    "fields": {
+      "title": "Mariachi"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 254,
+    "fields": {
+      "title": "Math Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 255,
+    "fields": {
+      "title": "Medieval"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 256,
+    "fields": {
+      "title": "Medieval Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 257,
+    "fields": {
+      "title": "Meditation"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 258,
+    "fields": {
+      "title": "Melancholia"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 259,
+    "fields": {
+      "title": "Mellow Gold"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 260,
+    "fields": {
+      "title": "Mellow Gold"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 261,
+    "fields": {
+      "title": "Melodic Death Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 262,
+    "fields": {
+      "title": "Melodic Dubstep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 263,
+    "fields": {
+      "title": "Melodic Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 264,
+    "fields": {
+      "title": "Melodic Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 265,
+    "fields": {
+      "title": "Memphis Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 266,
+    "fields": {
+      "title": "Merengue"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 267,
+    "fields": {
+      "title": "Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 268,
+    "fields": {
+      "title": "Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 269,
+    "fields": {
+      "title": "Metropopolis"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 270,
+    "fields": {
+      "title": "Mexican Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 271,
+    "fields": {
+      "title": "Mexican Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 272,
+    "fields": {
+      "title": "Min'Yo"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 273,
+    "fields": {
+      "title": "Minimalism"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 274,
+    "fields": {
+      "title": "Modern Alternative Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 275,
+    "fields": {
+      "title": "Modern Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 276,
+    "fields": {
+      "title": "Modern Blues Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 277,
+    "fields": {
+      "title": "Modern Country Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 278,
+    "fields": {
+      "title": "Modern Folk Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 279,
+    "fields": {
+      "title": "Modern Jazz Piano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 280,
+    "fields": {
+      "title": "Modern Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 281,
+    "fields": {
+      "title": "Motown"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 282,
+    "fields": {
+      "title": "Movie Tunes"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 283,
+    "fields": {
+      "title": "Nashville Sound"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 284,
+    "fields": {
+      "title": "Native American"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 285,
+    "fields": {
+      "title": "Neo Classical Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 286,
+    "fields": {
+      "title": "Neo Kyma"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 287,
+    "fields": {
+      "title": "Neo Mellow"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 288,
+    "fields": {
+      "title": "Neo R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 289,
+    "fields": {
+      "title": "Neo Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 290,
+    "fields": {
+      "title": "Neo-Classical"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 291,
+    "fields": {
+      "title": "Neo-Trad Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 292,
+    "fields": {
+      "title": "Neo-Traditional Bluegrass"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 293,
+    "fields": {
+      "title": "Neo-Traditional Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 294,
+    "fields": {
+      "title": "Neoclassical Darkwave"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 295,
+    "fields": {
+      "title": "Neoclassicism"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 296,
+    "fields": {
+      "title": "Neotango"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 297,
+    "fields": {
+      "title": "Nerdcore"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 298,
+    "fields": {
+      "title": "New Age"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 299,
+    "fields": {
+      "title": "New Age Piano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 300,
+    "fields": {
+      "title": "New Americana"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 301,
+    "fields": {
+      "title": "New Americana"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 302,
+    "fields": {
+      "title": "New Jack Swing"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 303,
+    "fields": {
+      "title": "New Orleans Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 304,
+    "fields": {
+      "title": "New Romantic"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 305,
+    "fields": {
+      "title": "New Romantic"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 306,
+    "fields": {
+      "title": "New Wave"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 307,
+    "fields": {
+      "title": "New Wave Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 308,
+    "fields": {
+      "title": "Noise Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 309,
+    "fields": {
+      "title": "Nordic Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 310,
+    "fields": {
+      "title": "Norwegian Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 311,
+    "fields": {
+      "title": "Nu Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 312,
+    "fields": {
+      "title": "Nuevo Flamenco"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 313,
+    "fields": {
+      "title": "Nwothm"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 314,
+    "fields": {
+      "title": "Oklahoma Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 315,
+    "fields": {
+      "title": "Old School Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 316,
+    "fields": {
+      "title": "Old School Thrash"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 317,
+    "fields": {
+      "title": "Opera"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 318,
+    "fields": {
+      "title": "Operatic Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 319,
+    "fields": {
+      "title": "Orchestra"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 320,
+    "fields": {
+      "title": "Outlaw Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 321,
+    "fields": {
+      "title": "Permanent Wave"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 322,
+    "fields": {
+      "title": "Perreo"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 323,
+    "fields": {
+      "title": "Piano Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 324,
+    "fields": {
+      "title": "Piedmont Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 325,
+    "fields": {
+      "title": "Polyphony"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 326,
+    "fields": {
+      "title": "Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 327,
+    "fields": {
+      "title": "Pop Dance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 328,
+    "fields": {
+      "title": "Pop Dance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 329,
+    "fields": {
+      "title": "Pop Edm"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 330,
+    "fields": {
+      "title": "Pop Edm"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 331,
+    "fields": {
+      "title": "Pop R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 332,
+    "fields": {
+      "title": "Pop R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 333,
+    "fields": {
+      "title": "Pop Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 334,
+    "fields": {
+      "title": "Pop Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 335,
+    "fields": {
+      "title": "Pop Reggaeton"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 336,
+    "fields": {
+      "title": "Pop Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 337,
+    "fields": {
+      "title": "Pop Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 338,
+    "fields": {
+      "title": "Post-Grunge"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 339,
+    "fields": {
+      "title": "Post-Romantic Era"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 340,
+    "fields": {
+      "title": "Post-Teen Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 341,
+    "fields": {
+      "title": "Power Blues-Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 342,
+    "fields": {
+      "title": "Power Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 343,
+    "fields": {
+      "title": "Pre-War Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 344,
+    "fields": {
+      "title": "Progressive Bluegrass"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 345,
+    "fields": {
+      "title": "Progressive Electro House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 346,
+    "fields": {
+      "title": "Progressive House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 347,
+    "fields": {
+      "title": "Progressive Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 348,
+    "fields": {
+      "title": "Progressive Trance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 349,
+    "fields": {
+      "title": "Psychedelic Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 350,
+    "fields": {
+      "title": "Psychedelic Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 351,
+    "fields": {
+      "title": "Puerto Rican Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 352,
+    "fields": {
+      "title": "Punk Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 353,
+    "fields": {
+      "title": "Queens Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 354,
+    "fields": {
+      "title": "Queer Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 355,
+    "fields": {
+      "title": "Quiet Storm"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 356,
+    "fields": {
+      "title": "R&B"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 357,
+    "fields": {
+      "title": "Rabindra Sangeet"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 358,
+    "fields": {
+      "title": "Ragtime"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 359,
+    "fields": {
+      "title": "Ranchera"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 360,
+    "fields": {
+      "title": "Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 361,
+    "fields": {
+      "title": "Red Dirt"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 362,
+    "fields": {
+      "title": "Reggaeton"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 363,
+    "fields": {
+      "title": "Reggaeton Colombiano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 364,
+    "fields": {
+      "title": "Reggaeton Flow"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 365,
+    "fields": {
+      "title": "Relaxative"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 366,
+    "fields": {
+      "title": "Renaissance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 367,
+    "fields": {
+      "title": "Rhythm And Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 368,
+    "fields": {
+      "title": "Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 369,
+    "fields": {
+      "title": "Rock En Espanol"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 370,
+    "fields": {
+      "title": "Rock-And-Roll"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 371,
+    "fields": {
+      "title": "Rockabilly"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 372,
+    "fields": {
+      "title": "Romantico"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 373,
+    "fields": {
+      "title": "Roots Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 374,
+    "fields": {
+      "title": "Roots Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 375,
+    "fields": {
+      "title": "Russian Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 376,
+    "fields": {
+      "title": "Salsa"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 377,
+    "fields": {
+      "title": "Samba-Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 378,
+    "fields": {
+      "title": "Scottish Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 379,
+    "fields": {
+      "title": "Serialism"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 380,
+    "fields": {
+      "title": "Sertanejo"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 381,
+    "fields": {
+      "title": "Shamanic"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 382,
+    "fields": {
+      "title": "Singer-Songwriter"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 383,
+    "fields": {
+      "title": "Sky Room"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 384,
+    "fields": {
+      "title": "Sleep"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 385,
+    "fields": {
+      "title": "Smooth Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 386,
+    "fields": {
+      "title": "Social Media Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 387,
+    "fields": {
+      "title": "Soft Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 388,
+    "fields": {
+      "title": "Soft Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 389,
+    "fields": {
+      "title": "Sophisti-Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 390,
+    "fields": {
+      "title": "Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 391,
+    "fields": {
+      "title": "Soul Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 392,
+    "fields": {
+      "title": "Soul Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 393,
+    "fields": {
+      "title": "Soundtrack"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 394,
+    "fields": {
+      "title": "Southern Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 395,
+    "fields": {
+      "title": "Southern Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 396,
+    "fields": {
+      "title": "Space Age Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 397,
+    "fields": {
+      "title": "Spanish Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 398,
+    "fields": {
+      "title": "Spanish Pop Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 399,
+    "fields": {
+      "title": "Speed Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 400,
+    "fields": {
+      "title": "Spiritual Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 401,
+    "fields": {
+      "title": "Stomp And Holler"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 402,
+    "fields": {
+      "title": "Straight-Ahead Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 403,
+    "fields": {
+      "title": "Stride"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 404,
+    "fields": {
+      "title": "String Quartet"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 405,
+    "fields": {
+      "title": "Sufi Chant"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 406,
+    "fields": {
+      "title": "Swamp Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 407,
+    "fields": {
+      "title": "Swedish Fiddle"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 408,
+    "fields": {
+      "title": "Swedish Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 409,
+    "fields": {
+      "title": "Swing"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 410,
+    "fields": {
+      "title": "Symphonic Black Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 411,
+    "fields": {
+      "title": "Symphonic Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 412,
+    "fields": {
+      "title": "Symphonic Rock"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 413,
+    "fields": {
+      "title": "Talent Show"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 414,
+    "fields": {
+      "title": "Tango"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 415,
+    "fields": {
+      "title": "Tatar Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 416,
+    "fields": {
+      "title": "Tech House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 417,
+    "fields": {
+      "title": "Technical Death Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 418,
+    "fields": {
+      "title": "Teen Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 419,
+    "fields": {
+      "title": "Tejano"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 420,
+    "fields": {
+      "title": "Texas Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 421,
+    "fields": {
+      "title": "Texas Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 422,
+    "fields": {
+      "title": "Thrash Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 423,
+    "fields": {
+      "title": "Timba"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 424,
+    "fields": {
+      "title": "Torch Song"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 425,
+    "fields": {
+      "title": "Traditional Bluegrass"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 426,
+    "fields": {
+      "title": "Traditional Blues"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 427,
+    "fields": {
+      "title": "Traditional Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 428,
+    "fields": {
+      "title": "Traditional Folk"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 429,
+    "fields": {
+      "title": "Trance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 430,
+    "fields": {
+      "title": "Trap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 431,
+    "fields": {
+      "title": "Trap Latino"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 432,
+    "fields": {
+      "title": "Trap Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 433,
+    "fields": {
+      "title": "Tropical"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 434,
+    "fields": {
+      "title": "Tropical House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 435,
+    "fields": {
+      "title": "Truck-Driving Country"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 436,
+    "fields": {
+      "title": "Turkish Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 437,
+    "fields": {
+      "title": "Twoubadou"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 438,
+    "fields": {
+      "title": "Underground Hip Hop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 439,
+    "fields": {
+      "title": "Uplifting Trance"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 440,
+    "fields": {
+      "title": "Urban Contemporary"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 441,
+    "fields": {
+      "title": "Us Power Metal"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 442,
+    "fields": {
+      "title": "Vapor Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 443,
+    "fields": {
+      "title": "Vapor Soul"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 444,
+    "fields": {
+      "title": "Vapor Trap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 445,
+    "fields": {
+      "title": "Vapor Twitch"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 446,
+    "fields": {
+      "title": "Vintage Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 447,
+    "fields": {
+      "title": "Violin"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 448,
+    "fields": {
+      "title": "Viral Pop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 449,
+    "fields": {
+      "title": "Vispop"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 450,
+    "fields": {
+      "title": "Vocal House"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 451,
+    "fields": {
+      "title": "Vocal Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 452,
+    "fields": {
+      "title": "Vocal Jazz"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 453,
+    "fields": {
+      "title": "West Coast Rap"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 454,
+    "fields": {
+      "title": "Western Swing"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 455,
+    "fields": {
+      "title": "World"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 456,
+    "fields": {
+      "title": "World Meditation"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 457,
+    "fields": {
+      "title": "Wyoming Roots"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 458,
+    "fields": {
+      "title": "Yoik"
+    }
+  },
+  {
+    "model": "vinyl.genre",
+    "pk": 459,
+    "fields": {
+      "title": "Zouk"
+    }
+  }
+]
