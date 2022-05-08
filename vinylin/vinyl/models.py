@@ -1,6 +1,4 @@
 from django.db import models
-from django.dispatch import receiver
-from django.db.models.signals import post_save
 
 from store.models import Product, Storage
 
@@ -35,6 +33,9 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['pk']
+
 
 class Vinyl(Product):
     vinyl_title = models.CharField(max_length=150)
@@ -54,10 +55,3 @@ class Vinyl(Product):
 
     def __str__(self):
         return self.title
-
-
-@receiver(post_save, sender=Vinyl)
-def create_storage_obj(sender, instance, created, **kwargs):
-    """Creates Storage object after product creation"""
-    if created:
-        Storage.objects.create(product=instance)
