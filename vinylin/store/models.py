@@ -3,17 +3,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.validators import MinValueValidator
 
 
-class Category(models.Model):
-    title = models.CharField(max_length=177)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
-
-
 class Tag(models.Model):
     title = models.CharField(max_length=100)
 
