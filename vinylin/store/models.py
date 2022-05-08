@@ -39,7 +39,7 @@ class AbstractProduct(models.Model):
 
 
 class Product(AbstractProduct):
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(to=Tag, blank=True, related_name='tags')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
