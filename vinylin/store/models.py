@@ -24,7 +24,7 @@ class Tag(models.Model):
 
 
 class Discount(models.Model):
-    product = models.ForeignKey(
+    product = models.OneToOneField(
         to='Product',
         on_delete=models.CASCADE,
         related_name='discount',
@@ -32,17 +32,8 @@ class Discount(models.Model):
     amount = models.SmallIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
-
-class Image(models.Model):
-    product = models.ForeignKey(
-        to='Product',
-        on_delete=models.CASCADE,
-        related_name='images',
-    )
-    image = models.ImageField()
-
-    def get_path_name(self):
-        pass
+    def __str__(self):
+        return self.product.title
 
 
 class AbstractProduct(models.Model):
