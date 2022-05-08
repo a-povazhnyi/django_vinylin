@@ -2,7 +2,11 @@ from django.contrib import admin
 
 from .forms import VinylAdminForm
 from .models import Country, Genre, Artist, Vinyl
-from store.admin import ImageInlineAdmin, StorageInlineAdmin, DiscountInlineAdmin
+from store.admin import (
+    ImageInlineAdmin,
+    StorageInlineAdmin,
+    DiscountInlineAdmin
+)
 
 
 @admin.register(Vinyl)
