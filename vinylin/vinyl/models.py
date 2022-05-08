@@ -1,5 +1,6 @@
 from django.db import models
 
+from .managers import VinylManager
 from store.models import Product, Storage
 
 
@@ -52,6 +53,8 @@ class Vinyl(Product):
     )
     format = models.CharField(max_length=50, blank=True, null=True)
     credits = models.CharField(max_length=250, blank=True, null=True)
+
+    objects = VinylManager()
 
     def __str__(self):
         return self.title
