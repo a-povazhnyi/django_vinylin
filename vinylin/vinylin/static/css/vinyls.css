@@ -1,0 +1,85 @@
+.small-container {
+    margin: 0 100px;
+}
+
+ul.vinyl-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 100%;
+}
+
+li.vinyl-li {
+    width: 300px;
+    overflow: scroll;
+}
+
+.li-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 35px;
+}
+
+.vinyl-img-wrapper {
+    position: relative;
+}
+
+img.vinyl-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px 8px rgba(0,0,0,0.12);
+    z-index: 8;
+}
+
+img.vinyl-center {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 70px;
+    top: 76px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+.vinyl-index-tag {
+    position: absolute;
+    left: 170px;
+    bottom: 172px;
+    background-color: rgb(114, 9, 9);
+    box-shadow: 5px 5px 15px -4px rgba(0,0,0,0.33);
+    border-radius: 10px;
+}
+
+.vinyl-index-tag > span {
+    color: white;
+}
+
+span.vinyl-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 50px;
+    z-index: 10;
+}
+
+.index-button-wrapper {
+    width: 220px !important;
+    height: 28px !important;
+    margin-top: 10px !important;
+}
+
+.vinyl-index-price {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+}
+
+a.index-buy-button {
+    font-size: 22px !important;
+}
