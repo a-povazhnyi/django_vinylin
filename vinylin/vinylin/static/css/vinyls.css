@@ -50,20 +50,29 @@ img.vinyl-center {
     z-index: 9;
 }
 
-.vinyl-index-tag {
+.tag-wrapper {
     position: absolute;
-    left: 170px;
-    bottom: 172px;
-    background-color: rgb(114, 9, 9);
+    left: 131px;
+    bottom: 4px;
+    z-index: 11;
+    text-align: center;
+}
+
+.vinyl-index-tag {
+    height: 28px;
+    width: 94px;
+    background-color: rgb(113, 45, 45);
     box-shadow: 5px 5px 15px -4px rgba(0,0,0,0.33);
     border-radius: 10px;
 }
 
 .vinyl-index-tag > span {
     color: white;
+    font-size: 16px;
 }
 
 span.vinyl-title {
+    color: black;
     font-size: 17px;
     font-weight: bold;
     margin-top: 50px;
