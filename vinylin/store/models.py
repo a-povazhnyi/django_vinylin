@@ -39,10 +39,6 @@ class AbstractProduct(models.Model):
 
 
 class Product(AbstractProduct):
-    category = models.ForeignKey(
-        to=Category,
-        on_delete=models.PROTECT,
-    )
     tags = models.ManyToManyField(Tag)
     created_at = models.DateTimeField(auto_now_add=True)
 
