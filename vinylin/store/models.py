@@ -63,11 +63,13 @@ class Product(AbstractProduct):
     @property
     def price_with_discount(self):
         try:
-            discount_amount = self.discount.get(product=self).amount
+            discount_amount = Discount.objects.get(product=self).amount
+            if discount_amount == 0:
+                return None
             discount_amount *= 0.01
         except ObjectDoesNotExist:
             return None
-        return self.price * (1 - discount_amount)
+        return float(self.price) * (1 - discount_amount)
 
 
 @receiver(post_save, sender=Product)
