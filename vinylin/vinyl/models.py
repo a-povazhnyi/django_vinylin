@@ -34,7 +34,7 @@ class Artist(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['pk']
+        ordering = ['name']
 
 
 class Vinyl(Product):
