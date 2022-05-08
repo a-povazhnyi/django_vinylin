@@ -57,11 +57,15 @@ class Product(AbstractProduct):
         return float(self.price) * (1 - discount_amount)
 
 
-@receiver(post_save, sender=Product)
-def create_storage_obj(sender, instance, created, **kwargs):
-    """Creates Storage object after product creation"""
-    if created:
-        Storage.objects.create(product=instance)
+class Image(models.Model):
+    product = models.ForeignKey(
+        to='Product',
+        on_delete=models.CASCADE,
+        related_name='images',
+    )
+    image = models.ImageField(
+        upload_to='vinyl/images/',
+    )
 
 
 class Storage(models.Model):
