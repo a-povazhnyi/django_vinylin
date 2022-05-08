@@ -157,3 +157,6 @@ EMAIL_USE_SSL = bool(int(os.environ.get('EMAIL_USE_SSL')))
 EMAIL_USE_TLS = bool(int(os.environ.get('EMAIL_USE_TLS')))
 
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
