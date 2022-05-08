@@ -12,38 +12,40 @@
             <div class="li-container">
 
               {% if not vinyl.images.exists %}
-                <a href="#">
+                <a href="{{ vinyl.get_absolute_url }}">
                   <img src="{% static 'img/null_image.png' %}"
                        alt="{{ vinyl.title }} image" class="vinyl-img">
                 </a>
               {% else %}
 
                 {% for image in vinyl.images.all|slice:":1" %}
-                  <a href="#">
+                  <a href="{{ vinyl.get_absolute_url }}">
                     <div class="vinyl-img-wrapper">
                       <img src="{{ image.image.url }}"
                            alt="{{ vinyl.title }} image" class="vinyl-img">
                       <img src="{% static 'img/vinyl-center.png' %}"
                            alt="center" class="vinyl-center">
 
-                      {% if vinyl.tags.exists %}
-                        {% for tag in vinyl.tags.all|slice:":1" %}
-                          <div class="vinyl-index-tag">
-                            <span>{{ tag }}</span>
-                          </div>
-                        {% endfor %}
-                      {% endif %}
+                      <div class="tag-wrapper">
+                        {% if vinyl.tags.exists %}
+                          {% for tag in vinyl.tags.all|slice:":1" %}
+                            <div class="vinyl-index-tag">
+                              <span>{{ tag }}</span>
+                            </div>
+                          {% endfor %}
+                        {% endif %}
+                      </div>
                     </div>
                   </a>
                 {% endfor %}
               {% endif %}
 
-              <a href="#"><span class="vinyl-title">{{ vinyl.title }}</span></a>
+              <a href="{{ vinyl.get_absolute_url }}"><span class="vinyl-title">{{ vinyl.title }}</span></a>
               <div class="vinyl-index-order">
                 <span class="vinyl-index-price">{{ vinyl.price }}$</span>
-                <div class="button-wrapper index-button-wrapper">
-                  <a href="#" class="index-buy-button">buy</a>
-                </div>
+                <a href="{{ vinyl.get_absolute_url }}" class="index-buy-button">
+                  <div class="button-wrapper index-button-wrapper">buy</div>
+                </a>
               </div>
             </div>
           </li>
