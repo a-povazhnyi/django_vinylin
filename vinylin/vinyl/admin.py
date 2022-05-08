@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from .forms import VinylAdminForm
 from .models import Country, Genre, Artist, Vinyl
-from store.admin import ImageAdmin, StorageAdmin, DiscountAdmin
+from store.admin import ImageInlineAdmin, StorageInlineAdmin, DiscountInlineAdmin
 
 
 @admin.register(Vinyl)
@@ -11,7 +11,7 @@ class VinylAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at',)
     list_display = ('id', 'title', 'price', 'part_number')
     list_display_links = ('id', 'title')
-    inlines = [ImageAdmin, StorageAdmin, DiscountAdmin]
+    inlines = [ImageInlineAdmin, StorageInlineAdmin, DiscountInlineAdmin]
 
     save_on_top = True
 
