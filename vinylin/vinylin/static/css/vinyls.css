@@ -164,6 +164,38 @@ li.vinyl-single-price {
     color: rgb(2, 73, 2);
 }
 
+.single-prices-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+span.vinyl-single-price__old-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+    text-decoration: rgb(2, 73, 2) line-through;
+}
+
+span.vinyl-single-price__new-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(150, 15, 15);
+    margin-right: 5px;
+}
+
+span.vinyl-index-price__old-price {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+    text-decoration: rgb(2, 73, 2) line-through;
+}
+
+span.vinyl-index-price__new-price {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(150, 15, 15);
+}
+
 .vinyl-overview > p {
     margin-bottom: 10px;
 }
