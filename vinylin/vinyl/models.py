@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from .managers import VinylManager
 from store.models import Product, Storage
@@ -44,12 +45,14 @@ class Vinyl(Product):
         to=Artist,
         on_delete=models.CASCADE,
         null=True,
+        related_name='artist',
     )
-    genres = models.ManyToManyField(Genre)
+    genres = models.ManyToManyField(Genre, related_name='genres')
     country = models.ForeignKey(
         to=Country,
         null=True,
         on_delete=models.SET_NULL,
+        related_name='country',
     )
     format = models.CharField(max_length=50, blank=True, null=True)
     credits = models.CharField(max_length=250, blank=True, null=True)
@@ -58,3 +61,6 @@ class Vinyl(Product):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('vinyl_single', kwargs={'pk': self.pk})
