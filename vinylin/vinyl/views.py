@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, ListView
+from django.views.generic import ListView, DetailView
 
 from .models import Vinyl
 
@@ -13,3 +13,10 @@ class IndexView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+
+class VinylDetailView(DetailView):
+    template_name = 'vinyl/single.html'
+
+    def get_queryset(self):
+        return Vinyl.objects.with_all_data().filter(pk=self.kwargs['pk'])
