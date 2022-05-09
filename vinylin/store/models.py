@@ -54,7 +54,7 @@ class Product(AbstractProduct):
             discount_amount *= 0.01
         except ObjectDoesNotExist:
             return None
-        return float(self.price) * (1 - discount_amount)
+        return round(float(self.price) * (1 - discount_amount), 2)
 
 
 class Image(models.Model):
