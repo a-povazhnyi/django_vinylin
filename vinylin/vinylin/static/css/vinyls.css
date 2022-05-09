@@ -125,6 +125,19 @@ section.single-vinyl-info {
     font-size: 36px;
 }
 
+.single-buy-button__disabled {
+    font-size: 36px;
+    cursor: none !important;
+}
+
+.single-button-wrapper__disabled {
+    width: 300px !important;
+    height: 50px !important;
+    cursor: default !important;
+    opacity: 0.3;
+    margin-top: 30px;
+}
+
 ul.single-vinyl-info > li {
     margin-bottom: 10px;
 }

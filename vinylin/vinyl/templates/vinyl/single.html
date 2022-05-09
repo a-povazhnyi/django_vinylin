@@ -19,11 +19,17 @@
           {% for image in vinyl.images.all|slice:":1" %}
             <img src="{{ image.image.url }}"
                  alt="{{ vinyl.title }} image" class="single-vinyl-img">
+          {% endfor %}
 
+          {% if not vinyl.storage.bad_status %}
             <a href="#" class="single-buy-button">
               <div class="button-wrapper single-button-wrapper">buy</div>
             </a>
-          {% endfor %}
+          {% else %}
+            <a href="#" class="single-buy-button__disabled">
+              <div class="button-wrapper single-button-wrapper__disabled">{{ vinyl.storage.bad_status }}</div>
+            </a>
+          {% endif %}
         </div>
 
         <section class="single-vinyl-info">

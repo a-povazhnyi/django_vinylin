@@ -85,7 +85,5 @@ class Storage(models.Model):
     @property
     def bad_status(self):
         if self.quantity < 1:
-            return 'out_of_stock'
-        if self.quantity < 10:
-            return 'running_low'
+            return 'out of stock'
         return False
