@@ -39,6 +39,13 @@ img.vinyl-img {
     z-index: 8;
 }
 
+img.single-vinyl-img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 15px 8px rgba(0,0,0,0.12);
+    z-index: 8;
+}
+
 img.vinyl-center {
     position: absolute;
     width: 65px;
@@ -93,4 +100,70 @@ span.vinyl-title {
 
 a.index-buy-button {
     font-size: 22px !important;
+}
+
+.single-vinyl {
+    display: flex;
+    flex-direction: row;
+}
+
+section.single-vinyl-info {
+    margin-left: 50px;
+}
+
+.single-button-wrapper {
+    width: 300px !important;
+    height: 50px !important;
+    margin-top: 30px;
+}
+
+.single-button-wrapper:hover {
+    background-color: rgb(2, 73, 2);;
+}
+
+.single-buy-button {
+    font-size: 36px;
+}
+
+ul.single-vinyl-info > li {
+    margin-bottom: 10px;
+}
+
+.vinyl-single-title > h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+span.single-info-title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul.single-vinyl-tags-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul.single-vinyl-tags-ul > li {
+    margin-right: 30px;
+    text-align: center;
+}
+
+ul.single-vinyl-genres {
+    display: flex;
+    flex-direction: row;
+}
+
+ul.single-vinyl-genres > li {
+    padding-left: 6px;
+}
+
+li.vinyl-single-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+}
+
+.vinyl-overview > p {
+    margin-bottom: 10px;
 }
