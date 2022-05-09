@@ -42,7 +42,7 @@
 
               <a href="{{ vinyl.get_absolute_url }}"><span class="vinyl-title">{{ vinyl.title }}</span></a>
               <div class="vinyl-index-order">
-                <span class="vinyl-index-price">{{ vinyl.price }}$</span>
+                <span class="vinyl-index-price">${{ vinyl.price }}</span>
                 <a href="{{ vinyl.get_absolute_url }}" class="index-buy-button">
                   <div class="button-wrapper index-button-wrapper">buy</div>
                 </a>
