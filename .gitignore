@@ -134,3 +134,7 @@ dmypy.json
 
 # MacOS
 *.DS_Store
+
+/vinylin/vinyl/fixtures/parsers/
+/vinylin/media/
+/vinylin/static/

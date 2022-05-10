@@ -1,0 +1,7002 @@
+[
+  {
+    "model": "vinyl.artist",
+    "pk": 1,
+    "fields": {
+      "name": "Drake"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 2,
+    "fields": {
+      "name": "Ed Sheeran"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 3,
+    "fields": {
+      "name": "Bad Bunny"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 4,
+    "fields": {
+      "name": "The Weeknd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 5,
+    "fields": {
+      "name": "Ariana Grande"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 6,
+    "fields": {
+      "name": "Justin Bieber"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 7,
+    "fields": {
+      "name": "Taylor Swift"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 8,
+    "fields": {
+      "name": "Eminem"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 9,
+    "fields": {
+      "name": "Post Malone"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 10,
+    "fields": {
+      "name": "BTS"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 11,
+    "fields": {
+      "name": "J Balvin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 12,
+    "fields": {
+      "name": "Kanye West"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 13,
+    "fields": {
+      "name": "Billie Eilish"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 14,
+    "fields": {
+      "name": "Juice WRLD"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 15,
+    "fields": {
+      "name": "Coldplay"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 16,
+    "fields": {
+      "name": "XXXTENTACION"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 17,
+    "fields": {
+      "name": "Ozuna"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 18,
+    "fields": {
+      "name": "Dua Lipa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 19,
+    "fields": {
+      "name": "Imagine Dragons"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 20,
+    "fields": {
+      "name": "Khalid"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 21,
+    "fields": {
+      "name": "Travis Scott"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 22,
+    "fields": {
+      "name": "Rihanna"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 23,
+    "fields": {
+      "name": "Maroon 5"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 24,
+    "fields": {
+      "name": "Shawn Mendes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 25,
+    "fields": {
+      "name": "David Guetta"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 26,
+    "fields": {
+      "name": "Bruno Mars"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 27,
+    "fields": {
+      "name": "Daddy Yankee"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 28,
+    "fields": {
+      "name": "Calvin Harris"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 29,
+    "fields": {
+      "name": "Sam Smith"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 30,
+    "fields": {
+      "name": "Queen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 31,
+    "fields": {
+      "name": "Kendrick Lamar"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 32,
+    "fields": {
+      "name": "The Chainsmokers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 33,
+    "fields": {
+      "name": "One Direction"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 34,
+    "fields": {
+      "name": "Chris Brown"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 35,
+    "fields": {
+      "name": "Future"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 36,
+    "fields": {
+      "name": "Beyonc\u00e9"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 37,
+    "fields": {
+      "name": "Nicki Minaj"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 38,
+    "fields": {
+      "name": "Anuel AA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 39,
+    "fields": {
+      "name": "Lady Gaga"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 40,
+    "fields": {
+      "name": "J. Cole"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 41,
+    "fields": {
+      "name": "Halsey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 42,
+    "fields": {
+      "name": "Selena Gomez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 43,
+    "fields": {
+      "name": "Adele"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 44,
+    "fields": {
+      "name": "The Beatles"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 45,
+    "fields": {
+      "name": "Sia"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 46,
+    "fields": {
+      "name": "Maluma"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 47,
+    "fields": {
+      "name": "Twenty One Pilots"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 48,
+    "fields": {
+      "name": "Marshmello"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 49,
+    "fields": {
+      "name": "Lil Uzi Vert"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 50,
+    "fields": {
+      "name": "Linkin Park"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 51,
+    "fields": {
+      "name": "Katy Perry"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 52,
+    "fields": {
+      "name": "Kygo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 53,
+    "fields": {
+      "name": "Avicii"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 54,
+    "fields": {
+      "name": "Farruko"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 55,
+    "fields": {
+      "name": "Lana Del Rey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 56,
+    "fields": {
+      "name": "Camila Cabello"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 57,
+    "fields": {
+      "name": "Rauw Alejandro"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 58,
+    "fields": {
+      "name": "Jason Derulo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 59,
+    "fields": {
+      "name": "Red Hot Chili Peppers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 60,
+    "fields": {
+      "name": "Arctic Monkeys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 61,
+    "fields": {
+      "name": "Demi Lovato"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 62,
+    "fields": {
+      "name": "Doja Cat"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 63,
+    "fields": {
+      "name": "Shakira"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 64,
+    "fields": {
+      "name": "Harry Styles"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 65,
+    "fields": {
+      "name": "KAROL G"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 66,
+    "fields": {
+      "name": "Nicky Jam"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 67,
+    "fields": {
+      "name": "OneRepublic"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 68,
+    "fields": {
+      "name": "Miley Cyrus"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 69,
+    "fields": {
+      "name": "Michael Jackson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 70,
+    "fields": {
+      "name": "Martin Garrix"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 71,
+    "fields": {
+      "name": "Pitbull"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 72,
+    "fields": {
+      "name": "Charlie Puth"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 73,
+    "fields": {
+      "name": "Panic! At The Disco"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 74,
+    "fields": {
+      "name": "Sebastian Yatra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 75,
+    "fields": {
+      "name": "G-Eazy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 76,
+    "fields": {
+      "name": "Mac Miller"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 77,
+    "fields": {
+      "name": "DaBaby"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 78,
+    "fields": {
+      "name": "Cardi B"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 79,
+    "fields": {
+      "name": "Major Lazer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 80,
+    "fields": {
+      "name": "Sech"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 81,
+    "fields": {
+      "name": "Lil Baby"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 82,
+    "fields": {
+      "name": "Lil Wayne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 83,
+    "fields": {
+      "name": "Ellie Goulding"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 84,
+    "fields": {
+      "name": "21 Savage"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 85,
+    "fields": {
+      "name": "Young Thug"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 86,
+    "fields": {
+      "name": "Pop Smoke"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 87,
+    "fields": {
+      "name": "Wiz Khalifa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 88,
+    "fields": {
+      "name": "Myke Towers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 89,
+    "fields": {
+      "name": "Metallica"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 90,
+    "fields": {
+      "name": "Diplo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 91,
+    "fields": {
+      "name": "Fall Out Boy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 92,
+    "fields": {
+      "name": "Lil Nas X"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 93,
+    "fields": {
+      "name": "Lil Peep"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 94,
+    "fields": {
+      "name": "Migos"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 95,
+    "fields": {
+      "name": "Logic"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 96,
+    "fields": {
+      "name": "Alan Walker"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 97,
+    "fields": {
+      "name": "Tyga"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 98,
+    "fields": {
+      "name": "John Mayer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 99,
+    "fields": {
+      "name": "P!nk"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 100,
+    "fields": {
+      "name": "Olivia Rodrigo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 101,
+    "fields": {
+      "name": "AC/DC"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 102,
+    "fields": {
+      "name": "DJ Snake"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 103,
+    "fields": {
+      "name": "ZAYN"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 104,
+    "fields": {
+      "name": "Trippie Redd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 105,
+    "fields": {
+      "name": "James Arthur"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 106,
+    "fields": {
+      "name": "Little Mix"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 107,
+    "fields": {
+      "name": "Macklemore"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 108,
+    "fields": {
+      "name": "Lauv"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 109,
+    "fields": {
+      "name": "Elton John"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 110,
+    "fields": {
+      "name": "Kodak Black"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 111,
+    "fields": {
+      "name": "Gunna"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 112,
+    "fields": {
+      "name": "A$AP Rocky"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 113,
+    "fields": {
+      "name": "Zedd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 114,
+    "fields": {
+      "name": "NF"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 115,
+    "fields": {
+      "name": "A Boogie Wit da Hoodie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 116,
+    "fields": {
+      "name": "5 Seconds of Summer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 117,
+    "fields": {
+      "name": "Frank Ocean"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 118,
+    "fields": {
+      "name": "Robin Schulz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 119,
+    "fields": {
+      "name": "Bob Marley & The Wailers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 120,
+    "fields": {
+      "name": "YoungBoy Never Broke Again"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 121,
+    "fields": {
+      "name": "Ti\u00ebsto"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 122,
+    "fields": {
+      "name": "Green Day"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 123,
+    "fields": {
+      "name": "Tyler, The Creator"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 124,
+    "fields": {
+      "name": "Bebe Rexha"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 125,
+    "fields": {
+      "name": "Metro Boomin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 126,
+    "fields": {
+      "name": "Justin Timberlake"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 127,
+    "fields": {
+      "name": "Romeo Santos"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 128,
+    "fields": {
+      "name": "DJ Khaled"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 129,
+    "fields": {
+      "name": "Luis Miguel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 130,
+    "fields": {
+      "name": "Clean Bandit"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 131,
+    "fields": {
+      "name": "Zara Larsson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 132,
+    "fields": {
+      "name": "Anne-Marie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 133,
+    "fields": {
+      "name": "SZA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 134,
+    "fields": {
+      "name": "Lewis Capaldi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 135,
+    "fields": {
+      "name": "Machine Gun Kelly"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 136,
+    "fields": {
+      "name": "Black Eyed Peas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 137,
+    "fields": {
+      "name": "Enrique Iglesias"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 138,
+    "fields": {
+      "name": "Michael Bubl\u00e9"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 139,
+    "fields": {
+      "name": "$uicideboy$"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 140,
+    "fields": {
+      "name": "BLACKPINK"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 141,
+    "fields": {
+      "name": "Nirvana"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 142,
+    "fields": {
+      "name": "Pink Floyd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 143,
+    "fields": {
+      "name": "JAY-Z"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 144,
+    "fields": {
+      "name": "Flo Rida"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 145,
+    "fields": {
+      "name": "The Rolling Stones"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 146,
+    "fields": {
+      "name": "Ty Dolla $ign"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 147,
+    "fields": {
+      "name": "Luis Fonsi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 148,
+    "fields": {
+      "name": "Mar\u00edlia Mendon\u00e7a"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 149,
+    "fields": {
+      "name": "Fleetwood Mac"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 150,
+    "fields": {
+      "name": "Britney Spears"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 151,
+    "fields": {
+      "name": "Anitta"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 152,
+    "fields": {
+      "name": "Guns N' Roses"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 153,
+    "fields": {
+      "name": "blackbear"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 154,
+    "fields": {
+      "name": "Jonas Blue"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 155,
+    "fields": {
+      "name": "The Neighbourhood"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 156,
+    "fields": {
+      "name": "Kid Cudi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 157,
+    "fields": {
+      "name": "Russ"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 158,
+    "fields": {
+      "name": "Reik"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 159,
+    "fields": {
+      "name": "Bastille"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 160,
+    "fields": {
+      "name": "Polo G"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 161,
+    "fields": {
+      "name": "2Pac"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 162,
+    "fields": {
+      "name": "Banda MS de Sergio Liz\u00e1rraga"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 163,
+    "fields": {
+      "name": "The Kid LAROI"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 164,
+    "fields": {
+      "name": "Childish Gambino"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 165,
+    "fields": {
+      "name": "50 Cent"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 166,
+    "fields": {
+      "name": "Gorillaz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 167,
+    "fields": {
+      "name": "Lorde"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 168,
+    "fields": {
+      "name": "Jhay Cortez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 169,
+    "fields": {
+      "name": "Becky G"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 170,
+    "fields": {
+      "name": "Ava Max"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 171,
+    "fields": {
+      "name": "Usher"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 172,
+    "fields": {
+      "name": "Big Sean"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 173,
+    "fields": {
+      "name": "Hozier"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 174,
+    "fields": {
+      "name": "Mariah Carey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 175,
+    "fields": {
+      "name": "Alessia Cara"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 176,
+    "fields": {
+      "name": "David Bowie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 177,
+    "fields": {
+      "name": "Camilo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 178,
+    "fields": {
+      "name": "Skrillex"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 179,
+    "fields": {
+      "name": "French Montana"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 180,
+    "fields": {
+      "name": "Foo Fighters"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 181,
+    "fields": {
+      "name": "Meek Mill"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 182,
+    "fields": {
+      "name": "Frank Sinatra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 183,
+    "fields": {
+      "name": "The Killers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 184,
+    "fields": {
+      "name": "Luke Combs"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 185,
+    "fields": {
+      "name": "Tory Lanez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 186,
+    "fields": {
+      "name": "Troye Sivan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 187,
+    "fields": {
+      "name": "U2"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 188,
+    "fields": {
+      "name": "John Legend"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 189,
+    "fields": {
+      "name": "Daft Punk"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 190,
+    "fields": {
+      "name": "Led Zeppelin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 191,
+    "fields": {
+      "name": "blink-182"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 192,
+    "fields": {
+      "name": "Meghan Trainor"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 193,
+    "fields": {
+      "name": "Radiohead"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 194,
+    "fields": {
+      "name": "Manuel Turizo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 195,
+    "fields": {
+      "name": "Christina Aguilera"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 196,
+    "fields": {
+      "name": "Playboi Carti"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 197,
+    "fields": {
+      "name": "Rae Sremmurd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 198,
+    "fields": {
+      "name": "Roddy Ricch"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 199,
+    "fields": {
+      "name": "Joji"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 200,
+    "fields": {
+      "name": "Rita Ora"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 201,
+    "fields": {
+      "name": "System Of A Down"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 202,
+    "fields": {
+      "name": "Labrinth"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 203,
+    "fields": {
+      "name": "The 1975"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 204,
+    "fields": {
+      "name": "The Notorious B.I.G."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 205,
+    "fields": {
+      "name": "Don Omar"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 206,
+    "fields": {
+      "name": "Jorge & Mateus"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 207,
+    "fields": {
+      "name": "Muse"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 208,
+    "fields": {
+      "name": "Mumford & Sons"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 209,
+    "fields": {
+      "name": "Jack Johnson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 210,
+    "fields": {
+      "name": "Paulo Londra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 211,
+    "fields": {
+      "name": "6ix9ine"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 212,
+    "fields": {
+      "name": "Christian Nodal"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 213,
+    "fields": {
+      "name": "Elvis Presley"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 214,
+    "fields": {
+      "name": "Snoop Dogg"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 215,
+    "fields": {
+      "name": "Gucci Mane"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 216,
+    "fields": {
+      "name": "Henrique & Juliano"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 217,
+    "fields": {
+      "name": "Bazzi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 218,
+    "fields": {
+      "name": "Paramore"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 219,
+    "fields": {
+      "name": "Melanie Martinez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 220,
+    "fields": {
+      "name": "Megan Thee Stallion"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 221,
+    "fields": {
+      "name": "Bon Jovi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 222,
+    "fields": {
+      "name": "Swae Lee"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 223,
+    "fields": {
+      "name": "Lil Pump"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 224,
+    "fields": {
+      "name": "Felix Jaehn"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 225,
+    "fields": {
+      "name": "Hailee Steinfeld"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 226,
+    "fields": {
+      "name": "Sean Paul"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 227,
+    "fields": {
+      "name": "Justin Quiles"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 228,
+    "fields": {
+      "name": "Oasis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 229,
+    "fields": {
+      "name": "Julia Michaels"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 230,
+    "fields": {
+      "name": "Dalex"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 231,
+    "fields": {
+      "name": "Slipknot"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 232,
+    "fields": {
+      "name": "Ne-Yo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 233,
+    "fields": {
+      "name": "Jess Glynne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 234,
+    "fields": {
+      "name": "Tame Impala"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 235,
+    "fields": {
+      "name": "The Lumineers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 236,
+    "fields": {
+      "name": "Cheat Codes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 237,
+    "fields": {
+      "name": "Disclosure"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 238,
+    "fields": {
+      "name": "Alicia Keys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 239,
+    "fields": {
+      "name": "TWICE"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 240,
+    "fields": {
+      "name": "Zion & Lennox"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 241,
+    "fields": {
+      "name": "Gusttavo Lima"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 242,
+    "fields": {
+      "name": "ABBA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 243,
+    "fields": {
+      "name": "Morgan Wallen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 244,
+    "fields": {
+      "name": "Florida Georgia Line"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 245,
+    "fields": {
+      "name": "Kings of Leon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 246,
+    "fields": {
+      "name": "6LACK"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 247,
+    "fields": {
+      "name": "Tove Lo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 248,
+    "fields": {
+      "name": "Fifth Harmony"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 249,
+    "fields": {
+      "name": "Chance the Rapper"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 250,
+    "fields": {
+      "name": "Jack Harlow"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 251,
+    "fields": {
+      "name": "Alesso"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 252,
+    "fields": {
+      "name": "Natti Natasha"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 253,
+    "fields": {
+      "name": "Florence + The Machine"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 254,
+    "fields": {
+      "name": "The Script"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 255,
+    "fields": {
+      "name": "Madonna"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 256,
+    "fields": {
+      "name": "Luke Bryan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 257,
+    "fields": {
+      "name": "Five Finger Death Punch"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 258,
+    "fields": {
+      "name": "Morat"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 259,
+    "fields": {
+      "name": "Jason Mraz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 260,
+    "fields": {
+      "name": "Creedence Clearwater Revival"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 261,
+    "fields": {
+      "name": "Lenny Tav\u00e1rez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 262,
+    "fields": {
+      "name": "Rammstein"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 263,
+    "fields": {
+      "name": "Z\u00e9 Neto & Cristiano"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 264,
+    "fields": {
+      "name": "Bruce Springsteen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 265,
+    "fields": {
+      "name": "Whitney Houston"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 266,
+    "fields": {
+      "name": "Galantis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 267,
+    "fields": {
+      "name": "Kehlani"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 268,
+    "fields": {
+      "name": "Piso 21"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 269,
+    "fields": {
+      "name": "Nickelback"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 270,
+    "fields": {
+      "name": "My Chemical Romance"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 271,
+    "fields": {
+      "name": "Glee Cast"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 272,
+    "fields": {
+      "name": "Alok"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 273,
+    "fields": {
+      "name": "Jonas Brothers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 274,
+    "fields": {
+      "name": "The Offspring"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 275,
+    "fields": {
+      "name": "Niall Horan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 276,
+    "fields": {
+      "name": "Kevin Gates"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 277,
+    "fields": {
+      "name": "Bryson Tiller"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 278,
+    "fields": {
+      "name": "Avril Lavigne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 279,
+    "fields": {
+      "name": "Macklemore & Ryan Lewis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 280,
+    "fields": {
+      "name": "Capital Bra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 281,
+    "fields": {
+      "name": "Alejandro Fern\u00e1ndez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 282,
+    "fields": {
+      "name": "Bring Me The Horizon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 283,
+    "fields": {
+      "name": "Arcangel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 284,
+    "fields": {
+      "name": "Kelly Clarkson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 285,
+    "fields": {
+      "name": "Kane Brown"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 286,
+    "fields": {
+      "name": "Duki"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 287,
+    "fields": {
+      "name": "Wisin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 288,
+    "fields": {
+      "name": "Vance Joy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 289,
+    "fields": {
+      "name": "Thomas Rhett"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 290,
+    "fields": {
+      "name": "Jennifer Lopez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 291,
+    "fields": {
+      "name": "Ryan Lewis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 292,
+    "fields": {
+      "name": "NAV"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 293,
+    "fields": {
+      "name": "Glass Animals"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 294,
+    "fields": {
+      "name": "James Bay"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 295,
+    "fields": {
+      "name": "Johnny Cash"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 296,
+    "fields": {
+      "name": "Lil Tjay"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 297,
+    "fields": {
+      "name": "YG"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 298,
+    "fields": {
+      "name": "YNW Melly"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 299,
+    "fields": {
+      "name": "Amy Winehouse"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 300,
+    "fields": {
+      "name": "Stevie Wonder"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 301,
+    "fields": {
+      "name": "Pearl Jam"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 302,
+    "fields": {
+      "name": "Lil Tecca"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 303,
+    "fields": {
+      "name": "Disturbed"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 304,
+    "fields": {
+      "name": "Hans Zimmer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 305,
+    "fields": {
+      "name": "Aerosmith"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 306,
+    "fields": {
+      "name": "Lil Skies"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 307,
+    "fields": {
+      "name": "Dr. Dre"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 308,
+    "fields": {
+      "name": "Flume"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 309,
+    "fields": {
+      "name": "Miguel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 310,
+    "fields": {
+      "name": "Backstreet Boys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 311,
+    "fields": {
+      "name": "Tones And I"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 312,
+    "fields": {
+      "name": "Kesha"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 313,
+    "fields": {
+      "name": "Nio Garcia"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 314,
+    "fields": {
+      "name": "Wisin & Yandel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 315,
+    "fields": {
+      "name": "Man\u00e1"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 316,
+    "fields": {
+      "name": "Matheus & Kauan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 317,
+    "fields": {
+      "name": "Jason Aldean"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 318,
+    "fields": {
+      "name": "Yandel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 319,
+    "fields": {
+      "name": "Phil Collins"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 320,
+    "fields": {
+      "name": "Akon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 321,
+    "fields": {
+      "name": "Eagles"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 322,
+    "fields": {
+      "name": "Three Days Grace"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 323,
+    "fields": {
+      "name": "24kGoldn"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 324,
+    "fields": {
+      "name": "Jeremih"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 325,
+    "fields": {
+      "name": "The Strokes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 326,
+    "fields": {
+      "name": "Dan + Shay"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 327,
+    "fields": {
+      "name": "Jul"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 328,
+    "fields": {
+      "name": "Anderson .Paak"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 329,
+    "fields": {
+      "name": "Avenged Sevenfold"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 330,
+    "fields": {
+      "name": "Billy Joel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 331,
+    "fields": {
+      "name": "Ninho"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 332,
+    "fields": {
+      "name": "Alejandro Sanz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 333,
+    "fields": {
+      "name": "Wesley Safad\u00e3o"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 334,
+    "fields": {
+      "name": "Steve Aoki"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 335,
+    "fields": {
+      "name": "C\u00e9line Dion"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 336,
+    "fields": {
+      "name": "Prince Royce"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 337,
+    "fields": {
+      "name": "George Ezra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 338,
+    "fields": {
+      "name": "Jessie J"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 339,
+    "fields": {
+      "name": "Lin-Manuel Miranda"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 340,
+    "fields": {
+      "name": "Lil Mosey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 341,
+    "fields": {
+      "name": "benny blanco"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 342,
+    "fields": {
+      "name": "Ricky Martin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 343,
+    "fields": {
+      "name": "2 Chainz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 344,
+    "fields": {
+      "name": "Don Toliver"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 345,
+    "fields": {
+      "name": "Aventura"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 346,
+    "fields": {
+      "name": "Lizzo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 347,
+    "fields": {
+      "name": "Lukas Graham"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 348,
+    "fields": {
+      "name": "Ricardo Arjona"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 349,
+    "fields": {
+      "name": "CNCO"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 350,
+    "fields": {
+      "name": "Passenger"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 351,
+    "fields": {
+      "name": "Calibre 50"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 352,
+    "fields": {
+      "name": "H.E.R."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 353,
+    "fields": {
+      "name": "Train"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 354,
+    "fields": {
+      "name": "Marc Anthony"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 355,
+    "fields": {
+      "name": "Trey Songz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 356,
+    "fields": {
+      "name": "Pentatonix"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 357,
+    "fields": {
+      "name": "Cartel De Santa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 358,
+    "fields": {
+      "name": "Mark Ronson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 359,
+    "fields": {
+      "name": "Pablo Albor\u00e1n"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 360,
+    "fields": {
+      "name": "Foster The People"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 361,
+    "fields": {
+      "name": "Lil Durk"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 362,
+    "fields": {
+      "name": "Nelly"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 363,
+    "fields": {
+      "name": "Maiara & Maraisa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 364,
+    "fields": {
+      "name": "Arijit Singh"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 365,
+    "fields": {
+      "name": "Rex Orange County"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 366,
+    "fields": {
+      "name": "Fetty Wap"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 367,
+    "fields": {
+      "name": "Dire Straits"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 368,
+    "fields": {
+      "name": "Daniel Caesar"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 369,
+    "fields": {
+      "name": "ROSAL\u00cdA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 370,
+    "fields": {
+      "name": "Bee Gees"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 371,
+    "fields": {
+      "name": "Bob Dylan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 372,
+    "fields": {
+      "name": "Bizarrap"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 373,
+    "fields": {
+      "name": "M\u00e5neskin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 374,
+    "fields": {
+      "name": "Danny Ocean"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 375,
+    "fields": {
+      "name": "Ski Mask The Slump God"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 376,
+    "fields": {
+      "name": "James Blunt"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 377,
+    "fields": {
+      "name": "Bryan Adams"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 378,
+    "fields": {
+      "name": "Lost Frequencies"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 379,
+    "fields": {
+      "name": "Quavo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 380,
+    "fields": {
+      "name": "Iron Maiden"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 381,
+    "fields": {
+      "name": "R3HAB"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 382,
+    "fields": {
+      "name": "Jeremy Zucker"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 383,
+    "fields": {
+      "name": "Alec Benjamin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 384,
+    "fields": {
+      "name": "Boyce Avenue"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 385,
+    "fields": {
+      "name": "LANY"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 386,
+    "fields": {
+      "name": "ScHoolboy Q"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 387,
+    "fields": {
+      "name": "Dean Lewis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 388,
+    "fields": {
+      "name": "John Williams"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 389,
+    "fields": {
+      "name": "Conan Gray"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 390,
+    "fields": {
+      "name": "Summer Walker"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 391,
+    "fields": {
+      "name": "Outkast"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 392,
+    "fields": {
+      "name": "Jhen\u00e9 Aiko"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 393,
+    "fields": {
+      "name": "Sam Hunt"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 394,
+    "fields": {
+      "name": "PARTYNEXTDOOR"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 395,
+    "fields": {
+      "name": "Disney"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 396,
+    "fields": {
+      "name": "Cage The Elephant"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 397,
+    "fields": {
+      "name": "Liam Payne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 398,
+    "fields": {
+      "name": "Rels B"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 399,
+    "fields": {
+      "name": "Offset"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 400,
+    "fields": {
+      "name": "The Police"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 401,
+    "fields": {
+      "name": "Charli XCX"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 402,
+    "fields": {
+      "name": "alt-J"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 403,
+    "fields": {
+      "name": "Lil Yachty"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 404,
+    "fields": {
+      "name": "Hillsong Worship"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 405,
+    "fields": {
+      "name": "Sigala"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 406,
+    "fields": {
+      "name": "Blake Shelton"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 407,
+    "fields": {
+      "name": "ILLENIUM"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 408,
+    "fields": {
+      "name": "The Vamps"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 409,
+    "fields": {
+      "name": "Rudimental"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 410,
+    "fields": {
+      "name": "BROCKHAMPTON"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 411,
+    "fields": {
+      "name": "Bibi Blocksberg"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 412,
+    "fields": {
+      "name": "Marvin Gaye"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 413,
+    "fields": {
+      "name": "The Black Keys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 414,
+    "fields": {
+      "name": "Mike Posner"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 415,
+    "fields": {
+      "name": "Tate McRae"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 416,
+    "fields": {
+      "name": "Jax Jones"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 417,
+    "fields": {
+      "name": "Maren Morris"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 418,
+    "fields": {
+      "name": "Armin van Buuren"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 419,
+    "fields": {
+      "name": "Zac Brown Band"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 420,
+    "fields": {
+      "name": "Mau y Ricky"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 421,
+    "fields": {
+      "name": "Chris Stapleton"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 422,
+    "fields": {
+      "name": "Rise Against"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 423,
+    "fields": {
+      "name": "Carlos Vives"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 424,
+    "fields": {
+      "name": "Bon Iver"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 425,
+    "fields": {
+      "name": "Madison Beer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 426,
+    "fields": {
+      "name": "Jesse & Joy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 427,
+    "fields": {
+      "name": "The Doors"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 428,
+    "fields": {
+      "name": "Juanes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 429,
+    "fields": {
+      "name": "RAF Camora"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 430,
+    "fields": {
+      "name": "A$AP Ferg"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 431,
+    "fields": {
+      "name": "Skillet"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 432,
+    "fields": {
+      "name": "Birdy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 433,
+    "fields": {
+      "name": "Destiny's Child"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 434,
+    "fields": {
+      "name": "Lunay"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 435,
+    "fields": {
+      "name": "Weezer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 436,
+    "fields": {
+      "name": "Carly Rae Jepsen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 437,
+    "fields": {
+      "name": "Iggy Azalea"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 438,
+    "fields": {
+      "name": "Soda Stereo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 439,
+    "fields": {
+      "name": "T.I."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 440,
+    "fields": {
+      "name": "JP Cooper"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 441,
+    "fields": {
+      "name": "Papa Roach"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 442,
+    "fields": {
+      "name": "Tim McGraw"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 443,
+    "fields": {
+      "name": "EXO"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 444,
+    "fields": {
+      "name": "Why Don't We"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 445,
+    "fields": {
+      "name": "Mabel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 446,
+    "fields": {
+      "name": "Vicente Fern\u00e1ndez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 447,
+    "fields": {
+      "name": "Kali Uchis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 448,
+    "fields": {
+      "name": "Bradley Cooper"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 449,
+    "fields": {
+      "name": "Bonez MC"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 450,
+    "fields": {
+      "name": "The Cure"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 451,
+    "fields": {
+      "name": "Becky Hill"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 452,
+    "fields": {
+      "name": "Os Bar\u00f5es Da Pisadinha"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 453,
+    "fields": {
+      "name": "Noah Cyrus"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 454,
+    "fields": {
+      "name": "Korn"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 455,
+    "fields": {
+      "name": "Eric Church"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 456,
+    "fields": {
+      "name": "SAINt JHN"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 457,
+    "fields": {
+      "name": "Norah Jones"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 458,
+    "fields": {
+      "name": "Calum Scott"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 459,
+    "fields": {
+      "name": "Paul McCartney"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 460,
+    "fields": {
+      "name": "MEDUZA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 461,
+    "fields": {
+      "name": "Joan Sebastian"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 462,
+    "fields": {
+      "name": "Imanbek"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 463,
+    "fields": {
+      "name": "PNL"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 464,
+    "fields": {
+      "name": "NLE Choppa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 465,
+    "fields": {
+      "name": "Journey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 466,
+    "fields": {
+      "name": "MARINA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 467,
+    "fields": {
+      "name": "iann dior"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 468,
+    "fields": {
+      "name": "Grupo Firme"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 469,
+    "fields": {
+      "name": "Stray Kids"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 470,
+    "fields": {
+      "name": "Juan Gabriel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 471,
+    "fields": {
+      "name": "Normani"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 472,
+    "fields": {
+      "name": "Kenny Chesney"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 473,
+    "fields": {
+      "name": "The Beach Boys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 474,
+    "fields": {
+      "name": "Depeche Mode"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 475,
+    "fields": {
+      "name": "X Ambassadors"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 476,
+    "fields": {
+      "name": "Rich The Kid"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 477,
+    "fields": {
+      "name": "Simon & Garfunkel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 478,
+    "fields": {
+      "name": "The Game"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 479,
+    "fields": {
+      "name": "George Michael"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 480,
+    "fields": {
+      "name": "Amin\u00e9"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 481,
+    "fields": {
+      "name": "AJR"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 482,
+    "fields": {
+      "name": "Breaking Benjamin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 483,
+    "fields": {
+      "name": "Nick Jonas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 484,
+    "fields": {
+      "name": "KHEA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 485,
+    "fields": {
+      "name": "Jon Bellion"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 486,
+    "fields": {
+      "name": "C. Tangana"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 487,
+    "fields": {
+      "name": "The xx"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 488,
+    "fields": {
+      "name": "Milky Chance"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 489,
+    "fields": {
+      "name": "bbno$"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 490,
+    "fields": {
+      "name": "Sabrina Carpenter"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 491,
+    "fields": {
+      "name": "Christina Perri"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 492,
+    "fields": {
+      "name": "Hillsong UNITED"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 493,
+    "fields": {
+      "name": "Years & Years"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 494,
+    "fields": {
+      "name": "Jimi Hendrix"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 495,
+    "fields": {
+      "name": "R.E.M."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 496,
+    "fields": {
+      "name": "Matoma"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 497,
+    "fields": {
+      "name": "Rick Ross"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 498,
+    "fields": {
+      "name": "Ufo361"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 499,
+    "fields": {
+      "name": "Earth, Wind & Fire"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 500,
+    "fields": {
+      "name": "Stormzy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 501,
+    "fields": {
+      "name": "La Arrolladora Banda El Lim\u00f3n De Rene Camacho"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 502,
+    "fields": {
+      "name": "Los \u00c1ngeles Azules"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 503,
+    "fields": {
+      "name": "Volbeat"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 504,
+    "fields": {
+      "name": "KYLE"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 505,
+    "fields": {
+      "name": "The Fray"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 506,
+    "fields": {
+      "name": "Van Morrison"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 507,
+    "fields": {
+      "name": "DNCE"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 508,
+    "fields": {
+      "name": "Robbie Williams"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 509,
+    "fields": {
+      "name": "Cali Y El Dandee"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 510,
+    "fields": {
+      "name": "Sam Feldt"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 511,
+    "fields": {
+      "name": "Shinedown"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 512,
+    "fields": {
+      "name": "The Smiths"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 513,
+    "fields": {
+      "name": "Lynyrd Skynyrd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 514,
+    "fields": {
+      "name": "El Alfa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 515,
+    "fields": {
+      "name": "Eric Clapton"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 516,
+    "fields": {
+      "name": "Kid Ink"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 517,
+    "fields": {
+      "name": "Dave"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 518,
+    "fields": {
+      "name": "Rage Against The Machine"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 519,
+    "fields": {
+      "name": "Dimitri Vegas & Like Mike"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 520,
+    "fields": {
+      "name": "Nelly Furtado"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 521,
+    "fields": {
+      "name": "Maria Becerra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 522,
+    "fields": {
+      "name": "All Time Low"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 523,
+    "fields": {
+      "name": "Black Sabbath"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 524,
+    "fields": {
+      "name": "Sabaton"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 525,
+    "fields": {
+      "name": "Dermot Kennedy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 526,
+    "fields": {
+      "name": "T-Pain"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 527,
+    "fields": {
+      "name": "Quinn XCII"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 528,
+    "fields": {
+      "name": "Rod Stewart"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 529,
+    "fields": {
+      "name": "The White Stripes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 530,
+    "fields": {
+      "name": "Daryl Hall & John Oates"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 531,
+    "fields": {
+      "name": "Van Halen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 532,
+    "fields": {
+      "name": "Aya Nakamura"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 533,
+    "fields": {
+      "name": "Jay Wheeler"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 534,
+    "fields": {
+      "name": "Grey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 535,
+    "fields": {
+      "name": "The Cranberries"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 536,
+    "fields": {
+      "name": "Of Monsters and Men"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 537,
+    "fields": {
+      "name": "Sfera Ebbasta"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 538,
+    "fields": {
+      "name": "TINI"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 539,
+    "fields": {
+      "name": "MGMT"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 540,
+    "fields": {
+      "name": "B.o.B"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 541,
+    "fields": {
+      "name": "Samra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 542,
+    "fields": {
+      "name": "Hollywood Undead"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 543,
+    "fields": {
+      "name": "Rag'n'Bone Man"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 544,
+    "fields": {
+      "name": "Prince"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 545,
+    "fields": {
+      "name": "Brytiago"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 546,
+    "fields": {
+      "name": "Plan B"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 547,
+    "fields": {
+      "name": "Enya"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 548,
+    "fields": {
+      "name": "Red Velvet"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 549,
+    "fields": {
+      "name": "RAYE"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 550,
+    "fields": {
+      "name": "A Day To Remember"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 551,
+    "fields": {
+      "name": "Keith Urban"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 552,
+    "fields": {
+      "name": "Aretha Franklin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 553,
+    "fields": {
+      "name": "Pedro Cap\u00f3"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 554,
+    "fields": {
+      "name": "Evanescence"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 555,
+    "fields": {
+      "name": "Kodaline"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 556,
+    "fields": {
+      "name": "PnB Rock"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 557,
+    "fields": {
+      "name": "Clairo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 558,
+    "fields": {
+      "name": "Andy Grammer"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 559,
+    "fields": {
+      "name": "Damso"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 560,
+    "fields": {
+      "name": "Rod Wave"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 561,
+    "fields": {
+      "name": "Juan Mag\u00e1n"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 562,
+    "fields": {
+      "name": "ODESZA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 563,
+    "fields": {
+      "name": "Mustard"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 564,
+    "fields": {
+      "name": "Natanael Cano"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 565,
+    "fields": {
+      "name": "Carrie Underwood"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 566,
+    "fields": {
+      "name": "Ludovico Einaudi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 567,
+    "fields": {
+      "name": "Casper Magico"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 568,
+    "fields": {
+      "name": "De La Ghetto"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 569,
+    "fields": {
+      "name": "El Fantasma"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 570,
+    "fields": {
+      "name": "Topic"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 571,
+    "fields": {
+      "name": "Joyner Lucas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 572,
+    "fields": {
+      "name": "Nas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 573,
+    "fields": {
+      "name": "Scorpions"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 574,
+    "fields": {
+      "name": "Sublime"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 575,
+    "fields": {
+      "name": "Swedish House Mafia"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 576,
+    "fields": {
+      "name": "George Strait"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 577,
+    "fields": {
+      "name": "Ozzy Osbourne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 578,
+    "fields": {
+      "name": "Goodboys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 579,
+    "fields": {
+      "name": "Shaggy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 580,
+    "fields": {
+      "name": "Carlos Rivera"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 581,
+    "fields": {
+      "name": "Luan Santana"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 582,
+    "fields": {
+      "name": "Marilyn Manson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 583,
+    "fields": {
+      "name": "SEVENTEEN"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 584,
+    "fields": {
+      "name": "GIMS"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 585,
+    "fields": {
+      "name": "Sum 41"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 586,
+    "fields": {
+      "name": "Melendi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 587,
+    "fields": {
+      "name": "WALK THE MOON"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 588,
+    "fields": {
+      "name": "Bing Crosby"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 589,
+    "fields": {
+      "name": "Aitana"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 590,
+    "fields": {
+      "name": "Axwell /\\ Ingrosso"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 591,
+    "fields": {
+      "name": "TOTO"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 592,
+    "fields": {
+      "name": "League of Legends"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 593,
+    "fields": {
+      "name": "Ali Gatie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 594,
+    "fields": {
+      "name": "Ella Mai"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 595,
+    "fields": {
+      "name": "Nacho"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 596,
+    "fields": {
+      "name": "MC Kevinho"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 597,
+    "fields": {
+      "name": "Astrid S"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 598,
+    "fields": {
+      "name": "3 Doors Down"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 599,
+    "fields": {
+      "name": "Jos\u00e9 Jos\u00e9"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 600,
+    "fields": {
+      "name": "Two Door Cinema Club"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 601,
+    "fields": {
+      "name": "Dolly Parton"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 602,
+    "fields": {
+      "name": "Supertramp"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 603,
+    "fields": {
+      "name": "Lord Huron"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 604,
+    "fields": {
+      "name": "Afrojack"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 605,
+    "fields": {
+      "name": "Don Diablo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 606,
+    "fields": {
+      "name": "Seeb"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 607,
+    "fields": {
+      "name": "David Bisbal"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 608,
+    "fields": {
+      "name": "Wale"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 609,
+    "fields": {
+      "name": "The Smashing Pumpkins"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 610,
+    "fields": {
+      "name": "Sido"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 611,
+    "fields": {
+      "name": "Louis Tomlinson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 612,
+    "fields": {
+      "name": "Danna Paola"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 613,
+    "fields": {
+      "name": "Arizona Zervas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 614,
+    "fields": {
+      "name": "Kacey Musgraves"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 615,
+    "fields": {
+      "name": "Bibi und Tina"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 616,
+    "fields": {
+      "name": "Zo\u00e9"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 617,
+    "fields": {
+      "name": "Jorja Smith"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 618,
+    "fields": {
+      "name": "Tainy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 619,
+    "fields": {
+      "name": "Electric Light Orchestra"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 620,
+    "fields": {
+      "name": "Banda El Recodo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 621,
+    "fields": {
+      "name": "Luciano"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 622,
+    "fields": {
+      "name": "Marco Antonio Sol\u00eds"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 623,
+    "fields": {
+      "name": "Bryant Myers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 624,
+    "fields": {
+      "name": "Mitski"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 625,
+    "fields": {
+      "name": "Tom Odell"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 626,
+    "fields": {
+      "name": "Jaden"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 627,
+    "fields": {
+      "name": "Ms. Lauryn Hill"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 628,
+    "fields": {
+      "name": "Colbie Caillat"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 629,
+    "fields": {
+      "name": "Portugal. The Man"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 630,
+    "fields": {
+      "name": "Rascal Flatts"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 631,
+    "fields": {
+      "name": "Feid"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 632,
+    "fields": {
+      "name": "The Clash"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 633,
+    "fields": {
+      "name": "Mac DeMarco"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 634,
+    "fields": {
+      "name": "R. Kelly"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 635,
+    "fields": {
+      "name": "gnash"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 636,
+    "fields": {
+      "name": "Martin Jensen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 637,
+    "fields": {
+      "name": "Eladio Carrion"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 638,
+    "fields": {
+      "name": "Chencho Corleone"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 639,
+    "fields": {
+      "name": "Desiigner"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 640,
+    "fields": {
+      "name": "Joel Corry"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 641,
+    "fields": {
+      "name": "Hardwell"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 642,
+    "fields": {
+      "name": "Kontra K"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 643,
+    "fields": {
+      "name": "Annie Lennox"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 644,
+    "fields": {
+      "name": "Noriel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 645,
+    "fields": {
+      "name": "M83"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 646,
+    "fields": {
+      "name": "Jessie Reyez"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 647,
+    "fields": {
+      "name": "Vampire Weekend"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 648,
+    "fields": {
+      "name": "Owl City"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 649,
+    "fields": {
+      "name": "Mike WiLL Made-It"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 650,
+    "fields": {
+      "name": "Apache 207"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 651,
+    "fields": {
+      "name": "Chief Keef"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 652,
+    "fields": {
+      "name": "Westlife"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 653,
+    "fields": {
+      "name": "Leon Bridges"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 654,
+    "fields": {
+      "name": "Wham!"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 655,
+    "fields": {
+      "name": "DMX"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 656,
+    "fields": {
+      "name": "The Kooks"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 657,
+    "fields": {
+      "name": "Elevation Worship"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 658,
+    "fields": {
+      "name": "Thirty Seconds To Mars"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 659,
+    "fields": {
+      "name": "Olly Murs"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 660,
+    "fields": {
+      "name": "Sara Bareilles"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 661,
+    "fields": {
+      "name": "NEFFEX"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 662,
+    "fields": {
+      "name": "Cosculluela"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 663,
+    "fields": {
+      "name": "Stromae"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 664,
+    "fields": {
+      "name": "Ha*Ash"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 665,
+    "fields": {
+      "name": "OMI"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 666,
+    "fields": {
+      "name": "M\u00d8"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 667,
+    "fields": {
+      "name": "Loud Luxury"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 668,
+    "fields": {
+      "name": "Alan Jackson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 669,
+    "fields": {
+      "name": "Gwen Stefani"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 670,
+    "fields": {
+      "name": "Joey Bada$$"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 671,
+    "fields": {
+      "name": "KISS"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 672,
+    "fields": {
+      "name": "Dilsinho"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 673,
+    "fields": {
+      "name": "Fergie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 674,
+    "fields": {
+      "name": "Moneybagg Yo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 675,
+    "fields": {
+      "name": "Bethel Music"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 676,
+    "fields": {
+      "name": "Cigarettes After Sex"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 677,
+    "fields": {
+      "name": "Queens of the Stone Age"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 678,
+    "fields": {
+      "name": "Snow Patrol"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 679,
+    "fields": {
+      "name": "Nekfeu"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 680,
+    "fields": {
+      "name": "Brent Faiyaz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 681,
+    "fields": {
+      "name": "Ruth B."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 682,
+    "fields": {
+      "name": "M\u00f6tley Cr\u00fce"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 683,
+    "fields": {
+      "name": "Ciara"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 684,
+    "fields": {
+      "name": "Stefflon Don"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 685,
+    "fields": {
+      "name": "Pharrell Williams"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 686,
+    "fields": {
+      "name": "Charlie Brown Jr."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 687,
+    "fields": {
+      "name": "Internet Money"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 688,
+    "fields": {
+      "name": "Nat King Cole"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 689,
+    "fields": {
+      "name": "Chelsea Cutler"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 690,
+    "fields": {
+      "name": "Louis Armstrong"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 691,
+    "fields": {
+      "name": "Conor Maynard"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 692,
+    "fields": {
+      "name": "Aloe Blacc"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 693,
+    "fields": {
+      "name": "Keane"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 694,
+    "fields": {
+      "name": "Dean Martin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 695,
+    "fields": {
+      "name": "Willy William"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 696,
+    "fields": {
+      "name": "Alice In Chains"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 697,
+    "fields": {
+      "name": "Ella Fitzgerald"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 698,
+    "fields": {
+      "name": "Denzel Curry"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 699,
+    "fields": {
+      "name": "WILLOW"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 700,
+    "fields": {
+      "name": "James TW"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 701,
+    "fields": {
+      "name": "Dierks Bentley"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 702,
+    "fields": {
+      "name": "Thalia"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 703,
+    "fields": {
+      "name": "Lady A"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 704,
+    "fields": {
+      "name": "The Jackson 5"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 705,
+    "fields": {
+      "name": "Sting"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 706,
+    "fields": {
+      "name": "MAX"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 707,
+    "fields": {
+      "name": "Two Feet"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 708,
+    "fields": {
+      "name": "Regard"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 709,
+    "fields": {
+      "name": "Santa Fe Klan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 710,
+    "fields": {
+      "name": "Old Dominion"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 711,
+    "fields": {
+      "name": "ANAVIT\u00d3RIA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 712,
+    "fields": {
+      "name": "KSI"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 713,
+    "fields": {
+      "name": "Ghostemane"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 714,
+    "fields": {
+      "name": "Leona Lewis"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 715,
+    "fields": {
+      "name": "Limp Bizkit"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 716,
+    "fields": {
+      "name": "Ben Howard"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 717,
+    "fields": {
+      "name": "Miranda Lambert"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 718,
+    "fields": {
+      "name": "fun."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 719,
+    "fields": {
+      "name": "Mon Laferte"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 720,
+    "fields": {
+      "name": "Vintage Culture"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 721,
+    "fields": {
+      "name": "Sleeping At Last"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 722,
+    "fields": {
+      "name": "Blueface"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 723,
+    "fields": {
+      "name": "Kelly Rowland"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 724,
+    "fields": {
+      "name": "Lu\u00edsa Sonza"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 725,
+    "fields": {
+      "name": "La Oreja de Van Gogh"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 726,
+    "fields": {
+      "name": "Martin Solveig"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 727,
+    "fields": {
+      "name": "Dynoro"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 728,
+    "fields": {
+      "name": "Booba"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 729,
+    "fields": {
+      "name": "Bill Withers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 730,
+    "fields": {
+      "name": "TOMORROW X TOGETHER"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 731,
+    "fields": {
+      "name": "Mike Perry"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 732,
+    "fields": {
+      "name": "Oliver Heldens"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 733,
+    "fields": {
+      "name": "John Newman"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 734,
+    "fields": {
+      "name": "Lofi Fruits Music"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 735,
+    "fields": {
+      "name": "The Pussycat Dolls"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 736,
+    "fields": {
+      "name": "Roxette"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 737,
+    "fields": {
+      "name": "AJ Tracey"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 738,
+    "fields": {
+      "name": "Trevor Daniel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 739,
+    "fields": {
+      "name": "Lee Brice"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 740,
+    "fields": {
+      "name": "Santana"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 741,
+    "fields": {
+      "name": "Lalo Ebratt"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 742,
+    "fields": {
+      "name": "Ezhel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 743,
+    "fields": {
+      "name": "Los Temerarios"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 744,
+    "fields": {
+      "name": "CHVRCHES"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 745,
+    "fields": {
+      "name": "girl in red"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 746,
+    "fields": {
+      "name": "The Who"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 747,
+    "fields": {
+      "name": "John Lennon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 748,
+    "fields": {
+      "name": "Lil Dicky"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 749,
+    "fields": {
+      "name": "Calle 13"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 750,
+    "fields": {
+      "name": "Michael Silverman"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 751,
+    "fields": {
+      "name": "Shania Twain"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 752,
+    "fields": {
+      "name": "Sade"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 753,
+    "fields": {
+      "name": "Saweetie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 754,
+    "fields": {
+      "name": "Daya"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 755,
+    "fields": {
+      "name": "Surfaces"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 756,
+    "fields": {
+      "name": "Gera MX"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 757,
+    "fields": {
+      "name": "Miracle Tones"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 758,
+    "fields": {
+      "name": "Jack \u00dc"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 759,
+    "fields": {
+      "name": "Gerardo Ortiz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 760,
+    "fields": {
+      "name": "beabadoobee"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 761,
+    "fields": {
+      "name": "Bruno & Marrone"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 762,
+    "fields": {
+      "name": "MKTO"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 763,
+    "fields": {
+      "name": "MAGIC!"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 764,
+    "fields": {
+      "name": "Arcade Fire"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 765,
+    "fields": {
+      "name": "Kylie Minogue"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 766,
+    "fields": {
+      "name": "Lionel Richie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 767,
+    "fields": {
+      "name": "Chris Young"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 768,
+    "fields": {
+      "name": "Niska"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 769,
+    "fields": {
+      "name": "Incubus"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 770,
+    "fields": {
+      "name": "Gryffin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 771,
+    "fields": {
+      "name": "Powfu"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 772,
+    "fields": {
+      "name": "Tee Grizzley"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 773,
+    "fields": {
+      "name": "Oliver Tree"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 774,
+    "fields": {
+      "name": "Yo Gotti"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 775,
+    "fields": {
+      "name": "Los Tigres Del Norte"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 776,
+    "fields": {
+      "name": "Gigi D'Agostino"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 777,
+    "fields": {
+      "name": "Nina Simone"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 778,
+    "fields": {
+      "name": "Sean Kingston"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 779,
+    "fields": {
+      "name": "Rich Brian"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 780,
+    "fields": {
+      "name": "Seether"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 781,
+    "fields": {
+      "name": "Angus & Julia Stone"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 782,
+    "fields": {
+      "name": "Kollegah"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 783,
+    "fields": {
+      "name": "Taio Cruz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 784,
+    "fields": {
+      "name": "Sin Bandera"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 785,
+    "fields": {
+      "name": "Bea Miller"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 786,
+    "fields": {
+      "name": "Greeicy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 787,
+    "fields": {
+      "name": "Paul Simon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 788,
+    "fields": {
+      "name": "Bullet For My Valentine"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 789,
+    "fields": {
+      "name": "Dennis Lloyd"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 790,
+    "fields": {
+      "name": "Chayanne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 791,
+    "fields": {
+      "name": "Simple Plan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 792,
+    "fields": {
+      "name": "Jon Pardi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 793,
+    "fields": {
+      "name": "LUDMILLA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 794,
+    "fields": {
+      "name": "Beret"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 795,
+    "fields": {
+      "name": "IU"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 796,
+    "fields": {
+      "name": "Fr\u00e9d\u00e9ric Chopin"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 797,
+    "fields": {
+      "name": "Jasmine Thompson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 798,
+    "fields": {
+      "name": "Junior H"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 799,
+    "fields": {
+      "name": "Darell"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 800,
+    "fields": {
+      "name": "Summer Cem"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 801,
+    "fields": {
+      "name": "TKKG"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 802,
+    "fields": {
+      "name": "Lily Allen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 803,
+    "fields": {
+      "name": "The National"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 804,
+    "fields": {
+      "name": "Max Richter"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 805,
+    "fields": {
+      "name": "Yung Gravy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 806,
+    "fields": {
+      "name": "Nipsey Hussle"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 807,
+    "fields": {
+      "name": "*NSYNC"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 808,
+    "fields": {
+      "name": "Selena"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 809,
+    "fields": {
+      "name": "Gente De Zona"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 810,
+    "fields": {
+      "name": "Tears For Fears"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 811,
+    "fields": {
+      "name": "Otis Redding"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 812,
+    "fields": {
+      "name": "Dido"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 813,
+    "fields": {
+      "name": "will.i.am"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 814,
+    "fields": {
+      "name": "Die drei !!!"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 815,
+    "fields": {
+      "name": "Guaynaa"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 816,
+    "fields": {
+      "name": "Brad Paisley"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 817,
+    "fields": {
+      "name": "Deftones"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 818,
+    "fields": {
+      "name": "JID"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 819,
+    "fields": {
+      "name": "Cyndi Lauper"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 820,
+    "fields": {
+      "name": "KALEO"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 821,
+    "fields": {
+      "name": "Tina Turner"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 822,
+    "fields": {
+      "name": "Sof\u00eda Reyes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 823,
+    "fields": {
+      "name": "Tracy Chapman"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 824,
+    "fields": {
+      "name": "Juicy J"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 825,
+    "fields": {
+      "name": "Chase Atlantic"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 826,
+    "fields": {
+      "name": "Kiiara"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 827,
+    "fields": {
+      "name": "Tom Walker"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 828,
+    "fields": {
+      "name": "Beastie Boys"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 829,
+    "fields": {
+      "name": "Felipe Ara\u00fajo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 830,
+    "fields": {
+      "name": "Mother Mother"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 831,
+    "fields": {
+      "name": "Wolfgang Amadeus Mozart"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 832,
+    "fields": {
+      "name": "Yusuf / Cat Stevens"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 833,
+    "fields": {
+      "name": "Giveon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 834,
+    "fields": {
+      "name": "Olivia O'Brien"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 835,
+    "fields": {
+      "name": "Ice Cube"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 836,
+    "fields": {
+      "name": "NCT 127"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 837,
+    "fields": {
+      "name": "Neil Young"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 838,
+    "fields": {
+      "name": "Julieta Venegas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 839,
+    "fields": {
+      "name": "Mary J. Blige"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 840,
+    "fields": {
+      "name": "Kevin Roldan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 841,
+    "fields": {
+      "name": "Kris Kross Amsterdam"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 842,
+    "fields": {
+      "name": "Dominic Fike"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 843,
+    "fields": {
+      "name": "CRO"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 844,
+    "fields": {
+      "name": "Oh Wonder"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 845,
+    "fields": {
+      "name": "Mr. Probz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 846,
+    "fields": {
+      "name": "Nicki Nicole"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 847,
+    "fields": {
+      "name": "Wallows"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 848,
+    "fields": {
+      "name": "Ramin Djawadi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 849,
+    "fields": {
+      "name": "Will Smith"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 850,
+    "fields": {
+      "name": "Lenny Kravitz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 851,
+    "fields": {
+      "name": "Yellow Claw"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 852,
+    "fields": {
+      "name": "Lupe Fiasco"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 853,
+    "fields": {
+      "name": "Skepta"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 854,
+    "fields": {
+      "name": "Brett Young"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 855,
+    "fields": {
+      "name": "The Score"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 856,
+    "fields": {
+      "name": "Ferrugem"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 857,
+    "fields": {
+      "name": "Alina Baraz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 858,
+    "fields": {
+      "name": "Blur"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 859,
+    "fields": {
+      "name": "Matu\u00ea"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 860,
+    "fields": {
+      "name": "Audioslave"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 861,
+    "fields": {
+      "name": "R\u00edo Roma"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 862,
+    "fields": {
+      "name": "AURORA"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 863,
+    "fields": {
+      "name": "Cash Cash"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 864,
+    "fields": {
+      "name": "Jowell & Randy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 865,
+    "fields": {
+      "name": "deadmau5"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 866,
+    "fields": {
+      "name": "Granular"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 867,
+    "fields": {
+      "name": "ZZ Top"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 868,
+    "fields": {
+      "name": "Pineapple StormTv"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 869,
+    "fields": {
+      "name": "Thiaguinho"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 870,
+    "fields": {
+      "name": "Lil Kleine"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 871,
+    "fields": {
+      "name": "Cher"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 872,
+    "fields": {
+      "name": "Petit Biscuit"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 873,
+    "fields": {
+      "name": "Alex Rose"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 874,
+    "fields": {
+      "name": "Natiruts"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 875,
+    "fields": {
+      "name": "DJ Luian"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 876,
+    "fields": {
+      "name": "Joaqu\u00edn Sabina"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 877,
+    "fields": {
+      "name": "DENNIS"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 878,
+    "fields": {
+      "name": "Falling In Reverse"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 879,
+    "fields": {
+      "name": "Natalia Lafourcade"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 880,
+    "fields": {
+      "name": "Mc Don Juan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 881,
+    "fields": {
+      "name": "Spice Girls"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 882,
+    "fields": {
+      "name": "Tori Kelly"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 883,
+    "fields": {
+      "name": "TLC"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 884,
+    "fields": {
+      "name": "Toby Keith"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 885,
+    "fields": {
+      "name": "Timbaland"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 886,
+    "fields": {
+      "name": "Tech N9ne"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 887,
+    "fields": {
+      "name": "Gustavo Cerati"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 888,
+    "fields": {
+      "name": "Dadju"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 889,
+    "fields": {
+      "name": "Mambo Kingz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 890,
+    "fields": {
+      "name": "Maggie Lindemann"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 891,
+    "fields": {
+      "name": "Vince Staples"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 892,
+    "fields": {
+      "name": "Baby Lullaby Academy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 893,
+    "fields": {
+      "name": "B\u00d8RNS"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 894,
+    "fields": {
+      "name": "Evaluna Montaner"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 895,
+    "fields": {
+      "name": "Tungevaag"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 896,
+    "fields": {
+      "name": "Sasha Alex Sloan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 897,
+    "fields": {
+      "name": "The Goo Goo Dolls"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 898,
+    "fields": {
+      "name": "Jay Chou"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 899,
+    "fields": {
+      "name": "Pink Sweat$"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 900,
+    "fields": {
+      "name": "La Adictiva Banda San Jos\u00e9 de Mesillas"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 901,
+    "fields": {
+      "name": "Melim"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 902,
+    "fields": {
+      "name": "Lykke Li"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 903,
+    "fields": {
+      "name": "Bruno Martini"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 904,
+    "fields": {
+      "name": "Jack & Jack"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 905,
+    "fields": {
+      "name": "Trueno"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 906,
+    "fields": {
+      "name": "Pixies"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 907,
+    "fields": {
+      "name": "Lauren Daigle"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 908,
+    "fields": {
+      "name": "Pusha T"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 909,
+    "fields": {
+      "name": "Aleman"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 910,
+    "fields": {
+      "name": "Dread Mar I"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 911,
+    "fields": {
+      "name": "Silk Sonic"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 912,
+    "fields": {
+      "name": "Burna Boy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 913,
+    "fields": {
+      "name": "YUNGBLUD"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 914,
+    "fields": {
+      "name": "The All-American Rejects"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 915,
+    "fields": {
+      "name": "Tyler Childers"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 916,
+    "fields": {
+      "name": "King Von"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 917,
+    "fields": {
+      "name": "Gloria Trevi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 918,
+    "fields": {
+      "name": "Pabllo Vittar"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 919,
+    "fields": {
+      "name": "Alvaro Soler"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 920,
+    "fields": {
+      "name": "Salmo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 921,
+    "fields": {
+      "name": "Beach House"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 922,
+    "fields": {
+      "name": "Willie Nelson"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 923,
+    "fields": {
+      "name": "Foreigner"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 924,
+    "fields": {
+      "name": "Bunbury"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 925,
+    "fields": {
+      "name": "Juan Luis Guerra 4.40"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 926,
+    "fields": {
+      "name": "Gavin James"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 927,
+    "fields": {
+      "name": "Beck"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 928,
+    "fields": {
+      "name": "Simone & Simaria"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 929,
+    "fields": {
+      "name": "Upchurch"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 930,
+    "fields": {
+      "name": "Duke Dumont"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 931,
+    "fields": {
+      "name": "Counting Crows"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 932,
+    "fields": {
+      "name": "Emeli Sand\u00e9"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 933,
+    "fields": {
+      "name": "Icona Pop"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 934,
+    "fields": {
+      "name": "MC Kevin o Chris"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 935,
+    "fields": {
+      "name": "BONES"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 936,
+    "fields": {
+      "name": "Megadeth"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 937,
+    "fields": {
+      "name": "The Temptations"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 938,
+    "fields": {
+      "name": "Talking Heads"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 939,
+    "fields": {
+      "name": "Gotye"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 940,
+    "fields": {
+      "name": "The Head And The Heart"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 941,
+    "fields": {
+      "name": "Cristian Castro"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 942,
+    "fields": {
+      "name": "MF DOOM"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 943,
+    "fields": {
+      "name": "Jeezy"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 944,
+    "fields": {
+      "name": "Laura Pausini"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 945,
+    "fields": {
+      "name": "Baby Keem"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 946,
+    "fields": {
+      "name": "Hombres G"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 947,
+    "fields": {
+      "name": "Capo Plaza"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 948,
+    "fields": {
+      "name": "(G)I-DLE"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 949,
+    "fields": {
+      "name": "Marracash"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 950,
+    "fields": {
+      "name": "ZHU"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 951,
+    "fields": {
+      "name": "Alanis Morissette"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 952,
+    "fields": {
+      "name": "Mora"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 953,
+    "fields": {
+      "name": "SCH"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 954,
+    "fields": {
+      "name": "Ruel"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 955,
+    "fields": {
+      "name": "Jacquees"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 956,
+    "fields": {
+      "name": "Salaam Remi"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 957,
+    "fields": {
+      "name": "Gustavo Mioto"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 958,
+    "fields": {
+      "name": "Lil Xan"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 959,
+    "fields": {
+      "name": "Frenna"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 960,
+    "fields": {
+      "name": "Diego & Victor Hugo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 961,
+    "fields": {
+      "name": "Sam Cooke"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 962,
+    "fields": {
+      "name": "Caf\u00e9 Tacvba"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 963,
+    "fields": {
+      "name": "Stone Sour"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 964,
+    "fields": {
+      "name": "Canserbero"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 965,
+    "fields": {
+      "name": "Missy Elliott"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 966,
+    "fields": {
+      "name": "Gzuz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 967,
+    "fields": {
+      "name": "Zendaya"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 968,
+    "fields": {
+      "name": "Eurythmics"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 969,
+    "fields": {
+      "name": "Dustin Lynch"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 970,
+    "fields": {
+      "name": "Pantera"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 971,
+    "fields": {
+      "name": "Bo Burnham"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 972,
+    "fields": {
+      "name": "$NOT"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 973,
+    "fields": {
+      "name": "Kelsea Ballerini"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 974,
+    "fields": {
+      "name": "A Tribe Called Quest"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 975,
+    "fields": {
+      "name": "Brantley Gilbert"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 976,
+    "fields": {
+      "name": "Ben&Ben"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 977,
+    "fields": {
+      "name": "Johann Sebastian Bach"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 978,
+    "fields": {
+      "name": "Craig David"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 979,
+    "fields": {
+      "name": "Snakehips"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 980,
+    "fields": {
+      "name": "Ultimo"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 981,
+    "fields": {
+      "name": "Brett Eldredge"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 982,
+    "fields": {
+      "name": "Leonard Cohen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 983,
+    "fields": {
+      "name": "Grouplove"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 984,
+    "fields": {
+      "name": "Andrea Bocelli"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 985,
+    "fields": {
+      "name": "AWOLNATION"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 986,
+    "fields": {
+      "name": "Dave Matthews Band"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 987,
+    "fields": {
+      "name": "LIT killah"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 988,
+    "fields": {
+      "name": "Ashnikko"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 989,
+    "fields": {
+      "name": "Benjamin Bl\u00fcmchen"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 990,
+    "fields": {
+      "name": "M.I.A."
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 991,
+    "fields": {
+      "name": "R\u00dcF\u00dcS DU SOL"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 992,
+    "fields": {
+      "name": "Gemitaiz"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 993,
+    "fields": {
+      "name": "Tinie Tempah"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 994,
+    "fields": {
+      "name": "RIN"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 995,
+    "fields": {
+      "name": "Death Cab for Cutie"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 996,
+    "fields": {
+      "name": "JP Saxe"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 997,
+    "fields": {
+      "name": "Los Enanitos Verdes"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 998,
+    "fields": {
+      "name": "Empire of the Sun"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 999,
+    "fields": {
+      "name": "Lil Jon"
+    }
+  },
+  {
+    "model": "vinyl.artist",
+    "pk": 1000,
+    "fields": {
+      "name": "BIGBANG"
+    }
+  }
+]

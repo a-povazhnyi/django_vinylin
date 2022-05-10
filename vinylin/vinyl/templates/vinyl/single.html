@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ vinyl.title }} : vinylin{% endblock title %}
+
+{% block content %}
+
+  <div class="single-vinyl-wrapper container">
+    <div class="single-vinyl">
+      {% if not vinyl.images.exists %}
+        <img src="{% static 'img/null_image.png' %}"
+             alt="{{ vinyl.title }} image" class="vinyl-img">
+        <a href="{{ vinyl.get_absolute_url }}" class="index-buy-button">
+          <div class="button-wrapper index-button-wrapper">buy</div>
+        </a>
+      {% else %}
+
+        <div class="image-buy-wrapper">
+          {% for image in vinyl.images.all|slice:":1" %}
+            <img src="{{ image.image.url }}"
+                 alt="{{ vinyl.title }} image" class="single-vinyl-img">
+          {% endfor %}
+
+          {% if not vinyl.storage.bad_status %}
+            <a href="#" class="single-buy-button">
+              <div class="button-wrapper single-button-wrapper">buy</div>
+            </a>
+          {% else %}
+            <a href="#" class="single-buy-button__disabled">
+              <div class="button-wrapper single-button-wrapper__disabled">{{ vinyl.storage.bad_status }}</div>
+            </a>
+          {% endif %}
+        </div>
+
+        <section class="single-vinyl-info">
+          <ul class="single-vinyl-info">
+
+            <li class="single-vinyl-li">
+              <div class="vinyl-single-title">
+                <h2>{{ vinyl.title }}</h2>
+              </div>
+            </li>
+
+            {% if vinyl.tags.exists %}
+              <li class="single-vinyl-tags">
+                <ul class="single-vinyl-tags-ul">
+                  {% for tag in vinyl.tags.all %}
+                    <li class="vinyl-index-tag"><span>{{ tag }}</span></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+
+            {% if not vinyl.price_with_discount %}
+              <li class="vinyl-single-price">${{ vinyl.price }}</li>
+            {% else %}
+              <li class="vinyl-single-price">
+                <div class="single-prices-wrapper">
+                  <span class="vinyl-single-price__new-price">${{ vinyl.price_with_discount }}</span>
+                  <span class="vinyl-single-price__old-price">${{ vinyl.price }}</span>
+                </div>
+              </li>
+            {% endif %}
+
+            {% if vinyl.format %}
+              <li class="single-vinyl-format">
+                <span class="single-info-title">Format: </span>
+                <span>{{ vinyl.format }}</span>
+              </li>
+            {% endif %}
+
+            {% if vinyl.genres.exists %}
+              <li class="single-vinyl-genres">
+                <ul class="single-vinyl-genres">
+                  <span class="single-info-title">Genres:</span>
+                  {% for genre in vinyl.genres.all %}
+                    <li class="single-vinyl-genre">
+                      {% if not forloop.last %}
+                        <span class="single-genre">{{ genre }},</span>
+                      {% else %}
+                        <span class="single-genre">{{ genre }}</span>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+
+            {% if vinyl.country %}
+              <li class="single-vinyl-country">
+                <span class="single-info-title">Country:</span>
+                <span>{{ vinyl.country }}</span>
+              </li>
+            {% endif %}
+
+            {% if vinyl.overview %}
+              <li class="vinyl-single-overview">
+                <span class="single-info-title">Overview:</span>
+                <div class="vinyl-overview">
+                  {{ vinyl.overview|safe }}
+                </div>
+              </li>
+            {% endif %}
+
+          </ul>
+        </section>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock content %}
