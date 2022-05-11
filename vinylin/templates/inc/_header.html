@@ -9,7 +9,7 @@
         <a href="{% url 'index' %}" class="vinylin-header-link">
           <h1 class="vinylin-header">VINYLIN</h1>
         </a>
-        <a href="#" class="header-cart">
+        <a href="{{ user.cart.get_absolute_url }}" class="header-cart">
           <img src="{% static "img/cart.svg" %}" alt="header-cart"
                class="header-cart">
         </a>
