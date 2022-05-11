@@ -10,8 +10,9 @@
       {% if not vinyl.images.exists %}
         <img src="{% static 'img/null_image.png' %}"
              alt="{{ vinyl.title }} image" class="vinyl-img">
-        <a href="{{ vinyl.get_absolute_url }}" class="index-buy-button">
-          <div class="button-wrapper index-button-wrapper">buy</div>
+        <a href="{% url 'add_to_cart' cart_pk=user.cart.pk product_pk=vinyl.pk %}"
+           class="index-buy-button">
+          <div class="button-wrapper index-button-wrapper">add to cart</div>
         </a>
       {% else %}
 
@@ -22,7 +23,8 @@
           {% endfor %}
 
           {% if not vinyl.storage.bad_status %}
-            <a href="#" class="single-buy-button">
+            <a href="{% url 'add_to_cart' cart_pk=user.cart.pk product_pk=vinyl.pk %}"
+               class="single-buy-button">
               <div class="button-wrapper single-button-wrapper">add to cart</div>
             </a>
           {% else %}
