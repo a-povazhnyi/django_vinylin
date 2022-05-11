@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.urls import reverse
 
 from store.models import Product
 from users.models import User
@@ -7,10 +10,19 @@ from users.models import User
 class Cart(models.Model):
     user = models.OneToOneField(to=User, on_delete=models.CASCADE)
     is_reserved = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'({self.pk}) {self.user} Cart'
+
+    def get_absolute_url(self):
+        return reverse('cart', kwargs={'pk': self.pk})
+
+
+@receiver(post_save, sender=User)
+def create_cart(sender, instance, created, **kwargs):
+    """Creates cart object after user registration"""
+    if created:
+        Cart.objects.create(user=instance)
 
 
 class Order(models.Model):
@@ -30,7 +42,7 @@ class Order(models.Model):
         return f'({self.pk}) {self.user} Order'
 
 
-class OrderItems(models.Model):
+class OrderItem(models.Model):
     cart = models.ForeignKey(to=Cart, null=True, on_delete=models.SET_NULL)
     order = models.ForeignKey(to=Order, null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(
