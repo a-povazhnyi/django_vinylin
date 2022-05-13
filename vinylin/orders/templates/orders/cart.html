@@ -7,6 +7,15 @@
 {% block content %}
   <section class="cart">
     <div class="cart-wrapper container">
+
+      <div class="cart-title-wrapper">
+        {% if cart_items %}
+        <h2 class="cart-title">Your Cart</h2>
+        {% else %}
+        <h2 class="cart-title">Your Cart is empty...</h2>
+        {% endif %}
+      </div>
+
       <div class="cart-ul-wrapper">
         <ul class="cart-ul">
           {% for item in cart_items %}
@@ -63,7 +72,7 @@
                   </li>
 
                   <li class="cart-item-quantity">
-                  {% show_quantity_form order_item_obj=item %}
+                    {% show_quantity_form order_item_obj=item %}
                   </li>
                 </ul>
               </div>
