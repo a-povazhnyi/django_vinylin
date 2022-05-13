@@ -43,7 +43,12 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    cart = models.ForeignKey(to=Cart, null=True, on_delete=models.SET_NULL)
+    cart = models.ForeignKey(
+        to=Cart,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='order_items'
+    )
     order = models.ForeignKey(to=Order, null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(
         to=Product,
