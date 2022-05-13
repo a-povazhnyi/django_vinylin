@@ -15,13 +15,15 @@ class CartView(ListView):
             .order_by('product_id')
 
     def add_to_cart(self, cart_pk, product_pk):
-        order_item, created_order_item = OrderItem.objects.update_or_create(
+        order_item, created_order_item = OrderItem.objects.get_or_create(
             cart_id=cart_pk,
             order=None,
             product_id=product_pk,
-
-            defaults={'quantity': F('quantity') + 1}
         )
+        if order_item and not created_order_item:
+            order_item.quantity = F('quantity') + 1
+            order_item.save()
+
         return redirect('cart', pk=cart_pk)
 
     def post(self, request, *args, **kwargs):
