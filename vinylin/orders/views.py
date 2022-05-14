@@ -14,6 +14,25 @@ class CartView(ListView):
         return OrderItem.objects.filter(cart_id=self.kwargs['pk'])\
             .order_by('product_id')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total_price'] = self.count_total_price()
+        return context
+
+    def count_total_price(self):
+        queryset = self.get_queryset()
+
+        total_price = float(0)
+        for item in queryset:
+            if item.product.price_with_discount:
+                item_price = item.product.price_with_discount * item.quantity
+                total_price += item_price
+            else:
+                item_price = item.product.price * item.quantity
+                total_price += float(item_price)
+
+        return round(total_price, 2)
+
     def add_to_cart(self, cart_pk, product_pk):
         order_item, created_order_item = OrderItem.objects.get_or_create(
             cart_id=cart_pk,
