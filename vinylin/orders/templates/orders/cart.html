@@ -10,9 +10,9 @@
 
       <div class="cart-title-wrapper">
         {% if cart_items %}
-        <h2 class="cart-title">Your Cart</h2>
+          <h2 class="cart-title">Your Cart</h2>
         {% else %}
-        <h2 class="cart-title">Your Cart is empty...</h2>
+          <h2 class="cart-title">Your Cart is empty...</h2>
         {% endif %}
       </div>
 
@@ -77,13 +77,26 @@
                 </ul>
               </div>
             </li>
-
-            {% if not forloop.last %}
-              <hr class="cart-hr">
-            {% endif %}
+            <hr class="cart-hr">
           {% endfor %}
         </ul>
       </div>
+
+      <div class="order-final">
+        <div class="order-final-wrapper">
+
+          <div class="total-price-wrapper">
+            <span class="total-price-title">Total:
+              <span class="total-price">${{ total_price }}</span>
+            </span>
+          </div>
+
+          <a href="#" class="make-order">
+            <div class="button-wrapper single-button-wrapper">make order</div>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 {% endblock content %}

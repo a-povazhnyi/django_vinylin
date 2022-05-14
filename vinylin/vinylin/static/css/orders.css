@@ -1,3 +1,8 @@
+section.cart {
+    margin-bottom: 80px;
+}
+
+
 img.cart-vinyl-img {
     width: 150px;
     height: 150px;
@@ -58,7 +63,6 @@ li.cart-tag > span {
     border-radius: 5px;
     width: 44px;
     font-size: 17px;
-    /* padding: 7px 5px; */
     text-align: center;
 }
 
@@ -69,4 +73,34 @@ form.quantity-form {
 
 li.cart-item-price {
     float: right;
+}
+
+.order-final-wrapper {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.total-price-wrapper {
+    text-align: center;
+}
+
+span.total-price-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+span.total-price-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+span.total-price {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+    text-decoration: underline;
+}
+
+a.make-order {
+    font-size: 36px;
 }
