@@ -109,6 +109,21 @@ span.total-price {
     text-decoration: underline;
 }
 
+.user-balance {
+    text-align: center;
+    margin-top: 17px;
+}
+
+span.user-balance-title {
+    font-weight: bold;
+}
+
+span.user-balance {
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+    text-decoration: underline;
+}
+
 a.make-order {
     font-size: 36px;
 }
