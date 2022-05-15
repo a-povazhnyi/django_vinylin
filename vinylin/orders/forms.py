@@ -1,6 +1,9 @@
 from django import forms
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 
 from .models import OrderItem
+from store.models import Storage
 
 
 class OrderItemQuantityForm(forms.ModelForm):
@@ -12,3 +15,12 @@ class OrderItemQuantityForm(forms.ModelForm):
                 'class': 'quantity-form'
             })
         }
+
+    def clean_quantity(self):
+        quantity = self.cleaned_data['quantity']
+        order_item = self.instance
+
+        if Storage.objects.get(product=order_item.product).quantity < quantity:
+            raise ValidationError(
+                _('There is not enough product in stock...')
+            )
