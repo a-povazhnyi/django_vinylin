@@ -2,7 +2,6 @@ section.cart {
     margin-bottom: 80px;
 }
 
-
 img.cart-vinyl-img {
     width: 150px;
     height: 150px;
@@ -73,6 +72,15 @@ form.quantity-form {
 
 li.cart-item-price {
     float: right;
+}
+
+li.cart-item-remove-li {
+    padding-left: 60px;
+}
+
+a.remove-item {
+    position: absolute;
+    font-size: 22px;
 }
 
 .order-final-wrapper {

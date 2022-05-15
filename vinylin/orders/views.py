@@ -45,6 +45,10 @@ class CartView(ListView):
 
         return redirect('cart', pk=cart_pk)
 
+    def remove_from_cart(self, cart_pk, order_item_pk):
+        OrderItem.objects.get(pk=order_item_pk).delete()
+        return redirect('cart', pk=cart_pk)
+
     def post(self, request, *args, **kwargs):
         order_item_id = int(request.POST['order_item_id'])
         order_item_obj = OrderItem.objects.get(pk=order_item_id)

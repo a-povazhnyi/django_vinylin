@@ -74,6 +74,11 @@
                   <li class="cart-item-quantity">
                     {% show_quantity_form order_item_obj=item %}
                   </li>
+
+                  <li class="cart-item-remove-li">
+                    <a href="{% url 'remove_from_cart' cart_pk=item.cart_id order_item_pk=item.pk %}" class="remove-item">✕</a>
+                  </li>
+
                 </ul>
               </div>
             </li>
@@ -82,6 +87,7 @@
         </ul>
       </div>
 
+    {% if cart_items %}
       <div class="order-final">
         <div class="order-final-wrapper">
 
@@ -96,6 +102,7 @@
           </a>
         </div>
       </div>
+    {% endif %}
 
     </div>
   </section>
