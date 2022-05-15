@@ -18,9 +18,10 @@ class OrderItemQuantityForm(forms.ModelForm):
 
     def clean_quantity(self):
         quantity = self.cleaned_data['quantity']
-        order_item = self.instance
+        product = self.instance.product
 
-        if Storage.objects.get(product=order_item.product).quantity < quantity:
+        if Storage.objects.get(product=product).quantity < quantity:
             raise ValidationError(
                 _('There is not enough product in stock...')
             )
+        return quantity
