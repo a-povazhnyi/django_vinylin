@@ -35,7 +35,7 @@ class Order(models.Model):
     ]
     user = models.ForeignKey(to=User, null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=5, choices=STATUS_CHOICES)
-    total_price = models.SmallIntegerField()
+    total_price = models.DecimalField(max_digits=7, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -49,7 +49,12 @@ class OrderItem(models.Model):
         on_delete=models.SET_NULL,
         related_name='order_items'
     )
-    order = models.ForeignKey(to=Order, null=True, on_delete=models.SET_NULL)
+    order = models.ForeignKey(
+        to=Order,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='order_items'
+    )
     product = models.ForeignKey(
         to=Product,
         null=True,
