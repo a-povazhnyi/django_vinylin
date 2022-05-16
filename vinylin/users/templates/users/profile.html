@@ -26,11 +26,11 @@
         </li>
 
         {% if user.profile.age %}
-        <li class="profile-li">
+          <li class="profile-li">
           <span>age:
             <span class="profile-data">{{ user.profile.age }}</span>
           </span>
-        </li>
+          </li>
         {% endif %}
 
         <li class="profile-li">
@@ -48,27 +48,33 @@
 
       <ul class="profile-buttons">
         <li class="profile-button">
-          <div class="button-wrapper">
-            <a href="{% url 'email_change' %}" class="profile-a">change e-mail</a>
-          </div>
+          <a href="{% url 'orders' %}" class="profile-a">
+            <div class="button-wrapper">orders</div>
+          </a>
         </li>
 
         <li class="profile-button">
-          <div class="button-wrapper">
-            <a href="{% url 'password_change' %}" class="profile-a">change password</a>
-          </div>
+          <a href="{% url 'email_change' %}" class="profile-a">
+            <div class="button-wrapper">change e-mail</div>
+          </a>
+        </li>
+
+        <li class="profile-button">
+          <a href="{% url 'password_change' %}" class="profile-a">
+            <div class="button-wrapper">change password</div>
+          </a>
         </li>
 
         <li class="profile-button red-button">
-          <div class="button-wrapper">
-            <a href="{% url 'password_reset' %}" class="profile-a">password reset</a>
-          </div>
+          <a href="{% url 'password_reset' %}" class="profile-a">
+            <div class="button-wrapper">password reset</div>
+          </a>
         </li>
 
         <li class="profile-button">
-          <div class="button-wrapper red-button-wrapper">
-            <a href="{% url 'sign_out' %}" class="profile-a">sign-out</a>
-          </div>
+          <a href="{% url 'sign_out' %}" class="profile-a">
+            <div class="button-wrapper red-button-wrapper">sign-out</div>
+          </a>
         </li>
       </ul>
     </div>

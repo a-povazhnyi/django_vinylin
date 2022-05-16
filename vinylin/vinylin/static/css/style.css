@@ -348,6 +348,10 @@ ul.errorlist > li {
     font-size: 14px;
 }
 
+a.profile-a > .button-wrapper {
+    font-size: 24px;
+}
+
 @font-face {
     font-family: 'PTSans-Regular';
     src: url("../font/PTSans-Regular.ttf");
