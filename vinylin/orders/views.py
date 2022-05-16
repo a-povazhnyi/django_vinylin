@@ -32,6 +32,7 @@ class CartView(ListView):
         return count_total_price(order_items)
 
     def post(self, request, *args, **kwargs):
+        """Used to change the quantity of order items in the cart"""
         order_item_id = int(request.POST['order_item_id'])
         order_item_obj = OrderItem.objects.get(pk=order_item_id)
         form = OrderItemQuantityForm(
@@ -144,7 +145,7 @@ class MakeOrderView(CreateView):
 
     @staticmethod
     def _update_storage(queryset):
-        """Update product storage quantities"""
+        """Updates the quantity of products in the storage"""
         storage_objets = []
         for item in queryset:
             storage = Storage.objects.get(product=item.product)
