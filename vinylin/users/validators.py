@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
 
-def validate_birthday(birthday):
+def birthday_validator(birthday):
     if birthday > datetime.today().date():
         raise ValidationError(
             _('Your birthday cannot be upper than today\'s date')
