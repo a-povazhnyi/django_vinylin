@@ -87,28 +87,35 @@
         </ul>
       </div>
 
-    {% if cart_items %}
-      <div class="order-final">
-        <div class="order-final-wrapper">
+      {% if cart_items %}
+        <div class="order-final">
+          <div class="order-final-wrapper">
 
-          <div class="total-price-wrapper">
+            <div class="total-price-wrapper">
             <span class="total-price-title">Total:
               <span class="total-price">${{ total_price }}</span>
             </span>
-          </div>
+            </div>
 
-          <div class="user-balance">
+            <div class="user-balance">
             <span class="user-balance-title">Your balance:
               <span class="user-balance">${{ user.profile.balance }}</span>
             </span>
-          </div>
+            </div>
 
-          <a href="#" class="make-order">
-            <div class="button-wrapper single-button-wrapper">make order</div>
-          </a>
+            {% if total_price > user.profile.balance %}
+              <div class="make-order">
+                <div class="button-wrapper single-button-wrapper__disabled">make order</div>
+              </div>
+
+            {% else %}
+              <a href="{% url 'make_order' cart_pk=cart_pk %}" class="make-order">
+                <div class="button-wrapper single-button-wrapper">make order</div>
+              </a>
+            {% endif %}
+          </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
 
     </div>
   </section>

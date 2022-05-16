@@ -124,6 +124,16 @@ span.user-balance {
     text-decoration: underline;
 }
 
-a.make-order {
+.make-order {
     font-size: 36px;
+}
+
+span.order-number {
+    font-size: 25px;
+}
+
+span.order-item-quantity {
+    font-size: 22px;
+    margin-left: 25px;
+    color: rgb(113, 45, 45);
 }
