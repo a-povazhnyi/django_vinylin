@@ -1,9 +1,15 @@
-from django.db.models import F
-from django.views.generic import ListView
-from django.shortcuts import redirect
+from django.core.exceptions import ValidationError
+from django.db import transaction
+from django.db.models import F, DecimalField
+from django.http import HttpResponse
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView
+from django.shortcuts import redirect, render
 
 from .forms import OrderItemQuantityForm
-from .models import OrderItem
+from .models import OrderItem, Order
+from .utils import count_total_price
+from store.models import Storage
 
 
 class CartView(ListView):
@@ -16,22 +22,13 @@ class CartView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['total_price'] = self.count_total_price()
+        context['cart_pk'] = self.kwargs['pk']
+        context['total_price'] = self._count_total_price()
         return context
 
-    def count_total_price(self):
-        queryset = self.get_queryset()
-
-        total_price = float(0)
-        for item in queryset:
-            if item.product.price_with_discount:
-                item_price = item.product.price_with_discount * item.quantity
-                total_price += item_price
-            else:
-                item_price = item.product.price * item.quantity
-                total_price += float(item_price)
-
-        return round(total_price, 2)
+    def _count_total_price(self):
+        order_items = self.get_queryset()
+        return count_total_price(order_items)
 
     def add_to_cart(self, cart_pk, product_pk):
         order_item, created_order_item = OrderItem.objects.get_or_create(
@@ -62,3 +59,73 @@ class CartView(ListView):
 
         form.save()
         return redirect('cart', pk=request.user.cart.pk)
+
+
+class OrderView(ListView):
+    template_name = 'orders/orders.html'
+    context_object_name = 'orders'
+
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        return super(OrderView, self).get_context_data(**kwargs)
+
+
+class MakeOrderView(CreateView):
+    def get(self, request, *args, **kwargs):
+        return self._make_order(request, kwargs['cart_pk'])
+
+    def _make_order(self, request, cart_pk):
+        order_items = OrderItem.objects.filter(cart_id=cart_pk)
+        total_price = count_total_price(order_items)
+
+        with transaction.atomic():
+            discard_balance_or_alert = self._discard_user_balance(
+                request,
+                total_price,
+                cart_pk
+            )
+            if isinstance(discard_balance_or_alert, HttpResponse):
+                return discard_balance_or_alert
+
+            self._update_storage(order_items)
+            new_order = Order.objects.create(
+                user=request.user,
+                status='PA',
+                total_price=total_price,
+            )
+            order_items.update(order=new_order, cart=None)
+            return redirect('orders')
+
+    @staticmethod
+    def _discard_user_balance(request, total_price, cart_pk):
+        try:
+            user_profile = request.user.profile
+            new_user_balance = float(user_profile.balance) - total_price
+
+            decimal = DecimalField(max_digits=6, decimal_places=2)
+            new_user_balance = str(round(new_user_balance, 2))
+            new_user_balance = decimal.clean(new_user_balance,
+                                             model_instance=None)
+            user_profile.balance = new_user_balance
+            user_profile.save()
+
+        except ValidationError:
+            context = {
+                'alert_message': ValidationError.messages,
+                'redirect_url': reverse_lazy('cart',
+                                             kwargs={'pk': cart_pk})
+            }
+            return render(request, 'alert.html', context)
+
+    @staticmethod
+    def _update_storage(queryset):
+        """Update product storage quantities"""
+        storage_objets = []
+        for item in queryset:
+            obj = Storage.objects.get(product=item.product)
+            obj.quantity = F('quantity') - item.quantity
+            storage_objets.append(obj)
+
+        return Storage.objects.bulk_update(storage_objets, ['quantity'])
