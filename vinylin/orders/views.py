@@ -3,9 +3,10 @@ from django.db import transaction
 from django.db.models import F, DecimalField
 from django.http import HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.shortcuts import redirect, render
 
+from .emails import AddCartItemEmailMessage
 from .forms import OrderItemQuantityForm
 from .models import OrderItem, Order
 from .utils import count_total_price
@@ -30,22 +31,6 @@ class CartView(ListView):
         order_items = self.get_queryset()
         return count_total_price(order_items)
 
-    def add_to_cart(self, cart_pk, product_pk):
-        order_item, created_order_item = OrderItem.objects.get_or_create(
-            cart_id=cart_pk,
-            order=None,
-            product_id=product_pk,
-        )
-        if order_item and not created_order_item:
-            order_item.quantity = F('quantity') + 1
-            order_item.save()
-
-        return redirect('cart', pk=cart_pk)
-
-    def remove_from_cart(self, cart_pk, order_item_pk):
-        OrderItem.objects.get(pk=order_item_pk).delete()
-        return redirect('cart', pk=cart_pk)
-
     def post(self, request, *args, **kwargs):
         order_item_id = int(request.POST['order_item_id'])
         order_item_obj = OrderItem.objects.get(pk=order_item_id)
@@ -61,15 +46,53 @@ class CartView(ListView):
         return redirect('cart', pk=request.user.cart.pk)
 
 
+class AddCartItemView(CreateView):
+    model = OrderItem
+
+    def get(self, request, *args, **kwargs):
+        return self._add_to_cart(request, *args, **kwargs)
+
+    def _add_to_cart(self, request, *args, **kwargs):
+        cart_pk = kwargs['cart_pk']
+        product_pk = kwargs['product_pk']
+
+        order_item, created_order_item = OrderItem.objects.get_or_create(
+            cart_id=cart_pk,
+            order=None,
+            product_id=product_pk,
+        )
+        if not created_order_item:
+            order_item.quantity = F('quantity') + 1
+            order_item.save()
+
+        context = {'item': order_item}
+        self._mail_order_item(request, context)
+        return redirect('cart', pk=cart_pk)
+
+    @staticmethod
+    def _mail_order_item(request, context):
+        message = AddCartItemEmailMessage(request, context)
+        item_image = context['item'].product.images.first()
+        message.create_inline_image_attachment(item_image)
+        message.send(fail_silently=True)
+
+
+class RemoveCartItemView(UpdateView):
+    model = OrderItem
+
+    def get(self, request, *args, **kwargs):
+        order_item_pk = kwargs['order_item_pk']
+        cart_pk = kwargs['cart_pk']
+        OrderItem.objects.get(pk=order_item_pk).delete()
+        return redirect('cart', pk=cart_pk)
+
+
 class OrderView(ListView):
     template_name = 'orders/orders.html'
     context_object_name = 'orders'
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        return super(OrderView, self).get_context_data(**kwargs)
 
 
 class MakeOrderView(CreateView):
@@ -124,8 +147,8 @@ class MakeOrderView(CreateView):
         """Update product storage quantities"""
         storage_objets = []
         for item in queryset:
-            obj = Storage.objects.get(product=item.product)
-            obj.quantity = F('quantity') - item.quantity
-            storage_objets.append(obj)
+            storage = Storage.objects.get(product=item.product)
+            storage.quantity = F('quantity') - item.quantity
+            storage_objets.append(storage)
 
         return Storage.objects.bulk_update(storage_objets, ['quantity'])
