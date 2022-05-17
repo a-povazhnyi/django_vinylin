@@ -66,14 +66,13 @@ class AddCartItemView(CreateView):
             order_item.quantity = F('quantity') + 1
             order_item.save()
 
-        context = {'item': order_item}
-        self._mail_order_item(request, context)
+        self._mail_order_item(request, {'item': order_item})
         return redirect('cart', pk=cart_pk)
 
     @staticmethod
     def _mail_order_item(request, context):
         message = AddCartItemEmailMessage(request, context)
-        message.send(fail_silently=True)
+        return message.send(fail_silently=True)
 
 
 class RemoveCartItemView(UpdateView):
@@ -123,7 +122,6 @@ class MakeOrderView(CreateView):
                 'order_items': OrderItem.objects.filter(order=new_order),
                 'total_price': total_price,
             }
-            print(context)
             self._mail_order(request, context)
             return redirect('orders')
 
@@ -162,6 +160,4 @@ class MakeOrderView(CreateView):
     @staticmethod
     def _mail_order(request, context):
         message = OrderEmailMessage(request, context)
-        # message.create_inline_image_attachments()
-        message.send(fail_silently=True)
-        return message
+        return message.send(fail_silently=True)
