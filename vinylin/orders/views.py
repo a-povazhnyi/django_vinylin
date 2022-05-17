@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView
 from django.shortcuts import redirect, render
 
-from .emails import AddCartItemEmailMessage
+from .emails import AddCartItemEmailMessage, OrderEmailMessage
 from .forms import OrderItemQuantityForm
 from .models import OrderItem, Order
 from .utils import count_total_price
@@ -73,8 +73,6 @@ class AddCartItemView(CreateView):
     @staticmethod
     def _mail_order_item(request, context):
         message = AddCartItemEmailMessage(request, context)
-        item_image = context['item'].product.images.first()
-        message.create_inline_image_attachment(item_image)
         message.send(fail_silently=True)
 
 
@@ -120,6 +118,13 @@ class MakeOrderView(CreateView):
                 total_price=total_price,
             )
             order_items.update(order=new_order, cart=None)
+
+            context = {
+                'order_items': OrderItem.objects.filter(order=new_order),
+                'total_price': total_price,
+            }
+            print(context)
+            self._mail_order(request, context)
             return redirect('orders')
 
     @staticmethod
@@ -153,3 +158,10 @@ class MakeOrderView(CreateView):
             storage_objets.append(storage)
 
         return Storage.objects.bulk_update(storage_objets, ['quantity'])
+
+    @staticmethod
+    def _mail_order(request, context):
+        message = OrderEmailMessage(request, context)
+        # message.create_inline_image_attachments()
+        message.send(fail_silently=True)
+        return message
