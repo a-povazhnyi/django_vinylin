@@ -43,11 +43,11 @@
               <a href="{{ vinyl.get_absolute_url }}"><span class="vinyl-title">{{ vinyl.title }}</span></a>
               <div class="vinyl-index-order">
 
-                {% if not vinyl.price_with_discount %}
+                {% if not vinyl.discount.price_with_discount %}
                   <span class="vinyl-index-price">${{ vinyl.price }}</span>
                 {% else %}
                   <div class="index-prices-wrapper">
-                    <span class="vinyl-index-price__new-price">${{ vinyl.price_with_discount }}</span>
+                    <span class="vinyl-index-price__new-price">${{ vinyl.discount.price_with_discount }}</span>
                     <span class="vinyl-index-price__old-price">${{ vinyl.price }}</span>
                   </div>
                 {% endif %}

@@ -8,7 +8,7 @@ class IndexView(ListView):
     context_object_name = 'vinyls'
 
     def get_queryset(self):
-        return Vinyl.objects.with_index_data().all()
+        return Vinyl.objects.with_index_data().all().order_by('id')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
