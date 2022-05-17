@@ -646,7 +646,7 @@
         <ul class="cart-item-ul">
           <li class="cart-item-li">
             {% if not item.product.images.exists %}
-              <img src="{% static 'img/null_image.png' %}"
+              <img src="cid:{{ image.image.name }}"
                    alt="{{ item.product.title }} image" class="cart-vinyl-img">
             {% else %}
 
