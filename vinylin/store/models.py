@@ -51,18 +51,6 @@ class Product(AbstractProduct):
     def __str__(self):
         return self.title
 
-    # @property
-    # def price_with_discount(self):
-    #     try:
-    #         discount_amount = 25
-    #         # discount_amount = Discount.objects.get(product=self).amount
-    #         if discount_amount == 0:
-    #             return None
-    #         discount_amount *= 0.01
-    #     except ObjectDoesNotExist:
-    #         return None
-    #     return round(float(self.price) * (1 - discount_amount), 2)
-
 
 class Image(models.Model):
     product = models.ForeignKey(
