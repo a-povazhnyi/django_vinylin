@@ -9,21 +9,22 @@ from django.shortcuts import redirect, render
 from .emails import AddCartItemEmailMessage, OrderEmailMessage
 from .forms import OrderItemQuantityForm
 from .models import OrderItem, Order
+from .mixins import UserOrdersPermissionMixin
 from .utils import count_total_price
 from store.models import Storage
 
 
-class CartView(ListView):
+class CartView(UserOrdersPermissionMixin, ListView):
     template_name = 'orders/cart.html'
     context_object_name = 'cart_items'
 
     def get_queryset(self):
-        return OrderItem.objects.filter(cart_id=self.kwargs['pk'])\
+        return OrderItem.objects.filter(cart_id=self.kwargs['cart_pk'])\
             .order_by('product_id')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['cart_pk'] = self.kwargs['pk']
+        context['cart_pk'] = self.kwargs['cart_pk']
         context['total_price'] = self._count_total_price()
         return context
 
@@ -47,7 +48,7 @@ class CartView(ListView):
         return redirect('cart', pk=request.user.cart.pk)
 
 
-class AddCartItemView(CreateView):
+class AddCartItemView(UserOrdersPermissionMixin, CreateView):
     model = OrderItem
 
     def get(self, request, *args, **kwargs):
@@ -66,7 +67,7 @@ class AddCartItemView(CreateView):
             order_item.quantity = F('quantity') + 1
             order_item.save()
 
-        self._mail_order_item(request, {'item': order_item})
+        # self._mail_order_item(request, {'item': order_item})
         return redirect('cart', pk=cart_pk)
 
     @staticmethod
@@ -75,7 +76,7 @@ class AddCartItemView(CreateView):
         return message.send(fail_silently=True)
 
 
-class RemoveCartItemView(UpdateView):
+class RemoveCartItemView(UserOrdersPermissionMixin, UpdateView):
     model = OrderItem
 
     def get(self, request, *args, **kwargs):
@@ -93,7 +94,7 @@ class OrderView(ListView):
         return Order.objects.filter(user=self.request.user)
 
 
-class MakeOrderView(CreateView):
+class MakeOrderView(UserOrdersPermissionMixin, CreateView):
     def get(self, request, *args, **kwargs):
         return self._make_order(request, kwargs['cart_pk'])
 
@@ -122,7 +123,7 @@ class MakeOrderView(CreateView):
                 'order_items': OrderItem.objects.filter(order=new_order),
                 'total_price': total_price,
             }
-            self._mail_order(request, context)
+            # self._mail_order(request, context)
             return redirect('orders')
 
     @staticmethod

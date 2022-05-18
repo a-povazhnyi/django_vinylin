@@ -15,7 +15,7 @@ class Cart(models.Model):
         return f'({self.pk}) {self.user} Cart'
 
     def get_absolute_url(self):
-        return reverse('cart', kwargs={'pk': self.pk})
+        return reverse('cart', kwargs={'cart_pk': self.pk})
 
 
 @receiver(post_save, sender=User)
