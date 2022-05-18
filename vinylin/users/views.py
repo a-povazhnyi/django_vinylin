@@ -1,20 +1,28 @@
-from django.shortcuts import render, redirect
+from django.db.models import F
+from django.contrib.auth import views as auth_views
+from django.contrib.auth import login
+from django.contrib.auth.forms import PasswordChangeForm
 from django.views.generic import (
     UpdateView,
     CreateView,
     TemplateView,
     DetailView,
 )
-from django.contrib.auth import views as auth_views
-from django.contrib.auth import login
-from django.contrib.auth.forms import PasswordChangeForm
 from django.urls import reverse, reverse_lazy
+from django.shortcuts import render, redirect
 
-from .forms import SignInForm, UserForm, TokenForm, EmailForm
+from .forms import (
+    SignInForm,
+    UserForm,
+    TokenForm,
+    EmailForm,
+    AddBalanceAdminForm,
+)
 from .decorators import anonymous_only
 from .tokens import TokenGenerator
 from .emails import EmailConfirmMessage
 from .mixins import SignRequiredMixin
+from .models import Profile
 
 
 UserModel = auth_views.get_user_model()
@@ -233,3 +241,28 @@ class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
         'redirect_url': reverse_lazy('sign_in'),
         'alert_message': 'Your password has been changed. Sign in!',
     }
+
+
+class AddBalanceAdminView(UpdateView):
+    def get(self, request, *args, **kwargs):
+        balance_form = AddBalanceAdminForm()
+        context = kwargs['admin_context']
+        context['balance_form'] = balance_form
+        return render(request, 'admin/add_balance.html', context)
+
+    def post(self, request, *args, **kwargs):
+        context = kwargs['admin_context']
+        balance_form = AddBalanceAdminForm(data=request.POST)
+        increasing_balance = balance_form.data.get('balance')
+
+        if not increasing_balance or not balance_form.is_valid():
+            balance_form = AddBalanceAdminForm()
+            context['balance_form'] = balance_form
+            return render(request, 'admin/add_balance.html', context)
+
+        profiles = Profile.objects.all()
+        profiles.update(balance=F('balance') + float(increasing_balance))
+
+        context['success_status'] = True
+        context['increased_balance'] = increasing_balance
+        return render(request, 'admin/add_balance.html', context)
