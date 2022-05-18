@@ -262,7 +262,4 @@ class AddBalanceAdminView(UpdateView):
 
         profiles = Profile.objects.all()
         profiles.update(balance=F('balance') + float(increasing_balance))
-
-        context['success_status'] = True
-        context['increased_balance'] = increasing_balance
-        return render(request, 'admin/add_balance.html', context)
+        return redirect('admin:users_profile_changelist')

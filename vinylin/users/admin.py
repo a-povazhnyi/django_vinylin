@@ -7,6 +7,7 @@ from .models import User, Profile
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
+    change_list_template = 'admin/profile_change_list.html'
     list_display = ('id', 'user')
     list_display_links = ('id', 'user')
     save_on_top = True
