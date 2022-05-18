@@ -53,12 +53,12 @@
               </li>
             {% endif %}
 
-            {% if not vinyl.price_with_discount %}
+            {% if not vinyl.discount.price_with_discount %}
               <li class="vinyl-single-price">${{ vinyl.price }}</li>
             {% else %}
               <li class="vinyl-single-price">
                 <div class="single-prices-wrapper">
-                  <span class="vinyl-single-price__new-price">${{ vinyl.price_with_discount }}</span>
+                  <span class="vinyl-single-price__new-price">${{ vinyl.discount.price_with_discount }}</span>
                   <span class="vinyl-single-price__old-price">${{ vinyl.price }}</span>
                 </div>
               </li>
