@@ -52,7 +52,7 @@ class OrderItem(models.Model):
     order = models.ForeignKey(
         to=Order,
         null=True,
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         related_name='order_items'
     )
     product = models.ForeignKey(
