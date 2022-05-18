@@ -42,10 +42,10 @@ class CartView(UserOrdersPermissionMixin, ListView):
         )
 
         if not form.is_valid():
-            return redirect('cart', pk=request.user.cart.pk)
+            return redirect('cart', cart_pk=request.user.cart.pk)
 
         form.save()
-        return redirect('cart', pk=request.user.cart.pk)
+        return redirect('cart', cart_pk=request.user.cart.pk)
 
 
 class AddCartItemView(UserOrdersPermissionMixin, CreateView):
@@ -68,7 +68,7 @@ class AddCartItemView(UserOrdersPermissionMixin, CreateView):
             order_item.save()
 
         # self._mail_order_item(request, {'item': order_item})
-        return redirect('cart', pk=cart_pk)
+        return redirect('cart', cart_pk=cart_pk)
 
     @staticmethod
     def _mail_order_item(request, context):
@@ -83,7 +83,7 @@ class RemoveCartItemView(UserOrdersPermissionMixin, UpdateView):
         order_item_pk = kwargs['order_item_pk']
         cart_pk = kwargs['cart_pk']
         OrderItem.objects.get(pk=order_item_pk).delete()
-        return redirect('cart', pk=cart_pk)
+        return redirect('cart', cart_pk=cart_pk)
 
 
 class OrderView(ListView):
@@ -143,7 +143,7 @@ class MakeOrderView(UserOrdersPermissionMixin, CreateView):
             context = {
                 'alert_message': ValidationError.messages,
                 'redirect_url': reverse_lazy('cart',
-                                             kwargs={'pk': cart_pk})
+                                             kwargs={'cart_pk': cart_pk})
             }
             return render(request, 'alert.html', context)
 
