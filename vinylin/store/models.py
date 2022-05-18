@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.exceptions import ObjectDoesNotExist
 from django.core.validators import MinValueValidator
 
 
@@ -24,7 +23,7 @@ class Discount(models.Model):
 
     @property
     def price_with_discount(self):
-        if self.amount == 0:
+        if not self.amount:
             return None
         return round(float(self.product.price) * (1 - (self.amount * 0.01)), 2)
 
