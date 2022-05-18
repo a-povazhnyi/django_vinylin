@@ -1,0 +1,13 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+  {% if success_status %}
+  <h4>Balance of all users has been increased by {{ increased_balance }}</h4>
+    <a href="{% url 'admin:add_balance' %}">add more</a>
+  {% else %}
+  <form method="post" action="{% url 'admin:add_balance' %}" class="add_balance">
+  {% csrf_token %}
+  {{ balance_form }}
+  <button type="submit">increase balance</button>
+  </form>
+  {% endif %}
+{% endblock %}
