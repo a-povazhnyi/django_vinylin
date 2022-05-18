@@ -253,13 +253,19 @@ class AddBalanceAdminView(UpdateView):
     def post(self, request, *args, **kwargs):
         context = kwargs['admin_context']
         balance_form = AddBalanceAdminForm(data=request.POST)
-        increasing_balance = balance_form.data.get('balance')
+        increasing_balance = float(balance_form.data.get('balance'))
 
         if not increasing_balance or not balance_form.is_valid():
             balance_form = AddBalanceAdminForm()
             context['balance_form'] = balance_form
             return render(request, 'admin/add_balance.html', context)
 
+        object_id = request.POST.get('object_id', None)
+        if object_id:
+            profile = Profile.objects.filter(pk=object_id)
+            profile.update(balance=F('balance') + increasing_balance)
+            return redirect('admin:users_profile_change', object_id=object_id)
+
         profiles = Profile.objects.all()
-        profiles.update(balance=F('balance') + float(increasing_balance))
+        profiles.update(balance=F('balance') + increasing_balance)
         return redirect('admin:users_profile_changelist')

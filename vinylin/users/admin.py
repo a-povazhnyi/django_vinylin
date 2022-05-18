@@ -8,23 +8,30 @@ from .models import User, Profile
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
     change_list_template = 'admin/profile_change_list.html'
-    list_display = ('id', 'user')
+    change_form_template = 'admin/profile_change_form.html'
+    list_display = ('id', 'user', 'age', 'country')
     list_display_links = ('id', 'user')
     save_on_top = True
 
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        context = {'object_id': object_id}
+        return super().change_view(request, object_id, extra_context=context)
+
     def get_urls(self):
         urls = super().get_urls()
-        custom_urls = [
-            path('balance/',
-                 self.add_balance_view,
-                 name='add_balance')
+        additional_urls = [
+            path('balance/', self.add_balance_view, name='add_balance'),
+            path('<path:object_id>/change/balance/',
+                 self.add_one_balance_view,
+                 name='add_one_balance')
         ]
-        urls = custom_urls + urls
-        return urls
+        return additional_urls + urls
 
     def add_balance_view(self, request):
         context = dict(self.admin_site.each_context(request))
         return AddBalanceAdminView.as_view()(request, admin_context=context)
 
-
-admin.site.register(User)
+    def add_one_balance_view(self, request, object_id):
+        context = dict(self.admin_site.each_context(request))
+        context['object_id'] = int(object_id)
+        return AddBalanceAdminView.as_view()(request, admin_context=context)
