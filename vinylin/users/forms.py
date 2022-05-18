@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth import password_validation, get_user_model
 from django.contrib.auth import forms as auth_forms
+from django.core.validators import MinValueValidator
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberInternationalFallbackWidget
@@ -148,4 +149,12 @@ class EmailForm(forms.Form):
             'class': 'input1',
             'placeholder': 'enter your new e-mail ...'
         })
+    )
+
+
+class AddBalanceAdminForm(forms.Form):
+    balance = forms.IntegerField(
+        label=_('Balance of all users will increase by this number: '),
+        widget=forms.NumberInput(),
+        validators=[MinValueValidator(0)]
     )
