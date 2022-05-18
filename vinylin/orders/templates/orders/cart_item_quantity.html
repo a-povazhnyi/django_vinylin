@@ -1,5 +1,5 @@
 <form class="cart-quantity-form"
-      method="post" action="{% url 'cart' pk=cart_pk %}"
+      method="post" action="{% url 'cart' cart_pk=cart_pk %}"
       onchange="sendForm(this);">
   {% csrf_token %}
   {{ form }}
