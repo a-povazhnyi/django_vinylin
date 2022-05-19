@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.db.models import F
 
+from .filters import StockFilter
 from .forms import VinylAdminForm
 from .models import Country, Genre, Artist, Vinyl
 from store.admin import (
@@ -21,7 +22,7 @@ class VinylAdmin(admin.ModelAdmin):
                     'price_with_discount', 'part_number')
     list_display_links = ('id', 'title')
     search_fields = ('vinyl_title',)
-    list_filter = ('genres',)
+    list_filter = (StockFilter, 'genres')
 
     readonly_fields = ('created_at', 'price_with_discount')
     inlines = [ImageInlineAdmin, StorageInlineAdmin, DiscountInlineAdmin]
