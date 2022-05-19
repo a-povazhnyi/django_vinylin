@@ -63,7 +63,8 @@ class AddCartItemView(UserOrdersPermissionMixin, CreateView):
             order_item.quantity = F('quantity') + 1
             order_item.save()
 
-        # self._mail_order_item(request, {'item': order_item})
+        if request.user.is_email_verified:
+            self._mail_order_item(request, {'item': order_item})
         return redirect('cart', cart_pk=cart_pk)
 
     @staticmethod
@@ -122,7 +123,7 @@ class MakeOrderView(UserOrdersPermissionMixin, CreateView):
                 'order_items': OrderItem.objects.filter(order=new_order),
                 'total_price': total_price,
             }
-            # self._mail_order(request, context)
+            self._mail_order(request, context)
             return redirect('orders')
 
     @staticmethod
