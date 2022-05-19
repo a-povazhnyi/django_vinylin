@@ -87,7 +87,10 @@ class OrderView(ListView):
     context_object_name = 'orders'
 
     def get_queryset(self):
-        return Order.objects.filter(user=self.request.user)
+        return (
+            Order.objects.filter(user=self.request.user)
+            .prefetch_related('order_items')
+        )
 
 
 class MakeOrderView(UserOrdersPermissionMixin, CreateView):
