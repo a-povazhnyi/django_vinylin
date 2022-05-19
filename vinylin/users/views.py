@@ -2,6 +2,7 @@ from django.db.models import F
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import login
 from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.models import Group
 from django.views.generic import (
     UpdateView,
     CreateView,
@@ -159,6 +160,8 @@ class EmailConfirmView(SignRequiredMixin, TemplateView):
             return render(request, 'users/email_confirmed.html', context)
 
         user.is_email_verified = True
+        user_permission = Group.objects.get(id=3)
+        user.groups.add(user_permission)
         user.save()
         context = {'email_confirmed': True}
         return render(request, 'users/email_confirmed.html', context)
