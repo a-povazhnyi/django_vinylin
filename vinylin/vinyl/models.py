@@ -68,6 +68,9 @@ class Vinyl(Product):
     def get_absolute_url(self):
         return reverse('vinyl_single', kwargs={'pk': self.pk})
 
+    class Meta:
+        unique_together = ['vinyl_title', 'artist']
+
 
 class VinylStock(Vinyl):
     class Meta:
