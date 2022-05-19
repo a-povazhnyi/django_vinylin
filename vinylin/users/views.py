@@ -21,7 +21,7 @@ from .forms import (
 from .decorators import anonymous_only
 from .tokens import TokenGenerator
 from .emails import EmailConfirmMessage
-from .mixins import SignRequiredMixin
+from .mixins import SignRequiredMixin, AdminPermissionMixin
 from .models import Profile
 
 
@@ -243,7 +243,7 @@ class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
     }
 
 
-class AddBalanceAdminView(UpdateView):
+class AddBalanceAdminView(AdminPermissionMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         balance_form = AddBalanceAdminForm()
         context = kwargs['admin_context']
@@ -260,8 +260,9 @@ class AddBalanceAdminView(UpdateView):
             context['balance_form'] = balance_form
             return render(request, 'admin/add_balance.html', context)
 
-        object_id = request.POST.get('object_id', None)
+        object_id = request.POST.get('object_id')
         if object_id:
+            # balance for one profile
             profile = Profile.objects.filter(pk=object_id)
             profile.update(balance=F('balance') + increasing_balance)
             return redirect('admin:users_profile_change', object_id=object_id)
