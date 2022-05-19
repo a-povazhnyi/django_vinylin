@@ -103,10 +103,16 @@
             </span>
             </div>
 
-            {% if total_price > user.profile.balance %}
+            {% if total_price > user.profile.balance or not user.is_email_verified %}
+              {% if not user.is_email_verified %}
+                <div class="make-order">
+                <div class="button-wrapper single-button-wrapper__disabled">verify your email</div>
+              </div>
+                {% else %}
               <div class="make-order">
                 <div class="button-wrapper single-button-wrapper__disabled">make order</div>
               </div>
+                {% endif %}
 
             {% else %}
               <a href="{% url 'make_order' cart_pk=cart_pk %}" class="make-order">
