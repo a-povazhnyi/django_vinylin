@@ -3,6 +3,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
 
+from .managers import OrderItemManager
 from store.models import Product
 from users.models import User
 
@@ -61,3 +62,5 @@ class OrderItem(models.Model):
         on_delete=models.SET_NULL,
     )
     quantity = models.SmallIntegerField(default=1)
+
+    objects = OrderItemManager()
