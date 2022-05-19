@@ -25,16 +25,12 @@ class CartView(UserOrdersPermissionMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['cart_pk'] = self.kwargs['cart_pk']
-        context['total_price'] = self._count_total_price()
+        context['total_price'] = count_total_price(context['object_list'])
         return context
-
-    def _count_total_price(self):
-        order_items = self.get_queryset()
-        return count_total_price(order_items)
 
     def post(self, request, *args, **kwargs):
         """Used to change the quantity of order items in the cart"""
-        order_item_id = int(request.POST['order_item_id'])
+        order_item_id = request.POST['order_item_id']
         order_item_obj = OrderItem.objects.get(pk=order_item_id)
         form = OrderItemQuantityForm(
             data=request.POST,
