@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
-from .managers import VinylManager
+from .managers import VinylManager, VinylStockManager
 from store.models import Product, Storage
 
 
@@ -64,3 +64,10 @@ class Vinyl(Product):
 
     def get_absolute_url(self):
         return reverse('vinyl_single', kwargs={'pk': self.pk})
+
+
+class VinylStock(Vinyl):
+    class Meta:
+        proxy = True
+
+    objects = VinylStockManager()

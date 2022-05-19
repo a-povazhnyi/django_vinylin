@@ -14,3 +14,8 @@ class VinylManager(models.Manager):
             .select_related('country') \
             .select_related('discount') \
             .select_related('artist')
+
+
+class VinylStockManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(storage__quantity__gt=0)
