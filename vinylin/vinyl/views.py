@@ -19,4 +19,4 @@ class VinylDetailView(DetailView):
     template_name = 'vinyl/single.html'
 
     def get_queryset(self):
-        return Vinyl.objects.with_all_data().filter(pk=self.kwargs['pk'])
+        return Vinyl.objects.with_all_data().filter(pk=self.kwargs.get('pk'))

@@ -69,12 +69,12 @@ class ProfileView(DetailView):
     template_name = 'users/profile.html'
 
     def get_queryset(self):
-        user_pk = self.kwargs['pk']
+        user_pk = self.kwargs.get('pk')
         return UserModel.objects.with_profile().filter(pk=user_pk)
 
     def get(self, request, *args, **kwargs):
         """Disallows a user from viewing other`s profiles"""
-        if request.user.pk != kwargs['pk']:
+        if request.user.pk != kwargs.get('pk'):
             context = {
                 'alert_message': ('You have not enough permissions '
                                   'to see this page'),
@@ -249,12 +249,12 @@ class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
 class AddBalanceAdminView(AdminPermissionMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         balance_form = AddBalanceAdminForm()
-        context = kwargs['admin_context']
+        context = kwargs.get('admin_context')
         context['balance_form'] = balance_form
         return render(request, 'admin/add_balance.html', context)
 
     def post(self, request, *args, **kwargs):
-        context = kwargs['admin_context']
+        context = kwargs.get('admin_context')
         balance_form = AddBalanceAdminForm(data=request.POST)
         increasing_balance = float(balance_form.data.get('balance'))
 

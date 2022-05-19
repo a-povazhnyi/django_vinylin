@@ -19,12 +19,12 @@ class CartView(UserOrdersPermissionMixin, ListView):
     context_object_name = 'cart_items'
 
     def get_queryset(self):
-        return OrderItem.objects.filter(cart_id=self.kwargs['cart_pk'])\
+        return OrderItem.objects.filter(cart_id=self.kwargs.get('cart_pk'))\
             .order_by('product_id')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['cart_pk'] = self.kwargs['cart_pk']
+        context['cart_pk'] = self.kwargs.get('cart_pk')
         context['total_price'] = count_total_price(context['object_list'])
         return context
 
@@ -51,8 +51,8 @@ class AddCartItemView(UserOrdersPermissionMixin, CreateView):
         return self._add_to_cart(request, *args, **kwargs)
 
     def _add_to_cart(self, request, *args, **kwargs):
-        cart_pk = kwargs['cart_pk']
-        product_pk = kwargs['product_pk']
+        cart_pk = kwargs.get('cart_pk')
+        product_pk = kwargs.get('product_pk')
 
         order_item, created_order_item = OrderItem.objects.get_or_create(
             cart_id=cart_pk,
@@ -77,9 +77,9 @@ class RemoveCartItemView(UserOrdersPermissionMixin, UpdateView):
     model = OrderItem
 
     def get(self, request, *args, **kwargs):
-        order_item_pk = kwargs['order_item_pk']
-        cart_pk = kwargs['cart_pk']
-        OrderItem.objects.get(pk=order_item_pk).delete()
+        order_item_pk = kwargs.get('order_item_pk')
+        cart_pk = kwargs.get('cart_pk')
+        OrderItem.objects.filter(pk=order_item_pk).delete()
         return redirect('cart', cart_pk=cart_pk)
 
 
@@ -96,7 +96,7 @@ class OrderView(ListView):
 
 class MakeOrderView(UserOrdersPermissionMixin, CreateView):
     def get(self, request, *args, **kwargs):
-        return self._make_order(request, kwargs['cart_pk'])
+        return self._make_order(request, kwargs.get('cart_pk'))
 
     def _make_order(self, request, cart_pk):
         order_items = OrderItem.objects.filter(cart_id=cart_pk)
