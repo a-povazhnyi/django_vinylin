@@ -154,7 +154,7 @@ class EmailForm(forms.Form):
 
 class AddBalanceAdminForm(forms.Form):
     balance = forms.IntegerField(
-        label=_('Balance of all users will increase by this number: '),
+        label=_('Balance will increase by this number'),
         widget=forms.NumberInput(),
         validators=[MinValueValidator(0)]
     )
