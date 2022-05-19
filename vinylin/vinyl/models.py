@@ -37,6 +37,9 @@ class Artist(models.Model):
 
     class Meta:
         ordering = ['name']
+        indexes = [
+            models.Index(fields=['name'], name='name_idx')
+        ]
 
 
 class Vinyl(Product):
