@@ -12,7 +12,6 @@ def count_total_price(order_items):
                 item_price = item.product.price * item.quantity
         except ObjectDoesNotExist:
             item_price = item.product.price * item.quantity
-        finally:
-            total_price += float(item_price)
+        total_price += float(item_price)
 
     return round(total_price, 2)
