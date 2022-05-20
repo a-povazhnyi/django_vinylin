@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 from .managers import VinylManager, VinylStockManager
-from store.models import Product, Storage
+from store.models import Product
 
 
 class Country(models.Model):
