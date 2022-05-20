@@ -9,7 +9,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
     path('users/', include('users.urls')),
-    path('', include('vinyl.urls')),
+    path('vinyl/', include('vinyl.urls')),
     path('orders/', include('orders.urls')),
 ]
 
