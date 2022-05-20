@@ -19,8 +19,10 @@ class CartView(UserOrdersPermissionMixin, ListView):
     context_object_name = 'cart_items'
 
     def get_queryset(self):
-        return OrderItem.objects.filter(cart_id=self.kwargs.get('cart_pk'))\
+        return (
+            OrderItem.objects.filter(cart_id=self.kwargs.get('cart_pk'))
             .order_by('product_id')
+        )
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
