@@ -48,14 +48,12 @@ class Vinyl(Product):
         to=Artist,
         on_delete=models.CASCADE,
         null=True,
-        related_name='artist',
     )
-    genres = models.ManyToManyField(Genre, related_name='genres')
+    genres = models.ManyToManyField(Genre)
     country = models.ForeignKey(
         to=Country,
         null=True,
         on_delete=models.SET_NULL,
-        related_name='country',
     )
     format = models.CharField(max_length=50, blank=True, null=True)
     credits = models.CharField(max_length=250, blank=True, null=True)
