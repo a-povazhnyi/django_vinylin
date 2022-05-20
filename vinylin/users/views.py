@@ -19,10 +19,14 @@ from .forms import (
     EmailForm,
     AddBalanceAdminForm,
 )
-from .decorators import anonymous_only
 from .tokens import TokenGenerator
 from .emails import EmailConfirmMessage
-from .mixins import SignRequiredMixin, AdminPermissionMixin
+from .mixins import (
+    SignRequiredMixin,
+    AdminPermissionMixin,
+    AnonymousOnlyMixin,
+    ProfileOwnViewMixin
+)
 from .models import Profile
 
 
@@ -30,14 +34,10 @@ UserModel = auth_views.get_user_model()
 INDEX_URL = reverse_lazy('index')
 
 
-class SignInView(auth_views.LoginView):
+class SignInView(AnonymousOnlyMixin, auth_views.LoginView):
     template_name = 'users/sign_in.html'
     form_class = SignInForm
-    redirect_field_name = ''
-
-    @anonymous_only(redirect_url='sign_exceptions')
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, *kwargs)
+    redirect_field_name = INDEX_URL
 
 
 class SignOutView(SignRequiredMixin, auth_views.LogoutView):
@@ -45,14 +45,12 @@ class SignOutView(SignRequiredMixin, auth_views.LogoutView):
     extra_context = {'redirect_url': INDEX_URL}
 
 
-class RegisterView(CreateView):
-    @anonymous_only(redirect_url='sign_exceptions')
+class RegisterView(AnonymousOnlyMixin, CreateView):
     def get(self, request, *args, **kwargs):
         user_form = UserForm()
         context = {'user_form': user_form}
         return render(request, 'users/register.html', context)
 
-    @anonymous_only(redirect_url='sign_exceptions')
     def post(self, request, *args, **kwargs):
         user_form = UserForm(data=request.POST)
 
@@ -65,23 +63,12 @@ class RegisterView(CreateView):
         return redirect('email_verification')
 
 
-class ProfileView(DetailView):
+class ProfileView(ProfileOwnViewMixin, DetailView):
     template_name = 'users/profile.html'
 
     def get_queryset(self):
         user_pk = self.kwargs.get('pk')
         return UserModel.objects.with_profile().filter(pk=user_pk)
-
-    def get(self, request, *args, **kwargs):
-        """Disallows a user from viewing other`s profiles"""
-        if request.user.pk != kwargs.get('pk'):
-            context = {
-                'alert_message': ('You have not enough permissions '
-                                  'to see this page'),
-                'redirect_url': INDEX_URL,
-            }
-            return render(request, 'alert.html', context)
-        return super().get(request, *args, **kwargs)
 
 
 class SignExceptionsView(TemplateView):
