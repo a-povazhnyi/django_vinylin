@@ -28,7 +28,7 @@ class ProfileOwnViewMixin:
     def _is_user_owner(request, **kwargs):
         return request.user.pk == kwargs.get('pk')
 
-    def get(self, request, *args, **kwargs):
+    def show_alert(self, request, **kwargs):
         if not self._is_user_owner(request, **kwargs):
             context = {
                 'alert_message': ('You have not enough permissions '
@@ -36,7 +36,6 @@ class ProfileOwnViewMixin:
                 'redirect_url': reverse_lazy('index'),
             }
             return render(request, 'alert.html', context)
-        return super().get(request, *args, **kwargs)
 
 
 class AdminPermissionMixin(PermissionRequiredMixin):

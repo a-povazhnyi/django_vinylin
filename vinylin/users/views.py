@@ -70,6 +70,10 @@ class ProfileView(ProfileOwnViewMixin, DetailView):
         user_pk = self.kwargs.get('pk')
         return UserModel.objects.with_profile().filter(pk=user_pk)
 
+    def get(self, request, *args, **kwargs):
+        alert = self.show_alert(request, **kwargs)
+        return alert if alert else super().get(request, *args, **kwargs)
+
 
 class SignExceptionsView(TemplateView):
     template_name = 'alert.html'
