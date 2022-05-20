@@ -80,4 +80,4 @@ class Storage(models.Model):
     def bad_status(self):
         if self.quantity < 1:
             return 'out of stock'
-        return False
+        return None

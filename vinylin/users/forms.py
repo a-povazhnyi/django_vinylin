@@ -97,7 +97,7 @@ class UserForm(auth_forms.UserCreationForm):
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        user.set_password(self.cleaned_data["password1"])
+        user.set_password(self.cleaned_data.get("password1"))
 
         if commit:
             user.save()
@@ -114,21 +114,20 @@ class UserForm(auth_forms.UserCreationForm):
         return True
 
     def _get_profile_data(self):
-        phone = self.cleaned_data['phone']
-        phone = phone if phone else None
+        phone = self.cleaned_data.get('phone')
 
         profile_data = {
             'phone': phone,
-            'birthday': self.cleaned_data['birthday'],
-            'country': self.cleaned_data['country'],
+            'birthday': self.cleaned_data.get('birthday'),
+            'country': self.cleaned_data.get('country'),
         }
         return profile_data
 
     def _save_profile(self, profile: Profile):
         profile_data = self._get_profile_data()
-        profile.phone = profile_data['phone']
-        profile.birthday = profile_data['birthday']
-        profile.country_id = profile_data['country']
+        profile.phone = profile_data.get('phone')
+        profile.birthday = profile_data.get('birthday')
+        profile.country_id = profile_data.get('country')
 
         profile.save()
         return profile

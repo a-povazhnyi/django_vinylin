@@ -34,6 +34,7 @@ class Order(models.Model):
         ('DE', 'is_delivered'),
         ('CA', 'canceled'),
     ]
+
     user = models.ForeignKey(to=User, null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=5, choices=STATUS_CHOICES)
     total_price = models.DecimalField(max_digits=7, decimal_places=2)

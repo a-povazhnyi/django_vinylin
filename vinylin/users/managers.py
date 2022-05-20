@@ -27,5 +27,7 @@ class UserManager(BaseUserManager):
 
     def with_profile(self):
         """Joins profile and country tables"""
-        return self.select_related('profile')\
-            .select_related('profile__country')
+        return (
+            self.select_related('profile')
+                .select_related('profile__country')
+        )

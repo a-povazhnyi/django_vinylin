@@ -13,7 +13,10 @@ class SignRequiredMixin(LoginRequiredMixin):
 
 
 class AnonymousOnlyMixin(UserPassesTestMixin):
+    request = None
+
     def test_func(self):
+        assert self.request is not None
         return self.request.user.is_anonymous
 
     def dispatch(self, request, *args, **kwargs):
@@ -36,6 +39,7 @@ class ProfileOwnViewMixin:
                 'redirect_url': reverse_lazy('index'),
             }
             return render(request, 'alert.html', context)
+        return None
 
 
 class AdminPermissionMixin(PermissionRequiredMixin):

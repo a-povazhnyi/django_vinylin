@@ -17,6 +17,7 @@ from vinyl.models import Country
 class User(AbstractUser):
     REQUIRED_FIELDS = []
     USERNAME_FIELD = 'email'
+
     username = None
     email = models.EmailField(unique=True)
     is_email_verified = models.BooleanField(default=False)
@@ -71,8 +72,5 @@ class Profile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
-    unverified_permission = Group.objects.get(id=4)
-    instance.groups.add(unverified_permission)
-
     if created:
         Profile.objects.create(user=instance)

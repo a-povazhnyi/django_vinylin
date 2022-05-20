@@ -7,15 +7,6 @@ from store.models import Storage
 
 
 class OrderItemQuantityForm(forms.ModelForm):
-    class Meta:
-        model = OrderItem
-        fields = ('quantity',)
-        widgets = {
-            'quantity': forms.NumberInput(attrs={
-                'class': 'quantity-form'
-            })
-        }
-
     def clean_quantity(self):
         quantity = self.cleaned_data['quantity']
         product = self.instance.product
@@ -25,3 +16,12 @@ class OrderItemQuantityForm(forms.ModelForm):
                 _('There is not enough product in stock...')
             )
         return quantity
+
+    class Meta:
+        model = OrderItem
+        fields = ('quantity',)
+        widgets = {
+            'quantity': forms.NumberInput(attrs={
+                'class': 'quantity-form'
+            })
+        }
