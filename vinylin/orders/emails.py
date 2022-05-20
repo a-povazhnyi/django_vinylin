@@ -49,7 +49,7 @@ class OrderEmailMessage(EmailMultiAlternatives):
         self._create_inline_image_attachments()
 
     def _get_images(self):
-        order_items = self.context['order_items']
+        order_items = self.context.get('order_items')
         return (item.product.images.first().image for item in order_items)
 
     def _create_inline_image_attachments(self):

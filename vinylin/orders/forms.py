@@ -8,7 +8,7 @@ from store.models import Storage
 
 class OrderItemQuantityForm(forms.ModelForm):
     def clean_quantity(self):
-        quantity = self.cleaned_data['quantity']
+        quantity = self.cleaned_data.get('quantity')
         product = self.instance.product
 
         if Storage.objects.get(product=product).quantity < quantity:

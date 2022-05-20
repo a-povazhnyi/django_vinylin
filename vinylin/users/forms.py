@@ -9,6 +9,7 @@ from phonenumber_field.widgets import PhoneNumberInternationalFallbackWidget
 from .models import Profile
 from vinyl.models import Country
 
+
 UserModel = get_user_model()
 
 
@@ -33,27 +34,6 @@ class SignInForm(auth_forms.AuthenticationForm):
 
 
 class UserForm(auth_forms.UserCreationForm):
-    class Meta:
-        model = UserModel
-        fields = ('email', 'first_name', 'last_name')
-        widgets = {
-            'username': forms.TextInput(attrs={
-                'class': 'input1',
-                'placeholder': 'username'
-            }),
-            'email': forms.EmailInput(attrs={
-                'class': 'input1',
-                'placeholder': '@mail'}),
-            'first_name': forms.TextInput(attrs={
-                'class': 'input1',
-                'placeholder': 'first name'
-            }),
-            'last_name': forms.TextInput(attrs={
-                'class': 'input1',
-                'placeholder': 'last name'
-            }),
-        }
-
     password1 = forms.CharField(
         label=_("Password"),
         strip=False,
@@ -64,7 +44,6 @@ class UserForm(auth_forms.UserCreationForm):
         }),
         help_text=password_validation.password_validators_help_text_html(),
     )
-
     password2 = forms.CharField(
         label=_("Password confirmation"),
         widget=forms.PasswordInput(attrs={
@@ -75,7 +54,6 @@ class UserForm(auth_forms.UserCreationForm):
         strip=False,
         help_text=_("Enter the same password as before, for verification."),
     )
-
     phone = PhoneNumberField(
         required=False,
         widget=PhoneNumberInternationalFallbackWidget(attrs={
@@ -83,13 +61,11 @@ class UserForm(auth_forms.UserCreationForm):
             'placeholder': 'phone',
         })
     )
-
     birthday = forms.DateField(
         required=False,
         label=_('Birthday'),
         widget=forms.TextInput(attrs={'type': 'date', 'class': 'input1'}),
     )
-
     country = forms.ModelChoiceField(
         queryset=Country.objects.all(),
         required=False,
@@ -101,7 +77,6 @@ class UserForm(auth_forms.UserCreationForm):
 
         if commit:
             user.save()
-
             if not self._is_profile_blank():
                 profile = Profile.objects.get(user=user.pk)
                 self._save_profile(profile=profile)
@@ -131,6 +106,27 @@ class UserForm(auth_forms.UserCreationForm):
 
         profile.save()
         return profile
+
+    class Meta:
+        model = UserModel
+        fields = ('email', 'first_name', 'last_name')
+        widgets = {
+            'username': forms.TextInput(attrs={
+                'class': 'input1',
+                'placeholder': 'username'
+            }),
+            'email': forms.EmailInput(attrs={
+                'class': 'input1',
+                'placeholder': '@mail'}),
+            'first_name': forms.TextInput(attrs={
+                'class': 'input1',
+                'placeholder': 'first name'
+            }),
+            'last_name': forms.TextInput(attrs={
+                'class': 'input1',
+                'placeholder': 'last name'
+            }),
+        }
 
 
 class TokenForm(forms.Form):
