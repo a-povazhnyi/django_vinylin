@@ -7,7 +7,7 @@ from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberInternationalFallbackWidget
 
 from .models import Profile
-from vinyl.countries.country_choices import COUNTRIES_FORM_CHOICES
+from vinyl.models import Country
 
 UserModel = get_user_model()
 
@@ -90,7 +90,10 @@ class UserForm(auth_forms.UserCreationForm):
         widget=forms.TextInput(attrs={'type': 'date', 'class': 'input1'}),
     )
 
-    country = forms.ChoiceField(required=False, choices=COUNTRIES_FORM_CHOICES)
+    country = forms.ModelChoiceField(
+        queryset=Country.objects.all(),
+        required=False,
+    )
 
     def save(self, commit=True):
         user = super().save(commit=False)
