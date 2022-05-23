@@ -217,7 +217,7 @@ form.sign-form {
     align-items: center;
 }
 
-input.input1 {
+input.input-default {
     border: 3px solid black;
     border-radius: 5px;
     width: 350px;

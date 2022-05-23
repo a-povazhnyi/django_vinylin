@@ -18,7 +18,7 @@ class SignInForm(auth_forms.AuthenticationForm):
         label='Email',
         widget=forms.EmailInput(attrs={
             'autofocus': True,
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'email'
         })
     )
@@ -27,7 +27,7 @@ class SignInForm(auth_forms.AuthenticationForm):
         strip=False,
         widget=forms.PasswordInput(attrs={
             'autocomplete': 'current-password',
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'password',
         })
     )
@@ -39,7 +39,7 @@ class UserForm(auth_forms.UserCreationForm):
         strip=False,
         widget=forms.PasswordInput(attrs={
             'autocomplete': 'new-password',
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'password',
         }),
         help_text=password_validation.password_validators_help_text_html(),
@@ -48,7 +48,7 @@ class UserForm(auth_forms.UserCreationForm):
         label=_("Password confirmation"),
         widget=forms.PasswordInput(attrs={
             'autocomplete': 'new-password',
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'password',
         }),
         strip=False,
@@ -57,14 +57,14 @@ class UserForm(auth_forms.UserCreationForm):
     phone = PhoneNumberField(
         required=False,
         widget=PhoneNumberInternationalFallbackWidget(attrs={
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'phone',
         })
     )
     birthday = forms.DateField(
         required=False,
         label=_('Birthday'),
-        widget=forms.TextInput(attrs={'type': 'date', 'class': 'input1'}),
+        widget=forms.TextInput(attrs={'type': 'date', 'class': 'input-default'}),
     )
     country = forms.ModelChoiceField(
         queryset=Country.objects.all(),
@@ -112,18 +112,18 @@ class UserForm(auth_forms.UserCreationForm):
         fields = ('email', 'first_name', 'last_name')
         widgets = {
             'username': forms.TextInput(attrs={
-                'class': 'input1',
+                'class': 'input-default',
                 'placeholder': 'username'
             }),
             'email': forms.EmailInput(attrs={
-                'class': 'input1',
+                'class': 'input-default',
                 'placeholder': '@mail'}),
             'first_name': forms.TextInput(attrs={
-                'class': 'input1',
+                'class': 'input-default',
                 'placeholder': 'first name'
             }),
             'last_name': forms.TextInput(attrs={
-                'class': 'input1',
+                'class': 'input-default',
                 'placeholder': 'last name'
             }),
         }
@@ -134,7 +134,7 @@ class TokenForm(forms.Form):
         label='Your code:',
         required=False,
         widget=forms.TextInput(attrs={
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'past your code here ...'
         })
     )
@@ -144,7 +144,7 @@ class EmailForm(forms.Form):
     new_email = forms.EmailField(
         label='New e-mail address:',
         widget=forms.EmailInput(attrs={
-            'class': 'input1',
+            'class': 'input-default',
             'placeholder': 'enter your new e-mail ...'
         })
     )
