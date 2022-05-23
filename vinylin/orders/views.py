@@ -1,7 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import transaction
-from django.db.models import F, DecimalField
-from django.http import HttpResponse
+from django.db.models import F, DecimalField, Sum
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView
 from django.shortcuts import redirect, render
@@ -10,7 +9,6 @@ from .emails import AddCartItemEmailMessage, OrderEmailMessage
 from .forms import OrderItemQuantityForm
 from .models import OrderItem, Order
 from .mixins import UserOrdersPermissionMixin
-from .utils import count_total_price
 from store.models import Storage
 
 
@@ -21,13 +19,13 @@ class CartView(UserOrdersPermissionMixin, ListView):
     def get_queryset(self):
         return (
             OrderItem.objects.filter(cart_id=self.kwargs.get('cart_pk'))
-            .order_by('product_id')
+                             .order_by('product_id')
         )
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['cart_pk'] = self.kwargs.get('cart_pk')
-        context['total_price'] = count_total_price(context['object_list'])
+        context['total_price'] = count_total_price(self.get_queryset())
         return context
 
     def post(self, request, *args, **kwargs):
@@ -52,7 +50,8 @@ class AddCartItemView(UserOrdersPermissionMixin, CreateView):
     def get(self, request, *args, **kwargs):
         return self._add_to_cart(request, *args, **kwargs)
 
-    def _add_to_cart(self, request, *args, **kwargs):
+    @staticmethod
+    def _add_to_cart(request, *args, **kwargs):
         cart_pk = kwargs.get('cart_pk')
         product_pk = kwargs.get('product_pk')
 
@@ -65,8 +64,8 @@ class AddCartItemView(UserOrdersPermissionMixin, CreateView):
             order_item.quantity = F('quantity') + 1
             order_item.save()
 
-        if request.user.is_email_verified:
-            self._mail_order_item(request, {'item': order_item})
+        # if request.user.is_email_verified:
+        # self._mail_order_item(request, {'item': order_item})
         return redirect('cart', cart_pk=cart_pk)
 
     @staticmethod
@@ -100,39 +99,35 @@ class MakeOrderView(UserOrdersPermissionMixin, CreateView):
     def get(self, request, *args, **kwargs):
         return self._make_order(request, kwargs.get('cart_pk'))
 
+    @transaction.atomic
     def _make_order(self, request, cart_pk):
         order_items = OrderItem.objects.filter(cart_id=cart_pk)
         total_price = count_total_price(order_items)
 
-        with transaction.atomic():
-            discard_balance_or_alert = self._discard_user_balance(
-                request,
-                total_price,
-                cart_pk
-            )
-            if isinstance(discard_balance_or_alert, HttpResponse):
-                return discard_balance_or_alert
+        discard_balance = self._discard_user_balance(request, total_price)
+        if not discard_balance:
+            return self._alert_user(request, cart_pk)
 
-            self._update_storage(order_items)
-            new_order = Order.objects.create(
-                user=request.user,
-                status='PA',
-                total_price=total_price,
-            )
-            order_items.update(order=new_order, cart=None)
+        self._update_storage(order_items)
+        new_order = Order.objects.create(
+            user=request.user,
+            status='PA',
+            total_price=total_price,
+        )
+        order_items.update(order=new_order, cart=None)
 
-            context = {
-                'order_items': OrderItem.objects.filter(order=new_order),
-                'total_price': total_price,
-            }
-            self._mail_order(request, context)
-            return redirect('orders')
+        context = {
+            'order_items': OrderItem.objects.filter(order=new_order),
+            'total_price': total_price,
+        }
+        self._mail_order(request, context)
+        return redirect('orders')
 
     @staticmethod
-    def _discard_user_balance(request, total_price, cart_pk):
+    def _discard_user_balance(request, total_price):
         try:
             user_profile = request.user.profile
-            new_user_balance = float(user_profile.balance) - total_price
+            new_user_balance = float(user_profile.balance) - float(total_price)
 
             decimal = DecimalField(max_digits=6, decimal_places=2)
             new_user_balance = str(round(new_user_balance, 2))
@@ -140,27 +135,38 @@ class MakeOrderView(UserOrdersPermissionMixin, CreateView):
                                              model_instance=None)
             user_profile.balance = new_user_balance
             user_profile.save()
+            return user_profile
 
         except ValidationError:
-            context = {
-                'alert_message': ValidationError.messages,
-                'redirect_url': reverse_lazy('cart',
-                                             kwargs={'cart_pk': cart_pk})
-            }
-            return render(request, 'alert.html', context)
+            return None
+
+    @staticmethod
+    def _alert_user(request, cart_pk):
+        context = {
+            'alert_message': 'You have not enough balance to make this order',
+            'redirect_url': reverse_lazy('cart',
+                                         kwargs={'cart_pk': cart_pk})
+        }
+        return render(request, 'alert.html', context)
 
     @staticmethod
     def _update_storage(queryset):
         """Updates the quantity of products in the storage"""
-        storage_objets = []
-        for item in queryset:
-            storage = Storage.objects.get(product=item.product)
+        storages = []
+        for item in queryset.select_related('product__storage'):
+            storage = item.product.storage
             storage.quantity = F('quantity') - item.quantity
-            storage_objets.append(storage)
+            storages.append(storage)
 
-        return Storage.objects.bulk_update(storage_objets, ['quantity'])
+        return Storage.objects.bulk_update(storages, ['quantity'])
 
     @staticmethod
     def _mail_order(request, context):
         message = OrderEmailMessage(request, context)
         return message.send(fail_silently=True)
+
+
+def count_total_price(queryset):
+    if not queryset.exists():
+        return None
+    return round(queryset.aggregate(Sum('final_price'))['final_price__sum'], 2)
