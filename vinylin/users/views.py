@@ -1,34 +1,42 @@
-from django.shortcuts import render, redirect
+from django.db.models import F
+from django.contrib.auth import views as auth_views
+from django.contrib.auth import login
+from django.contrib.auth.forms import PasswordChangeForm
 from django.views.generic import (
     UpdateView,
     CreateView,
     TemplateView,
     DetailView,
 )
-from django.contrib.auth import views as auth_views
-from django.contrib.auth import login
-from django.contrib.auth.forms import PasswordChangeForm
 from django.urls import reverse, reverse_lazy
+from django.shortcuts import render, redirect
 
-from .forms import SignInForm, UserForm, TokenForm, EmailForm
-from .decorators import anonymous_only
+from .forms import (
+    SignInForm,
+    UserForm,
+    TokenForm,
+    EmailForm,
+    AddBalanceAdminForm,
+)
 from .tokens import TokenGenerator
 from .emails import EmailConfirmMessage
-from .mixins import SignRequiredMixin
+from .mixins import (
+    SignRequiredMixin,
+    AdminPermissionMixin,
+    AnonymousOnlyMixin,
+    ProfileOwnViewMixin
+)
+from .models import Profile
 
 
 UserModel = auth_views.get_user_model()
 INDEX_URL = reverse_lazy('index')
 
 
-class SignInView(auth_views.LoginView):
+class SignInView(AnonymousOnlyMixin, auth_views.LoginView):
     template_name = 'users/sign_in.html'
     form_class = SignInForm
-    redirect_field_name = ''
-
-    @anonymous_only(redirect_url='sign_exceptions')
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, *kwargs)
+    redirect_field_name = INDEX_URL
 
 
 class SignOutView(SignRequiredMixin, auth_views.LogoutView):
@@ -36,14 +44,12 @@ class SignOutView(SignRequiredMixin, auth_views.LogoutView):
     extra_context = {'redirect_url': INDEX_URL}
 
 
-class RegisterView(CreateView):
-    @anonymous_only(redirect_url='sign_exceptions')
+class RegisterView(AnonymousOnlyMixin, CreateView):
     def get(self, request, *args, **kwargs):
         user_form = UserForm()
         context = {'user_form': user_form}
         return render(request, 'users/register.html', context)
 
-    @anonymous_only(redirect_url='sign_exceptions')
     def post(self, request, *args, **kwargs):
         user_form = UserForm(data=request.POST)
 
@@ -56,23 +62,16 @@ class RegisterView(CreateView):
         return redirect('email_verification')
 
 
-class ProfileView(DetailView):
+class ProfileView(ProfileOwnViewMixin, DetailView):
     template_name = 'users/profile.html'
 
     def get_queryset(self):
-        user_pk = self.kwargs['pk']
+        user_pk = self.kwargs.get('pk')
         return UserModel.objects.with_profile().filter(pk=user_pk)
 
     def get(self, request, *args, **kwargs):
-        """Disallows a user from viewing other`s profiles"""
-        if request.user.pk != kwargs['pk']:
-            context = {
-                'alert_message': ('You have not enough permissions '
-                                  'to see this page'),
-                'redirect_url': INDEX_URL,
-            }
-            return render(request, 'alert.html', context)
-        return super().get(request, *args, **kwargs)
+        alert = self.show_alert(request, **kwargs)
+        return alert if alert else super().get(request, *args, **kwargs)
 
 
 class SignExceptionsView(TemplateView):
@@ -91,45 +90,58 @@ class EmailVerificationView(SignRequiredMixin, TemplateView):
         self._token_generator = TokenGenerator()
 
     def get(self, request, *args, **kwargs):
-        if not self._db_email_confirmed(request):
+        if not self._is_db_email_confirmed(request):
             token_form = TokenForm()
-            context = {'token_form': token_form}
-            return render(request, 'users/email_verification.html', context)
+            return render(
+                request,
+                'users/email_verification.html',
+                {'token_form': token_form}
+            )
 
-        context = {'email_confirmed': True}
-        return render(request, 'users/email_verification.html', context)
+        return render(
+            request,
+            'users/email_verification.html',
+            {'email_confirmed': True}
+        )
 
     def post(self, request, *args, **kwargs):
         token_form = TokenForm(data=request.POST)
 
         if not token_form.changed_data and token_form.is_valid():
-            code = self._make_token(request)
-            self._mail_code(request, code)
-
-            context = {'token_form': token_form, 'is_sent': True}
-            return render(request, 'users/email_verification.html', context)
+            token = self._make_token(request)
+            self._send_token(request, token)
+            return render(
+                request,
+                'users/email_verification.html',
+                {'token_form': token_form, 'is_sent': True}
+            )
 
         user_token = token_form.data.get('code')
         if not user_token or not token_form.is_valid():
-            context = {'token_form': token_form, 'is_sent': False}
-            return render(request, 'users/email_verification.html', context)
+            return render(
+                request,
+                'users/email_verification.html',
+                {'token_form': token_form, 'is_sent': False}
+            )
 
-        return redirect(f'/users/email-confirm/{user_token}/',
-                        user_code=user_token)
+        return redirect(
+            f'/users/email-confirm/{user_token}/',
+            user_code=user_token
+        )
 
     def _make_token(self, request):
-        new_token = self._token_generator.make_token(request.user)
-        return new_token
+        return self._token_generator.make_token(request.user)
 
     @staticmethod
-    def _db_email_confirmed(request):
-        if UserModel.objects.get(pk=request.user.pk).is_email_verified:
-            return True
+    def _is_db_email_confirmed(request):
+        return UserModel.objects.get(user=request.user).is_email_verified
 
     @staticmethod
-    def _mail_code(request, code):
-        email_to = request.user.email
-        email_confirm = EmailConfirmMessage(code=code, to=[email_to])
+    def _send_token(request, code):
+        email_confirm = EmailConfirmMessage(
+            code=code,
+            to=[request.user.email]
+        )
         email_confirm.send(fail_silently=True)
 
 
@@ -141,29 +153,35 @@ class EmailConfirmView(SignRequiredMixin, TemplateView):
     def get(self, request, *args, **kwargs):
         user = request.user
         user_token = kwargs.get('token')
-        user_token_checked = self._token_generator.check_token(
+        is_user_token_valid = self._token_generator.check_token(
             user=user,
             token=user_token
         )
 
-        if not user_token or not user_token_checked:
-            context = {'email_confirmed': False}
-            return render(request, 'users/email_confirmed.html', context)
+        if not user_token or not is_user_token_valid:
+            return render(
+                request,
+                'users/email_confirmed.html',
+                {'email_confirmed': False}
+            )
 
         user.is_email_verified = True
         user.save()
-        context = {'email_confirmed': True}
-        return render(request, 'users/email_confirmed.html', context)
+        return render(
+            request,
+            'users/email_confirmed.html',
+            {'email_confirmed': True}
+        )
 
 
 class EmailChangeView(SignRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         email_form = EmailForm()
-        context = {
-            'email_form': email_form,
-            'current_email': request.user.email,
-        }
-        return render(request, 'users/email_change.html', context)
+        return render(
+            request,
+            'users/email_change.html',
+            {'email_form': email_form, 'current_email': request.user.email}
+        )
 
     def post(self, request, *args, **kwargs):
         user = request.user
@@ -171,11 +189,11 @@ class EmailChangeView(SignRequiredMixin, UpdateView):
         new_email = email_form.data.get('new_email')
 
         if not new_email or not email_form.is_valid():
-            context = {
-                'email_form': email_form,
-                'current_email': user.email,
-            }
-            return render(request, 'users/email_change.html', context)
+            return render(
+                request,
+                'users/email_change.html',
+                {'email_form': email_form, 'current_email': user.email}
+            )
 
         user.email = new_email
         user.is_email_verified = False
@@ -233,3 +251,32 @@ class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
         'redirect_url': reverse_lazy('sign_in'),
         'alert_message': 'Your password has been changed. Sign in!',
     }
+
+
+class AddBalanceAdminView(AdminPermissionMixin, UpdateView):
+    def get(self, request, *args, **kwargs):
+        balance_form = AddBalanceAdminForm()
+        context = kwargs.get('admin_context')
+        context['balance_form'] = balance_form
+        return render(request, 'admin/add_balance.html', context)
+
+    def post(self, request, *args, **kwargs):
+        context = kwargs.get('admin_context')
+        balance_form = AddBalanceAdminForm(data=request.POST)
+        increasing_balance = float(balance_form.data.get('balance'))
+
+        if not increasing_balance or not balance_form.is_valid():
+            balance_form = AddBalanceAdminForm()
+            context['balance_form'] = balance_form
+            return render(request, 'admin/add_balance.html', context)
+
+        object_id = request.POST.get('object_id')
+        if object_id:
+            # balance for one profile
+            profile = Profile.objects.filter(pk=object_id)
+            profile.update(balance=F('balance') + increasing_balance)
+            return redirect('admin:users_profile_change', object_id=object_id)
+
+        profiles = Profile.objects.all()
+        profiles.update(balance=F('balance') + increasing_balance)
+        return redirect('admin:users_profile_changelist')

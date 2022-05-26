@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load cart_quantity_form %}
+
+{% block title %}Your Cart - vinylin{% endblock title %}
+
+{% block content %}
+  <section class="cart">
+    <div class="cart-wrapper container">
+
+      <div class="cart-title-wrapper">
+        {% if cart_items %}
+          <h2 class="cart-title">Your Cart</h2>
+        {% else %}
+          <h2 class="cart-title">Your Cart is empty...</h2>
+        {% endif %}
+      </div>
+
+      <div class="cart-ul-wrapper">
+        <ul class="cart-ul">
+          {% for item in cart_items %}
+            <li class="cart-item">
+              <div class="cart-item-block">
+                <ul class="cart-item-ul">
+
+                  <li class="cart-item-li">
+                    {% if not item.product.images.exists %}
+                      <img src="{% static 'img/null_image.png' %}"
+                           alt="{{ vinyl.title }} image" class="cart-vinyl-img">
+                    {% else %}
+
+                      {% for image in item.product.images.all|slice:":1" %}
+                        <img src="{{ image.image.url }}"
+                             alt="{{ vinyl.title }} image" class="cart-vinyl-img">
+                      {% endfor %}
+                    {% endif %}
+                  </li>
+
+                  <li class="cart-item-li">
+                    <div class="cart-item-info">
+                      <ul class="cart-item-info-ul">
+                        <li class="cart-item-info-li">
+                          <h3 class="cart-item-title">{{ item.product.title }}</h3>
+                        </li>
+
+                        {% if item.product.tags.exists %}
+                          <li class="single-vinyl-tags">
+                            <ul class="single-vinyl-tags-ul cart-tag-ul">
+                              {% for tag in item.product.tags.all %}
+                                <li class="vinyl-index-tag cart-tag"><span>{{ tag }}</span></li>
+                              {% endfor %}
+                            </ul>
+                          </li>
+                        {% endif %}
+
+                        {% if not item.product.discount.price_with_discount %}
+                          <li class="vinyl-single-price">${{ item.product.price }}</li>
+                        {% else %}
+                          <li class="vinyl-single-price">
+                            <div class="single-prices-wrapper">
+                              <span class="vinyl-single-price__new-price">
+                                ${{ item.product.discount.price_with_discount }}
+                              </span>
+                              <span class="vinyl-single-price__old-price">
+                                ${{ item.product.price }}
+                              </span>
+                            </div>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="cart-item-quantity">
+                    {% show_quantity_form order_item_obj=item %}
+                  </li>
+
+                  <li class="cart-item-remove-li">
+                    <a href="{% url 'remove_from_cart' cart_pk=item.cart_id order_item_pk=item.pk %}" class="remove-item">✕</a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <hr class="cart-hr">
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% if cart_items %}
+        <div class="order-final">
+          <div class="order-final-wrapper">
+
+            <div class="total-price-wrapper">
+            <span class="total-price-title">Total:
+              <span class="total-price">${{ total_price }}</span>
+            </span>
+            </div>
+
+            <div class="user-balance">
+            <span class="user-balance-title">Your balance:
+              <span class="user-balance">${{ user.profile.balance }}</span>
+            </span>
+            </div>
+
+            {% if total_price > user.profile.balance or not user.is_email_verified %}
+              {% if not user.is_email_verified %}
+                <div class="make-order">
+                <div class="button-wrapper single-button-wrapper__disabled">verify your email</div>
+              </div>
+                {% else %}
+              <div class="make-order">
+                <div class="button-wrapper single-button-wrapper__disabled">make order</div>
+              </div>
+                {% endif %}
+
+            {% else %}
+              <a href="{% url 'make_order' cart_pk=cart_pk %}" class="make-order">
+                <div class="button-wrapper single-button-wrapper">make order</div>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </section>
+{% endblock content %}

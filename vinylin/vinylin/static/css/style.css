@@ -1,4 +1,5 @@
 @import url('./vinyls.css');
+@import url('./orders.css');
 
 * {
     font-weight: inherit;
@@ -216,7 +217,7 @@ form.sign-form {
     align-items: center;
 }
 
-input.input1 {
+input.input-default {
     border: 3px solid black;
     border-radius: 5px;
     width: 350px;
@@ -278,7 +279,7 @@ a.email-status {
     text-align: center;
     position: absolute;
     left: 919px;
-    top: 75px;
+    top: 91px;
     height: 14px;
 }
 
@@ -345,6 +346,10 @@ ul.errorlist > li {
     text-align: center;
     font-weight: lighter;
     font-size: 14px;
+}
+
+a.profile-a > .button-wrapper {
+    font-size: 24px;
 }
 
 @font-face {

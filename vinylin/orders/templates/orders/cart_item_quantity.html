@@ -1,0 +1,13 @@
+<form class="cart-quantity-form"
+      method="post" action="{% url 'cart' cart_pk=cart_pk %}"
+      onchange="sendForm(this);">
+  {% csrf_token %}
+  {{ form }}
+  <input type="hidden" name="order_item_id" value="{{ order_item_id }}">
+
+  <script>
+      function sendForm(e) {
+          e.submit();
+      }
+  </script>
+</form>

@@ -1,8 +1,8 @@
 from django.db import models
 from django.urls import reverse
 
-from .managers import VinylManager
-from store.models import Product, Storage
+from .managers import VinylManager, VinylStockManager
+from store.models import Product
 
 
 class Country(models.Model):
@@ -37,6 +37,9 @@ class Artist(models.Model):
 
     class Meta:
         ordering = ['name']
+        indexes = [
+            models.Index(fields=['name'], name='name_idx')
+        ]
 
 
 class Vinyl(Product):
@@ -45,14 +48,12 @@ class Vinyl(Product):
         to=Artist,
         on_delete=models.CASCADE,
         null=True,
-        related_name='artist',
     )
-    genres = models.ManyToManyField(Genre, related_name='genres')
+    genres = models.ManyToManyField(Genre)
     country = models.ForeignKey(
         to=Country,
         null=True,
         on_delete=models.SET_NULL,
-        related_name='country',
     )
     format = models.CharField(max_length=50, blank=True, null=True)
     credits = models.CharField(max_length=250, blank=True, null=True)
@@ -64,3 +65,13 @@ class Vinyl(Product):
 
     def get_absolute_url(self):
         return reverse('vinyl_single', kwargs={'pk': self.pk})
+
+    class Meta:
+        unique_together = ['vinyl_title', 'artist']
+
+
+class VinylStock(Vinyl):
+    class Meta:
+        proxy = True
+
+    objects = VinylStockManager()

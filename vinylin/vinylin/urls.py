@@ -7,9 +7,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('users/', include('users.urls')),
 
-    path('', include('vinyl.urls'))
+    path('users/', include('users.urls')),
+    path('vinyl/', include('vinyl.urls')),
+    path('orders/', include('orders.urls')),
 ]
 
 if settings.DEBUG:

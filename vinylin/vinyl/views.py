@@ -8,15 +8,11 @@ class IndexView(ListView):
     context_object_name = 'vinyls'
 
     def get_queryset(self):
-        return Vinyl.objects.with_index_data().all()
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
+        return Vinyl.objects.with_index_data().all().order_by('id')
 
 
 class VinylDetailView(DetailView):
     template_name = 'vinyl/single.html'
 
     def get_queryset(self):
-        return Vinyl.objects.with_all_data().filter(pk=self.kwargs['pk'])
+        return Vinyl.objects.with_all_data().filter(pk=self.kwargs.get('pk'))
