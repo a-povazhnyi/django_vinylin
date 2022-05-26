@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="email-description">
+    {% if email_confirmed %}
+      <h2 class="email-ver">Your email is confirmed!</h2>
+        <a href="{% url 'index' %}" class="button1">start</a>
+
+    {% else %}
+      <h2 class="email-ver">Your code is wrong or expired...</h2>
+      <div class="sign-form-wrapper container">
+        <form class="sign-form register-form"
+              method="post" action="{% url 'email_verification' %}">
+          {% csrf_token %}
+          {{ form }}
+          <button type="submit" class="button1 register-button">send code</button>
+        </form>
+      </div>
+    {% endif %}
+  </div>
+{% endblock content %}

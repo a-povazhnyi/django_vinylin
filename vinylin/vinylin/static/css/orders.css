@@ -1,0 +1,139 @@
+section.cart {
+    margin-bottom: 80px;
+}
+
+img.cart-vinyl-img {
+    width: 150px;
+    height: 150px;
+}
+
+.cart-title-wrapper {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+h2.cart-title {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+ul.cart-item-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul.cart-ul > li {
+    margin-bottom: 0;
+}
+
+hr.cart-hr {
+    opacity: 0.2;
+    border-radius: 2px;
+    color: black;
+    background-color: black;
+    height: 1px;
+    margin-top: 11px;
+    margin-bottom: 15px;
+}
+
+.cart-item-info {
+    margin: auto 10px;
+}
+
+h3.cart-item-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+ul.cart-tag-ul > li {
+    margin-right: 9px;
+}
+
+li.cart-tag {
+    height: 24px;
+}
+
+li.cart-tag > span {
+    font-size: 14px;
+}
+
+#id_quantity {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 44px;
+    font-size: 17px;
+    text-align: center;
+}
+
+form.quantity-form {
+    margin-left: 30px;
+    margin-top: 69px;
+}
+
+li.cart-item-price {
+    float: right;
+}
+
+li.cart-item-remove-li {
+    padding-left: 60px;
+}
+
+a.remove-item {
+    position: absolute;
+    font-size: 22px;
+}
+
+.order-final-wrapper {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.total-price-wrapper {
+    text-align: center;
+}
+
+span.total-price-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+span.total-price-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+span.total-price {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+    text-decoration: underline;
+}
+
+.user-balance {
+    text-align: center;
+    margin-top: 17px;
+}
+
+span.user-balance-title {
+    font-weight: bold;
+}
+
+span.user-balance {
+    font-weight: bold;
+    color: rgb(2, 73, 2);
+    text-decoration: underline;
+}
+
+.make-order {
+    font-size: 36px;
+}
+
+span.order-number {
+    font-size: 25px;
+}
+
+span.order-item-quantity {
+    font-size: 22px;
+    margin-left: 25px;
+    color: rgb(113, 45, 45);
+}

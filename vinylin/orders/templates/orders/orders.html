@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load cart_quantity_form %}
+
+{% block title %}Your Orders - vinylin{% endblock title %}
+
+{% block content %}
+  <section class="cart">
+    <div class="cart-wrapper container">
+
+      <div class="cart-title-wrapper">
+        {% if orders %}
+          <h2 class="cart-title">Your Orders</h2>
+        {% else %}
+          <h2 class="cart-title">You have no orders yet...</h2>
+        {% endif %}
+      </div>
+
+      {% for order in orders %}
+        <span class="order-number">#{{ forloop.counter }}</span>
+        <div class="cart-ul-wrapper">
+          <ul class="cart-ul">
+            {% for item in order.order_items.all %}
+              <li class="cart-item">
+                <div class="cart-item-block">
+                  <ul class="cart-item-ul">
+
+                    <li class="cart-item-li">
+                      {% if not item.product.images.exists %}
+                        <img src="{% static 'img/null_image.png' %}"
+                             alt="{{ vinyl.title }} image" class="cart-vinyl-img">
+                      {% else %}
+
+                        {% for image in item.product.images.all|slice:":1" %}
+                          <img src="{{ image.image.url }}"
+                               alt="{{ vinyl.title }} image" class="cart-vinyl-img">
+                        {% endfor %}
+                      {% endif %}
+                    </li>
+
+                    <li class="cart-item-li">
+                      <div class="cart-item-info">
+                        <ul class="cart-item-info-ul">
+                          <li class="cart-item-info-li">
+                            <h3 class="cart-item-title">{{ item.product.title }}</h3>
+                          </li>
+
+                          {% if item.product.tags.exists %}
+                            <li class="single-vinyl-tags">
+                              <ul class="single-vinyl-tags-ul cart-tag-ul">
+                                {% for tag in item.product.tags.all %}
+                                  <li class="vinyl-index-tag cart-tag"><span>{{ tag }}</span></li>
+                                {% endfor %}
+                              </ul>
+                            </li>
+                          {% endif %}
+
+                          {% if not item.product.price_with_discount %}
+                            <li class="vinyl-single-price">${{ item.product.price }}</li>
+                          {% else %}
+                            <li class="vinyl-single-price">
+                              <div class="single-prices-wrapper">
+                              <span class="vinyl-single-price__new-price">
+                                ${{ item.product.price_with_discount }}
+                              </span>
+                                <span class="vinyl-single-price__old-price">
+                                ${{ item.product.price }}
+                              </span>
+                              </div>
+                            </li>
+                          {% endif %}
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="cart-item-quantity">
+                      <span class="order-item-quantity">x {{ item.quantity }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <hr class="cart-hr">
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock content %}

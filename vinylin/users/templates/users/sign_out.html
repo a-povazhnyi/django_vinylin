@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+  <script type="text/javascript">
+    alert('You have signed out!')
+    document.location.replace("{{ redirect_url }}");
+  </script>
+{% endblock content %}

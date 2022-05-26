@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="sign-form-wrapper container">
+    <form class="sign-form register-form"
+          method="post" action="{% url 'register' %}">
+      {% csrf_token %}
+      {{ user_form }}
+
+      {{ profile_form }}
+
+      <button type="submit" class="button1 register-button">register</button>
+    </form>
+  </div>
+{% endblock content %}

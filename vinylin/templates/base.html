@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{% block title %}vinylin{% endblock %}</title>
+  <link rel="icon" type="image/x-icon"
+        href="{% static 'img/vinylin_favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+{% include "included/_header.html" %}
+{% block content %}
+{% endblock content %}
+
+{% block script %}
+{% endblock script %}
+</body>
+</html>
