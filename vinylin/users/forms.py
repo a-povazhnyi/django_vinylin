@@ -64,7 +64,9 @@ class UserForm(auth_forms.UserCreationForm):
     birthday = forms.DateField(
         required=False,
         label=_('Birthday'),
-        widget=forms.TextInput(attrs={'type': 'date', 'class': 'input-default'}),
+        widget=forms.TextInput(
+            attrs={'type': 'date', 'class': 'input-default'}
+        )
     )
     country = forms.ModelChoiceField(
         queryset=Country.objects.all(),
